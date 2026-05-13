@@ -1,0 +1,11 @@
+# Codex CLI 設定
+# AGENTS.md がプロジェクトの主指示書（Codex はネイティブで AGENTS.md を読む）
+
+model = "gpt-4o"
+
+[sandbox]
+mode = "workspace-write"
+
+# 承認ポリシー: 危険なコマンドは確認
+[approval_policy]
+always_ask = ["rm -rf", "git push --force"]

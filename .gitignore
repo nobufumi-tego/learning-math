@@ -1,0 +1,36 @@
+# Claude Code 個人設定（個人専用、リポジトリ外で管理）
+.claude/settings.local.json
+.claude/memory/personal_*.md
+CLAUDE.local.md
+GEMINI.local.md
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.uv/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# データ
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# 大容量ファイル
+*.mp4
+*.avi
+*.mov
+*.zip
+*.tar.gz
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
