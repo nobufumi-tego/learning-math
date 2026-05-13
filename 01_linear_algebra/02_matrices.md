@@ -423,6 +423,8 @@ R = np.array([
 # (詳しくは 04_decompositions.md の SVD)
 ```
 
+→ 詳細は [`04_decompositions.md`](04_decompositions.md) の SVD セクション
+
 ### (4) Transformer の Attention
 
 ```
@@ -469,3 +471,11 @@ Attention(Q, K, V) = softmax(Q Kᵀ / √d) V
 - **PyTorch / TensorFlow** — 行列演算を GPU で高速化するフレームワーク
 - **CUDA** — NVIDIA の GPU 計算プラットフォーム
 - **TPU** — Google が作った行列計算特化のハードウェア
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次 → |
+|---|---|---|
+| [`01_vectors.md`](01_vectors.md) | [章 TOP](README.md) | [`03_eigenvalues.md`](03_eigenvalues.md) |

@@ -173,3 +173,13 @@ Macintosh の有名な広告 (Super Bowl の "1984") は今でも語り継がれ
 これは、**人類が80年かけて磨いてきた道具**を、たった今手にしている瞬間です。
 
 ちょっと、感動しませんか?
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次の読み物 → |
+|---|---|---|
+| [章 TOP](../README.md) | [章 TOP](../README.md) | [`01_unix_philosophy.md`](01_unix_philosophy.md) |
+
+本流に戻る → [`../09_ai_cli_as_smart_pet.md`](../09_ai_cli_as_smart_pet.md)

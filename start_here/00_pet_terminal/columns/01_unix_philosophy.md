@@ -194,3 +194,13 @@ UNIX の哲学を一行で:
 - **Linus Torvalds** — Linux の作者、超有名な毒舌家
 - **Ken Thompson** — UNIX 共同開発者、Go 言語共同設計者
 - **Dennis Ritchie** — UNIX 共同開発者、C 言語の生みの親
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次の読み物 → |
+|---|---|---|
+| [`00_history_of_computer.md`](00_history_of_computer.md) | [章 TOP](../README.md) | [`02_keyboard_age.md`](02_keyboard_age.md) |
+
+本流に戻る → [`../09_ai_cli_as_smart_pet.md`](../09_ai_cli_as_smart_pet.md)

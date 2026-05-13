@@ -153,3 +153,11 @@ Attention(Q, K, V) = softmax(Q × K^T / √d) × V
 
 **「AI に振り回される側」から「AI を理解する側」へ。**
 数学が、その境界線を越える橋になります。
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次 → |
+|---|---|---|
+| [`04_e_and_pi.md`](04_e_and_pi.md) | [章 TOP](../README.md) | 本流の続き: [`../04_logarithm.md`](../04_logarithm.md) |

@@ -101,3 +101,11 @@ def iff(P: bool, Q: bool) -> bool:
   - `∃y ∀x, y > x` → ある特定の y が、すべての x より大きい（偽）
 - 自然言語の「ならば」と論理学の `⇒` は微妙にニュアンスが違う
 - 否定は丁寧に: `¬(∀x, P(x))` ⇔ `∃x, ¬P(x)`
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次 → |
+|---|---|---|
+| [`02_set_theory.md`](02_set_theory.md) | [章 TOP](README.md) | [`04_function_notation.md`](04_function_notation.md) |

@@ -71,3 +71,11 @@
 
 - 数学はどこから来たの？ → [`columns/00_what_is_math.md`](columns/00_what_is_math.md)
 - 今のAIで使われている数学 → [`columns/05_math_in_ai.md`](columns/05_math_in_ai.md)
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次 → |
+|---|---|---|
+| [`00_pet_terminal/09_ai_cli_as_smart_pet.md`](00_pet_terminal/09_ai_cli_as_smart_pet.md) | [章 TOP](README.md) | [`02_pythagoras.md`](02_pythagoras.md) |

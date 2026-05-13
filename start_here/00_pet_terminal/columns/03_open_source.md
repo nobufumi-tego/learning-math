@@ -219,3 +219,11 @@ OpenSSL のメンテナーは数人で、年間予算は **2,000ドル** (たっ
 - **xz Utils backdoor** — 2024年の事件、メンテナー疲弊問題の続編
 - **Free Software Foundation (FSF)** — RMS が作った財団
 - **OSI (Open Source Initiative)** — 「Open Source」の定義を管理する団体
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次 → |
+|---|---|---|
+| [`02_keyboard_age.md`](02_keyboard_age.md) | [章 TOP](../README.md) | 本流へ戻る: [`../09_ai_cli_as_smart_pet.md`](../09_ai_cli_as_smart_pet.md) |

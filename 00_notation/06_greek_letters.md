@@ -113,3 +113,13 @@ print(grad)  # [2*x, 3]
 - 大文字 `Σ` は「演算子」と「共分散行列」を**文脈で判別**
 - ε は「小さな正の数」の慣例だが、強化学習の「ε-greedy」では「探索確率」
 - ν と v は字形が似ていて混同しがち
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次の章 → |
+|---|---|---|
+| [`05_summation_product.md`](05_summation_product.md) | [章 TOP](README.md) | [`../01_linear_algebra/README.md`](../01_linear_algebra/README.md) |
+
+🎉 記号読解章卒業！次は線形代数の世界へ。

@@ -183,3 +183,11 @@ ps = np.array([1/6] * 6)
 ev = np.sum(xs * ps)
 print(ev)  # 3.5
 ```
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次 → |
+|---|---|---|
+| [`04_function_notation.md`](04_function_notation.md) | [章 TOP](README.md) | [`06_greek_letters.md`](06_greek_letters.md) |

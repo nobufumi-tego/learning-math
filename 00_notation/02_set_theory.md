@@ -84,3 +84,11 @@ print(S)  # {0, 1, 2, 3, 4}
   - `{1} ∈ {1, 2}` ❌（{1} は要素ではない、1 が要素）
 - `∅` は何の部分集合でもある: `∅ ⊆ A` は常に真
 - Python の `set` は順序を持たない、重複を許さない
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次 → |
+|---|---|---|
+| [`01_basic_symbols.md`](01_basic_symbols.md) | [章 TOP](README.md) | [`03_logic_symbols.md`](03_logic_symbols.md) |

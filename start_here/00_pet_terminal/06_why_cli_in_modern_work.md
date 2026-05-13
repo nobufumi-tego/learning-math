@@ -210,3 +210,11 @@ ChatGPT や Claude に:
 - **DevOps** — 開発と運用を自動化する文化、CLI が中心
 - **GitHub Actions** — クラウドで CLI を自動実行する仕組み
 - **Homebrew** (Mac) / **Chocolatey** (Windows) — CLIツールのインストールマネージャ
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次 → |
+|---|---|---|
+| [`05_pipes_and_combine.md`](05_pipes_and_combine.md) | [章 TOP](README.md) | [`07_python_for_pets.md`](07_python_for_pets.md) |

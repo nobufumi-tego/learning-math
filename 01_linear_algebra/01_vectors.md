@@ -475,3 +475,11 @@ print(np.linalg.norm(error))          # 0.244...
 - **ユークリッド空間 (Euclidean space)** — n次元の「普通の」空間
 - **Vector Database** — Pinecone, Chroma, Weaviate など。LLM 時代に急成長
 - **Embedding model** — OpenAI text-embedding-3, Cohere embed など
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次 → |
+|---|---|---|
+| [章 TOP](README.md) | [章 TOP](README.md) | [`02_matrices.md`](02_matrices.md) |

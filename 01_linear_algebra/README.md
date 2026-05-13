@@ -104,3 +104,11 @@ np.linalg.svd(A)      ↔   jnp.linalg.svd(A)
 ## 次の章へ
 
 線形代数を終えたら → [`02_calculus/`](../02_calculus/README.md) (微積分)
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次 → |
+|---|---|---|
+| [`../00_notation/06_greek_letters.md`](../00_notation/06_greek_letters.md) | (このページが章 TOP) | [`01_vectors.md`](01_vectors.md) |

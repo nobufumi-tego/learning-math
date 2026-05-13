@@ -217,3 +217,11 @@ uv run python 01_linear_algebra/examples/vectors_and_matrices.py
 - **PyPI (パイピーアイ)** — Python のライブラリ配布サイト、世界中の道具が集まる
 - **TIOBE Index** — プログラミング言語の人気ランキング、Python は近年常にトップ
 - **Anaconda** — Python の有名なディストリビューション (uv の競合)
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次 → |
+|---|---|---|
+| [`06_why_cli_in_modern_work.md`](06_why_cli_in_modern_work.md) | [章 TOP](README.md) | [`08_uv_keeps_pet_healthy.md`](08_uv_keeps_pet_healthy.md) |

@@ -96,3 +96,11 @@
 それでは、ペンタと一緒に最初の一歩を踏み出しましょう。
 
 → [`01_what_is_terminal.md`](01_what_is_terminal.md) へ
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次 → |
+|---|---|---|
+| [start_here 入口](../README.md) | (このページが章 TOP) | [`01_what_is_terminal.md`](01_what_is_terminal.md) |

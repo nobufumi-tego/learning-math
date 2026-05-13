@@ -34,3 +34,11 @@
 - 機械学習の論文の Abstract を読む
 - `np.sum(x)` と `Σx_i` の対応を説明する
 - ChatGPT/Claude に「行列の固有値分解」を質問して、出てきた数式を読み解く
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次 → |
+|---|---|---|
+| [`../start_here/04_logarithm.md`](../start_here/04_logarithm.md) | (このページが章 TOP) | [`01_basic_symbols.md`](01_basic_symbols.md) |

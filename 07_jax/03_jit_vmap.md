@@ -151,4 +151,14 @@ fast_grad_fn = jax.jit(grad_fn)
 これら4つで、現代の機械学習研究コードの大部分が書ける。
 
 ## サンプル
-- `examples/jit_vmap_demo.py` で実際の速度差を体感できる
+- [`examples/jit_vmap_demo.py`](examples/jit_vmap_demo.py) で実際の速度差を体感できる
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次の章 → |
+|---|---|---|
+| [`02_autodiff.md`](02_autodiff.md) | [章 TOP](README.md) | [`../04_discrete_math/README.md`](../04_discrete_math/README.md) |
+
+🎉 JAX 章卒業！残るは離散数学のみ (補助章)。

@@ -152,3 +152,11 @@ echo こんにちは
 - **シェルスクリプト** — シェルの命令をファイルにまとめたもの。自動化の第一歩
 - **dotfiles** — `.bashrc` `.zshrc` などの設定ファイル群。プロは大事に育てる
 - **starship** — モダンでカスタマイズ自由なプロンプト
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次 → |
+|---|---|---|
+| [`01_what_is_terminal.md`](01_what_is_terminal.md) | [章 TOP](README.md) | [`03_first_commands.md`](03_first_commands.md) |

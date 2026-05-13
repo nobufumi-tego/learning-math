@@ -179,3 +179,11 @@ uv run jupyter lab
 
 - 三角関数が現代社会のどこで使われているか → [`columns/02_trig_in_real_world.md`](columns/02_trig_in_real_world.md)
 - π（円周率）の不思議 → [`columns/04_e_and_pi.md`](columns/04_e_and_pi.md)
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次 → |
+|---|---|---|
+| [`02_pythagoras.md`](02_pythagoras.md) | [章 TOP](README.md) | [`04_logarithm.md`](04_logarithm.md) |

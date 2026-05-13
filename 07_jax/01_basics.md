@@ -120,4 +120,12 @@ keys = jax.random.split(key, num=10)   # 10個のキーを一気に作る
 # 3. 二乗和を計算
 ```
 
-`examples/jax_basics.py` で答え合わせができる。
+[`examples/jax_basics.py`](examples/jax_basics.py) で答え合わせができる。
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次 → |
+|---|---|---|
+| [章 TOP](README.md) | [章 TOP](README.md) | [`02_autodiff.md`](02_autodiff.md) |

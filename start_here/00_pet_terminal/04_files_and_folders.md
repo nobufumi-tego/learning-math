@@ -280,3 +280,11 @@ rm -ri practice    # -ri なら確認してから消してくれる
 - **シンボリックリンク (ln -s)** — ショートカット
 - **dotfile (隠しファイル)** — `.gitignore` `.bashrc` など `.` で始まるファイル
 - **`tree` コマンド** — フォルダ構造をきれいに表示
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次 → |
+|---|---|---|
+| [`03_first_commands.md`](03_first_commands.md) | [章 TOP](README.md) | [`05_pipes_and_combine.md`](05_pipes_and_combine.md) |

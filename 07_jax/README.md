@@ -87,6 +87,13 @@ x = jax.random.normal(subkey, shape=(3,))
 
 ## サンプル
 - `examples/jax_basics.py`: jax.numpy の基本
-- `examples/grad_demo.py`: 自動微分の威力
-- `examples/jit_vmap_demo.py`: JIT と vmap の効果
-- `examples/numpy_vs_jax.py`: 同じ計算を両方で実装し検算
+- [`examples/grad_demo.py`](examples/grad_demo.py): 自動微分の威力
+- [`examples/jit_vmap_demo.py`](examples/jit_vmap_demo.py): JIT と vmap の効果
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次 → |
+|---|---|---|
+| [`../06_ml_math_bridge/README.md`](../06_ml_math_bridge/README.md) | (このページが章 TOP) | [`01_basics.md`](01_basics.md) |

@@ -228,3 +228,11 @@ cd Doc[Tab]      # → cd Documents/ になる
 - **ファイルシステム** — Linux の ext4、macOS の APFS、Windows の NTFS
 - **Filesystem Hierarchy Standard (FHS)** — Linux のフォルダ構造の取り決め
 - **ターミナルショートカット** — Ctrl+A, Ctrl+E, Ctrl+R などで効率爆上げ
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次 → |
+|---|---|---|
+| [`02_meet_your_pet.md`](02_meet_your_pet.md) | [章 TOP](README.md) | [`04_files_and_folders.md`](04_files_and_folders.md) |

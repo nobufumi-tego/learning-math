@@ -114,3 +114,13 @@ PE(pos, 2i+1) = cos(pos / 10000^(2i/d))
 22世紀の人類が振り返ったら、「**21世紀の文明は、三角関数で動いていた**」と評するかもしれません。
 
 次に sin / cos の式を見たら、「**こいつのおかげで、私のスマホが動いている**」と感謝してみてください。
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次の読み物 → |
+|---|---|---|
+| [`01_pythagoras_story.md`](01_pythagoras_story.md) | [章 TOP](../README.md) | [`03_zero_invention.md`](03_zero_invention.md) |
+
+本流に戻る → [`../03_trigonometry.md`](../03_trigonometry.md)

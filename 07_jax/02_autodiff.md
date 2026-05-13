@@ -161,3 +161,11 @@ params = jax.tree.map(lambda p, g: p - lr * g, params, grads)
 ```
 
 これがニューラルネット訓練の本体。**勾配導出を一切書かない**で済む。
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次 → |
+|---|---|---|
+| [`01_basics.md`](01_basics.md) | [章 TOP](README.md) | [`03_jit_vmap.md`](03_jit_vmap.md) |

@@ -156,3 +156,11 @@ uv run jupyter lab
 ## 関連コラム
 
 - ピタゴラスは数学者か、宗教家か？ → [`columns/01_pythagoras_story.md`](columns/01_pythagoras_story.md)
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 目次 | 次 → |
+|---|---|---|
+| [`01_why_math.md`](01_why_math.md) | [章 TOP](README.md) | [`03_trigonometry.md`](03_trigonometry.md) |
