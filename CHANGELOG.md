@@ -50,6 +50,7 @@
 - `c265a59` docs(disclaimer): 連絡先から email を削除し GitHub チャネルに一本化
 - `405fb31` docs(readme): ライセンス記述をデュアルライセンスに統一
 - `7b36eda` docs(launch): 各章 README にワンショット起動方法 (start.bat/sh/ps1) を反映
+- `2666517` docs(readme): ZIP 展開手順を OS 別に追加 (初心者の最大つまずき対策)
 
 ### 🤖 CI/CD
 
@@ -66,4 +67,4 @@
 
 ---
 
-_Total commits indexed: **36**_
+_Total commits indexed: **37**_
