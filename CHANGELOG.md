@@ -71,6 +71,7 @@
 - `690a9f6` docs(jupyter): 残り 2 章 (00_notation, 07_jax) にも JupyterLab ガイドリンク追加
 - `83c84bb` docs(jupyter): セルが [*] で止まる症状を WebSocket 切れ視点で詳解
 - `361e66b` docs: 残存する旧 notebook パスを修正 + Phase 0/1/7 を解説/動かすペア表に統一
+- `63c04b2` docs(notebook): @jit 高速化の教育的コメントと章間クロスリンクを追加
 
 ### 🤖 CI/CD
 
@@ -87,4 +88,4 @@
 
 ---
 
-_Total commits indexed: **51**_
+_Total commits indexed: **52**_
