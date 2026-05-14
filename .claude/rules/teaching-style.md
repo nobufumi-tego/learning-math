@@ -56,6 +56,30 @@
 
 学習フローの順序は `AGENTS.md` および `docs/learning_path.md` 参照。
 
+### Jupyter notebook (.ipynb) の二段ナビ
+
+GitHub での閲覧時に迷わないよう、各 .ipynb には以下を必須:
+
+#### 冒頭セル (タイトル直後): クイックナビ
+```markdown
+> 🧭 **クイックナビ**: 📚 [ROOT (全体 TOP)](../../README.md) ・ 🏠 [章 TOP](../README.md) ・ 📖 [解説 md (XX.md)](../XX.md)
+```
+
+#### 末尾セル: .md と同じ 4カラム表
+```markdown
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [前のノート](prev.ipynb) | [章 TOP](../README.md) | [📚 ROOT README](../../README.md) | [次のノート](next.ipynb) |
+```
+
+notebook はすべて `<chapter>/notebooks/<name>.ipynb` レイアウトなので相対パスは固定:
+- ROOT: `../../README.md`
+- 章 TOP: `../README.md`
+
 ## 「標準形式」と「JAX形式」の併記ルール（厳守）
 
 すべての計算コードは、原則として標準形式（NumPy など）と JAX 形式の**両方**を提示する。

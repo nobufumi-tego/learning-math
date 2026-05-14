@@ -102,6 +102,31 @@ CLI に不安がある学習者を**置き去りにしない**ことを最優先
 - コラムは「本流に戻る」リンクを次ページ欄に置く
 - **「📚 全体 TOP」は ROOT README へのリンク**。深さに応じて `../README.md`, `../../README.md`, `../../../README.md` を使い分ける
 
+### (4) Jupyter notebook (.ipynb) も「二段ナビ」を必ず入れる
+
+GitHub で .ipynb を閲覧したときも迷子にならないよう、各 notebook に以下 2 つの markdown セルを設置する:
+
+#### 冒頭の「クイックナビ」 (タイトル直後の独立セル)
+```markdown
+> 🧭 **クイックナビ**: 📚 [ROOT (全体 TOP)](../../README.md) ・ 🏠 [章 TOP](../README.md) ・ 📖 [解説 md (XX.md)](../XX.md)
+```
+
+#### 末尾の「📍 ナビゲーション」 (.md と同じ 4カラム表)
+```markdown
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [前のノート](prev.ipynb) または [章 TOP](../README.md) | [章 TOP](../README.md) | [📚 ROOT README](../../README.md) | [次のノート](next.ipynb) または [次の章](../../next/README.md) |
+```
+
+すべての notebook は `<chapter>/notebooks/<name>.ipynb` レイアウトなので相対パスは:
+- ROOT: `../../README.md`
+- 章 TOP: `../README.md`
+- 同名 md: `../<name>.md`
+
 ### (3) 学習フロー全体図
 
 詳細は `docs/learning_path.md`。
