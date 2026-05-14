@@ -21,6 +21,8 @@
 
 詳細・トラブルシューティングは ROOT [`README.md`](../README.md) の Quick Start セクションを参照。**初心者の方はこちらを推奨します**。
 
+> 🧪 **Jupyter Lab を起動した後の使い方** (Shift+Enter でのセル実行、画面の見方、トラブル対処等) は [`jupyter_lab_guide.md`](jupyter_lab_guide.md) を参照してください。
+
 以下は「**仕組みを理解したい / スクリプトを使わず手動でやりたい**」 方向けの手動手順です。
 
 ---

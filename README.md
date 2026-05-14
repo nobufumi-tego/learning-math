@@ -131,6 +131,8 @@ git clone https://github.com/nobufumi-tego/learning-math.git
 
 > 📖 **VSCode 不要・ブラウザだけで完結**: 起動後の JupyterLab 内でこの README が開き、本文中のリンクから各章 README やコラムへ巡回できます。左サイドのファイルツリーから notebook (`.ipynb`) を開けばその場で実行可能。**ドキュメント閲覧 + コード実行 + ファイル編集** の全部が JupyterLab 1 つで完結します。
 
+> 🧪 **Jupyter Lab を初めて使う方** → **[`docs/jupyter_lab_guide.md`](docs/jupyter_lab_guide.md)** で完全ビギナーガイドを用意しています (Shift+Enter でセル実行する基本から、トラブル対処法、起動コマンドの使い分けまで)。
+
 最初の学習は **[`start_here/notebooks/01_pythagoras.ipynb`](start_here/notebooks/01_pythagoras.ipynb)** から始めるのがおすすめです (上記 README 内のリンクからも辿れます)。
 
 #### ⏰ 待ち時間の目安 — 「フリーズしてない?」 と心配しないでください
