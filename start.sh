@@ -58,9 +58,11 @@ echo ""
 echo "✅ 依存関係の準備が完了しました"
 echo ""
 
-# 3. Jupyter Lab 起動
+# 3. Jupyter Lab 起動 (README.md を Markdown プレビューで自動オープン)
 echo "🚀 Jupyter Lab を起動します..."
 echo "   ⏰ 初回起動は 10〜30 秒かかります。ブラウザが自動で開いたら準備完了です。"
+echo "   📖 README.md が自動で開きます。本文中のリンクから各章へ巡れます。"
+echo "   🧭 左サイドのファイルツリーで notebook (.ipynb) を開けば実行できます。"
 echo "   📛 停止するには、このターミナルで Ctrl+C を 2 回押してください。"
 echo ""
-exec uv run lab.py
+exec uv run lab.py README.md

@@ -77,9 +77,11 @@ Write-Host ""
 Write-Host "✅ 依存関係の準備が完了しました" -ForegroundColor Green
 Write-Host ""
 
-# 3. Jupyter Lab 起動
+# 3. Jupyter Lab 起動 (README.md を Markdown プレビューで自動オープン)
 Write-Host "🚀 Jupyter Lab を起動します..." -ForegroundColor Green
 Write-Host "   ⏰ 初回起動は 10〜30 秒かかります。ブラウザが自動で開いたら準備完了です。" -ForegroundColor Green
+Write-Host "   📖 README.md が自動で開きます。本文中のリンクから各章へ巡れます。" -ForegroundColor Green
+Write-Host "   🧭 左サイドのファイルツリーで notebook (.ipynb) を開けば実行できます。" -ForegroundColor Green
 Write-Host "   📛 停止するには、このウィンドウで Ctrl+C を 2 回押してください。" -ForegroundColor Green
 Write-Host ""
-uv run lab.py
+uv run lab.py README.md

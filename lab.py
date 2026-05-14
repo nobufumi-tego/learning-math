@@ -7,7 +7,11 @@
 - .md ファイルをダブルクリックすると Markdown Preview モードで開く
 
 使い方:
-    uv run lab.py
+    uv run lab.py                # 通常起動
+    uv run lab.py README.md      # 起動と同時に README.md を開く
+    uv run lab.py 01_linear_algebra/README.md   # 特定の章を直接開く
+
+start.sh / start.ps1 / start.bat はデフォルトで `README.md` を渡します。
 
 通常の JupyterLab を起動したい場合 (個人設定で起動) :
     uv run jupyter lab

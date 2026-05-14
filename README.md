@@ -127,9 +127,11 @@ git clone https://github.com/nobufumi-tego/learning-math.git
 スクリプトが以下を全部自動でやってくれます:
 1. **uv** が未インストールなら公式インストーラを実行 (ユーザー領域、管理者権限不要)
 2. **依存関係を sync** (初回は数分かかります)
-3. **Jupyter Lab を起動** (ブラウザが自動で開きます)
+3. **Jupyter Lab を起動** + **この README をブラウザで自動オープン** (Markdown プレビュー表示)
 
-ブラウザが開いたら **[`start_here/notebooks/01_pythagoras.ipynb`](start_here/notebooks/01_pythagoras.ipynb)** を開いてください。
+> 📖 **VSCode 不要・ブラウザだけで完結**: 起動後の JupyterLab 内でこの README が開き、本文中のリンクから各章 README やコラムへ巡回できます。左サイドのファイルツリーから notebook (`.ipynb`) を開けばその場で実行可能。**ドキュメント閲覧 + コード実行 + ファイル編集** の全部が JupyterLab 1 つで完結します。
+
+最初の学習は **[`start_here/notebooks/01_pythagoras.ipynb`](start_here/notebooks/01_pythagoras.ipynb)** から始めるのがおすすめです (上記 README 内のリンクからも辿れます)。
 
 #### ⏰ 待ち時間の目安 — 「フリーズしてない?」 と心配しないでください
 
