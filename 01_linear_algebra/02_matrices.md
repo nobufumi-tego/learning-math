@@ -7,7 +7,7 @@
 ## 💡 このページのコードを動かすには
 
 ```bash
-uv run lab.py
+uv run jupyter lab
 ```
 
 ファイルツリーから `01_linear_algebra/notebooks/02_matrices.ipynb` を開いて、上から順に **Shift+Enter**。
@@ -26,12 +26,14 @@ uv run lab.py
 
 行列 (matrix) とは、**数を縦横に並べた表**:
 
-```
-A = [ 1  2  3 ]
-    [ 4  5  6 ]
-```
+$$
+A = \begin{pmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6
+\end{pmatrix}
+$$
 
-これは **2行 × 3列** の行列。書き方は **`(2, 3) 行列`** または **`2×3 行列`**。
+これは **2行 × 3列** の行列。書き方は **「$(2, 3)$ 行列」** または **「$2 \times 3$ 行列」**。
 
 ### 何の役に立つか
 
@@ -40,7 +42,7 @@ A = [ 1  2  3 ]
 | **データセット** | 行=サンプル、列=特徴量 |
 | **画像** | 縦×横 のピクセル値 (グレースケールなら1枚の行列) |
 | **線形変換** | 「**ベクトルを別のベクトルに変換**」する操作 |
-| **連立方程式** | `Ax = b` の形 |
+| **連立方程式** | $A\mathbf{x} = \mathbf{b}$ の形 |
 | **グラフ (頂点間の繋がり)** | 隣接行列 |
 | **マルコフ連鎖** | 状態遷移確率 |
 
@@ -49,11 +51,11 @@ A = [ 1  2  3 ]
 
 ### 記号
 
-```
-A ∈ ℝᵐˣⁿ      ← 「A は m行n列の実数行列」
-```
+$$
+A \in \mathbb{R}^{m \times n} \quad \text{← 「} A \text{ は } m \text{ 行 } n \text{ 列の実数行列」}
+$$
 
-要素は `A[i, j]` または `aᵢⱼ` と書きます (i行目、j列目)。
+要素は $A[i, j]$ または $a_{ij}$ と書きます ($i$ 行目、$j$ 列目)。
 
 ⚠️ **数学は1始まり**, **Python は0始まり**。これがバグの最頻出原因。
 
@@ -97,26 +99,28 @@ np.ones((2, 3))       # 全要素1
 np.full((2, 3), 7)    # 全要素7
 ```
 
-### 単位行列 (identity matrix) `I`
+### 単位行列 (identity matrix) $I$
 
-対角線が1、他は0。**「掛け算の単位元」**:
+対角線が $1$、他は $0$。**「掛け算の単位元」**:
 
-```
-I₃ = [ 1  0  0 ]
-     [ 0  1  0 ]
-     [ 0  0  1 ]
-```
+$$
+I_3 = \begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+$$
 
 ```python
 np.eye(3)            # 3×3 単位行列
 ```
 
-性質: 任意の行列 `A` に対し `A I = I A = A`。
-数の世界で「× 1 は何も変えない」のと同じ。
+性質: 任意の行列 $A$ に対し $A I = I A = A$。
+数の世界で「$\times 1$ は何も変えない」のと同じ。
 
 ### 対角行列 (diagonal matrix)
 
-対角だけに値があり、他は0:
+対角だけに値があり、他は $0$:
 
 ```python
 np.diag([2, 3, 5])
@@ -127,7 +131,7 @@ np.diag([2, 3, 5])
 
 ### 対称行列 (symmetric matrix)
 
-`A = Aᵀ` を満たす行列。
+$A = A^\top$ を満たす行列。
 共分散行列やカーネル行列など、機械学習で頻出。
 
 ```python
@@ -141,13 +145,13 @@ print(np.allclose(A, A.T))    # True ← 対称
 
 ## 4. 転置 (transpose) — 行と列を入れ替える
 
-```
-A = [ 1  2  3 ]            Aᵀ = [ 1  4 ]
-    [ 4  5  6 ]                  [ 2  5 ]
-                                 [ 3  6 ]
-```
+$$
+A = \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{pmatrix}
+\qquad
+A^\top = \begin{pmatrix} 1 & 4 \\ 2 & 5 \\ 3 & 6 \end{pmatrix}
+$$
 
-shape は `(2, 3)` → `(3, 2)` に。
+shape は $(2, 3) \to (3, 2)$ に。
 
 ```python
 A = np.array([[1, 2, 3], [4, 5, 6]])
@@ -161,7 +165,7 @@ print(A.T.shape)     # (3, 2)
 print(jnp.array(A).T)
 ```
 
-> 💡 **頻出**: 「**A の転置と A の積**」は、機械学習の「**正規方程式**」「**ガラムリン法**」「**自己相関行列**」など、あちこちで出てきます:
+> 💡 **頻出**: 「**$A$ の転置と $A$ の積**」 $A^\top A$ は、機械学習の「**正規方程式**」「**自己相関行列**」など、あちこちで出てきます:
 > ```python
 > AtA = A.T @ A   # shape: (3, 3)
 > ```
@@ -170,16 +174,18 @@ print(jnp.array(A).T)
 
 ## 5. 行列とベクトルの積
 
-行列 `A` (m×n) とベクトル `x` (n次元) の積 `Ax` は、**m次元ベクトル**を返す。
+行列 $A \in \mathbb{R}^{m \times n}$ とベクトル $\mathbf{x} \in \mathbb{R}^n$ の積 $A\mathbf{x}$ は、**$m$ 次元ベクトル**を返す。
 
 ### 計算ルール
 
-```
-[ 1  2 ] [ 5 ]   [ 1×5 + 2×6 ]   [ 17 ]
-[ 3  4 ] [ 6 ] = [ 3×5 + 4×6 ] = [ 39 ]
-```
+$$
+\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}
+\begin{pmatrix} 5 \\ 6 \end{pmatrix}
+= \begin{pmatrix} 1 \cdot 5 + 2 \cdot 6 \\ 3 \cdot 5 + 4 \cdot 6 \end{pmatrix}
+= \begin{pmatrix} 17 \\ 39 \end{pmatrix}
+$$
 
-つまり「**A の各行と x の内積**」を並べたもの。
+つまり「**$A$ の各行と $\mathbf{x}$ の内積**」を並べたもの。
 
 ### Python
 
@@ -197,8 +203,8 @@ print(jnp.array(A) @ jnp.array(x))
 
 ### 幾何学的解釈: 「線形変換」
 
-`Ax` は **「x をAで変換した結果」**と解釈できます。
-A は「変換の法則」。
+$A\mathbf{x}$ は **「$\mathbf{x}$ を $A$ で変換した結果」**と解釈できます。
+$A$ は「変換の法則」。
 
 ```python
 # 例: 反時計回りに 90 度回転する行列
@@ -212,8 +218,14 @@ y = R @ x
 print(y)                     # [0. 1.] ← 90度回って、y軸方向に
 ```
 
+回転行列の一般形:
+
+$$
+R(\theta) = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}
+$$
+
 機械学習の「**ニューラルネットの1層**」は、結局この変換。
-**`y = Wx + b`** の `Wx` の部分です。
+**$\mathbf{y} = W\mathbf{x} + \mathbf{b}$** の $W\mathbf{x}$ の部分です。
 
 ---
 
@@ -221,20 +233,20 @@ print(y)                     # [0. 1.] ← 90度回って、y軸方向に
 
 ### ルール
 
-`A` (m×n) と `B` (n×p) の積 `AB` は、**(m×p) の行列**:
+$A \in \mathbb{R}^{m \times n}$ と $B \in \mathbb{R}^{n \times p}$ の積 $AB$ は、**$\mathbb{R}^{m \times p}$ の行列**:
 
-```
-(A B)[i, j] = Σₖ A[i, k] × B[k, j]
-```
+$$
+(AB)_{ij} = \sum_{k=1}^n A_{ik} B_{kj}
+$$
 
-つまり「**A の i行目と B の j列目の内積**」を、すべての (i, j) について計算。
+つまり「**$A$ の $i$ 行目と $B$ の $j$ 列目の内積**」を、すべての $(i, j)$ について計算。
 
 ### 重要: shape が合わないと計算できない
 
-```
-(2, 3) × (3, 4)  → (2, 4)   ✅ 中の3が一致
-(2, 3) × (4, 3)  → ❌ エラー
-```
+| サイズ | 結果 |
+|---|---|
+| $(2, 3) \times (3, 4) \to (2, 4)$ | ✅ 中の $3$ が一致 |
+| $(2, 3) \times (4, 3) \to$ ❌ | エラー |
 
 > 💡 **覚え方**: **「内側が一致、外側が結果の shape」**
 
@@ -258,12 +270,12 @@ print(C.shape)                     # (2, 2)
 
 | 性質 | 例 |
 |---|---|
-| **結合法則** | `(AB)C = A(BC)` ✅ |
-| **分配法則** | `A(B + C) = AB + AC` ✅ |
-| **可換じゃない** | 一般に `AB ≠ BA` ⚠️ |
-| **転置と積** | `(AB)ᵀ = BᵀAᵀ` (順序が逆!) |
+| **結合法則** | $(AB)C = A(BC)$ ✅ |
+| **分配法則** | $A(B + C) = AB + AC$ ✅ |
+| **可換じゃない** | 一般に $AB \neq BA$ ⚠️ |
+| **転置と積** | $(AB)^\top = B^\top A^\top$ (順序が逆!) |
 
-`AB ≠ BA` という事実は、線形代数の最大の罠の一つ。
+$AB \neq BA$ という事実は、線形代数の最大の罠の一つ。
 普通の数の掛け算とは違うことを、**何度も自分に言い聞かせる**必要があります。
 
 ---
@@ -272,13 +284,14 @@ print(C.shape)                     # (2, 2)
 
 ### 定義
 
-正方行列 `A` (n×n) に対して、`A⁻¹` という行列があれば:
-```
-A A⁻¹ = A⁻¹ A = I
-```
+正方行列 $A \in \mathbb{R}^{n \times n}$ に対して、$A^{-1}$ という行列があれば:
+
+$$
+A A^{-1} = A^{-1} A = I
+$$
 
 これを **逆行列** と呼ぶ。
-数の世界の「**逆数 (1/x)**」に対応します。
+数の世界の「**逆数 ($1/x$)**」に対応します。
 
 ### 計算
 
@@ -299,7 +312,7 @@ print(A @ A_inv)
 
 ### 連立方程式を解く
 
-「`Ax = b` を `x` について解く」=「`x = A⁻¹ b`」。
+「$A\mathbf{x} = \mathbf{b}$ を $\mathbf{x}$ について解く」 = 「$\mathbf{x} = A^{-1} \mathbf{b}$」。
 
 ```python
 # 2x + y = 5
@@ -323,7 +336,7 @@ print(x2)            # [1. 3.]
 ### 逆行列が存在しない場合
 
 すべての行列に逆行列があるわけではありません。
-**行列式 (determinant)** が 0 だと逆行列なし。
+**行列式 (determinant)** が $0$ だと逆行列なし。
 これを **特異 (singular)** または **退化 (degenerate)** と言います。
 
 ```python
@@ -341,10 +354,10 @@ print(np.linalg.det(A))            # 0.0 ← 特異
 
 行列式は、**「その行列による線形変換が、空間をどれだけ拡大するか」** を表すスカラー。
 
-- `det(A) = 2` → 面積 (2D) や体積 (3D) が 2倍
-- `det(A) = 1` → 大きさは変わらない (回転など)
-- `det(A) = -1` → 鏡映 (反転)
-- `det(A) = 0` → 潰れて次元が下がる (情報の損失)
+- $\det(A) = 2$ → 面積 (2D) や体積 (3D) が $2$ 倍
+- $\det(A) = 1$ → 大きさは変わらない (回転など)
+- $\det(A) = -1$ → 鏡映 (反転)
+- $\det(A) = 0$ → 潰れて次元が下がる (情報の損失)
 
 ### Python
 
@@ -358,18 +371,18 @@ print(np.linalg.det(A))            # -2.0  (1×4 − 2×3 = −2)
 
 行列式は、**正規分布の確率密度関数** や **VAE (Variational AutoEncoder)** の **ヤコビアン項** で出てきます:
 
-```
-p(x) = (1 / √((2π)ⁿ |Σ|)) × exp(-½ (x-μ)ᵀ Σ⁻¹ (x-μ))
-                  ↑
-               これが行列式
-```
+$$
+p(\mathbf{x}) = \frac{1}{\sqrt{(2\pi)^n |\Sigma|}} \exp\left(-\frac{1}{2} (\mathbf{x} - \boldsymbol{\mu})^\top \Sigma^{-1} (\mathbf{x} - \boldsymbol{\mu})\right)
+$$
+
+ここで $|\Sigma|$ が共分散行列の行列式。
 
 ---
 
 ## 9. ランク (rank) — 「行列が持つ情報量」
 
 ランクとは、**行列の独立な行 (or 列) の数**。
-- フル ランク = `min(m, n)` → 最大限の情報
+- フルランク = $\min(m, n)$ → 最大限の情報
 - ランク不足 = 行や列に重複・依存があり、情報が減っている
 
 ```python
@@ -419,17 +432,24 @@ R = np.array([
     [1, 1, 0, 5],   # ユーザー3
     [0, 0, 5, 4],   # ユーザー4
 ])
-# これを R ≈ U × V^T と分解して、欠損を埋める
+# これを R ≈ U V^T と分解して、欠損を埋める
 # (詳しくは 04_decompositions.md の SVD)
 ```
 
 → 詳細は [`04_decompositions.md`](04_decompositions.md) の SVD セクション
 
+行列分解の式:
+
+$$
+R \approx U \Sigma V^\top
+$$
+
 ### (4) Transformer の Attention
 
-```
-Attention(Q, K, V) = softmax(Q Kᵀ / √d) V
-```
+$$
+\mathrm{Attention}(Q, K, V) = \mathrm{softmax}\left(\frac{Q K^\top}{\sqrt{d}}\right) V
+$$
+
 すべて行列の積。ChatGPT/Claude/Gemini の中核も、行列。
 
 ---
@@ -438,14 +458,14 @@ Attention(Q, K, V) = softmax(Q Kᵀ / √d) V
 
 | 概念 | 数式 | Python | shape変化 |
 |---|---|---|---|
-| 行列の作成 | A ∈ ℝᵐˣⁿ | `np.array([[..],..])` | – |
-| 転置 | Aᵀ | `A.T` | (m,n) → (n,m) |
-| 行列×ベクトル | Ax | `A @ x` | (m,n) × (n,) → (m,) |
-| 行列×行列 | AB | `A @ B` | (m,n) × (n,p) → (m,p) |
-| 逆行列 | A⁻¹ | `np.linalg.inv(A)` | (n,n) → (n,n) |
-| 連立方程式 | Ax=b | `np.linalg.solve(A, b)` | – |
-| 行列式 | det(A) | `np.linalg.det(A)` | スカラー |
-| ランク | rank(A) | `np.linalg.matrix_rank(A)` | スカラー |
+| 行列の作成 | $A \in \mathbb{R}^{m \times n}$ | `np.array([[..],..])` | – |
+| 転置 | $A^\top$ | `A.T` | $(m,n) \to (n,m)$ |
+| 行列×ベクトル | $A\mathbf{x}$ | `A @ x` | $(m,n) \times (n,) \to (m,)$ |
+| 行列×行列 | $AB$ | `A @ B` | $(m,n) \times (n,p) \to (m,p)$ |
+| 逆行列 | $A^{-1}$ | `np.linalg.inv(A)` | $(n,n) \to (n,n)$ |
+| 連立方程式 | $A\mathbf{x} = \mathbf{b}$ | `np.linalg.solve(A, b)` | – |
+| 行列式 | $\det(A)$ | `np.linalg.det(A)` | スカラー |
+| ランク | $\mathrm{rank}(A)$ | `np.linalg.matrix_rank(A)` | スカラー |
 
 **この章のキー**: 行列はベクトルを別のベクトルに変換する装置。機械学習のすべての層は、結局行列の積。
 
@@ -464,8 +484,8 @@ Attention(Q, K, V) = softmax(Q Kᵀ / √d) V
 
 - **BLAS / LAPACK** — 線形代数演算の標準ライブラリ、NumPy/SciPy/JAX の裏側で動いている
 - **GEMM** (General Matrix Multiplication) — 行列積の標準名
-- **Strassen のアルゴリズム** — 行列積を O(n²·⁸¹) で計算する魔法
-- **疎行列 (sparse matrix)** — 0が多い行列の効率的扱い、`scipy.sparse`
+- **Strassen のアルゴリズム** — 行列積を $O(n^{2.81})$ で計算する魔法
+- **疎行列 (sparse matrix)** — $0$ が多い行列の効率的扱い、`scipy.sparse`
 - **ブロードキャスト (NumPy)** — 形状の違う配列同士の演算規則
 - **Einsum (`np.einsum`)** — 任意の行列演算を1行で書ける魔法
 - **PyTorch / TensorFlow** — 行列演算を GPU で高速化するフレームワーク

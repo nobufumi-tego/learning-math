@@ -11,6 +11,8 @@ JAX（や PyTorch）はこれを完全自動化する。
 
 ## 基本
 
+数式: $f(x) = x^2$ の微分 $f'(x) = 2x$
+
 ```python
 import jax
 import jax.numpy as jnp
@@ -25,12 +27,16 @@ df_dx = jax.grad(f)
 print(df_dx(3.0))   # 6.0  ← 解析解 2x | x=3
 ```
 
-これだけ。関数 `f` を渡すと、その勾配を計算する**関数**が返ってくる。
+これだけ。関数 $f$ を渡すと、その勾配を計算する**関数**が返ってくる。
 
 ## 多変数関数
 
 `jax.grad` はデフォルトで**第1引数についての勾配**を返す。
 ベクトル入力 → ベクトル勾配。
+
+数式: $g: \mathbb{R}^2 \to \mathbb{R}$, $g(\mathbf{x}) = x_0^2 + x_0 x_1 + x_1^2$
+
+勾配: $\nabla g = (2x_0 + x_1, x_0 + 2x_1)$
 
 ```python
 def g(x):
@@ -40,7 +46,7 @@ def g(x):
 grad_g = jax.grad(g)
 
 x = jnp.array([1.0, 2.0])
-print(grad_g(x))    # [4., 5.]  ← (∂g/∂x₀, ∂g/∂x₁) = (2x₀+x₁, x₀+2x₁)
+print(grad_g(x))    # [4., 5.]  ← (2x₀+x₁, x₀+2x₁)
 ```
 
 ## 値と勾配を同時に: `value_and_grad`
@@ -54,7 +60,7 @@ print(value)   # 7.0
 print(grad)    # [4., 5.]
 ```
 
-`f(x)` を 2 回呼ぶ必要がなく効率的。
+$f(x)$ を 2 回呼ぶ必要がなく効率的。
 
 ## 別の引数で微分する: `argnums`
 
@@ -79,6 +85,8 @@ print(dh_both(2.0, 3.0))  # (4.0, 27.0)
 
 `jax.grad` を**重ねがけ**できる。
 
+数式: $f(x) = x^3$, $f'(x) = 3x^2$, $f''(x) = 6x$, $f'''(x) = 6$
+
 ```python
 def f(x):
     return x ** 3       # f(x) = x³
@@ -94,7 +102,23 @@ print(d3f(2.0))  # 6.0
 
 ## ヤコビアン・ヘッシアン
 
-ベクトル → ベクトルの関数のヤコビアン（一階偏微分の行列）:
+ベクトル → ベクトルの関数のヤコビアン (一階偏微分の行列):
+
+数式: $\mathbf{f}: \mathbb{R}^2 \to \mathbb{R}^3$, $\mathbf{f}(x_0, x_1) = (x_0 + x_1, x_0 x_1, x_0^2)$
+
+$$
+J = \begin{pmatrix}
+\dfrac{\partial f_0}{\partial x_0} & \dfrac{\partial f_0}{\partial x_1} \\
+\dfrac{\partial f_1}{\partial x_0} & \dfrac{\partial f_1}{\partial x_1} \\
+\dfrac{\partial f_2}{\partial x_0} & \dfrac{\partial f_2}{\partial x_1}
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 1 \\
+x_1 & x_0 \\
+2x_0 & 0
+\end{pmatrix}
+$$
 
 ```python
 def vector_f(x):
@@ -115,7 +139,13 @@ print(jacobian(x))
 #  [2.  0. ]]   ← ∂f₂/∂x₀, ∂f₂/∂x₁
 ```
 
-ヘッシアン（二階偏微分の行列）:
+ヘッシアン (二階偏微分の行列):
+
+数式: $g(\mathbf{x}) = \sum_i x_i^3$
+
+$$
+H_{ii} = \frac{\partial^2 g}{\partial x_i^2} = 6 x_i, \quad H_{ij} = 0 \;\; (i \neq j)
+$$
 
 ```python
 def g(x):
@@ -132,19 +162,19 @@ print(hessian(jnp.array([1.0, 2.0, 3.0])))
 
 | 数学 | JAX |
 |---|---|
-| `df/dx` | `jax.grad(f)` |
-| `∂f/∂x` (多変数) | `jax.grad(f)` (xに関して) |
-| `∇f` (勾配) | `jax.grad(f)` |
-| `Jf` (ヤコビアン) | `jax.jacfwd(f)` |
-| `Hf` (ヘッシアン) | `jax.hessian(f)` |
-| `f^(n)` (n階微分) | `jax.grad` を n 回ネスト |
+| $\dfrac{df}{dx}$ | `jax.grad(f)` |
+| $\dfrac{\partial f}{\partial x}$ (多変数) | `jax.grad(f)` ($\mathbf{x}$ に関して) |
+| $\nabla f$ (勾配) | `jax.grad(f)` |
+| $J_f$ (ヤコビアン) | `jax.jacfwd(f)` |
+| $H_f$ (ヘッシアン) | `jax.hessian(f)` |
+| $f^{(n)}$ ($n$ 階微分) | `jax.grad` を $n$ 回ネスト |
 
 ## ハマりポイント
 
-- 微分対象の関数は**スカラーを返す**必要がある（`jax.grad` の場合）
+- 微分対象の関数は**スカラーを返す**必要がある (`jax.grad` の場合)
   - ベクトル出力なら `jacfwd` か `jacrev`
 - 整数で微分しようとするとエラー: `jax.grad(f)(3)` → `jax.grad(f)(3.0)`
-- 「`x[0]` での微分」ではなく**「`x`（ベクトル）での微分」が `[∂f/∂x[0], ∂f/∂x[1]]`** を返す
+- 「`x[0]` での微分」ではなく**「$\mathbf{x}$ (ベクトル) での微分」が $(\partial f / \partial x_0, \partial f / \partial x_1)$** を返す
 - 計算グラフを保持するため、極めて深いネストはメモリ食う
 
 ## ML での代表的使い方
@@ -159,6 +189,12 @@ loss_val, grads = jax.value_and_grad(loss_fn)(params, x, y)
 # パラメータ更新
 params = jax.tree.map(lambda p, g: p - lr * g, params, grads)
 ```
+
+数式での更新式:
+
+$$
+\boldsymbol{\theta} \leftarrow \boldsymbol{\theta} - \eta \nabla L(\boldsymbol{\theta})
+$$
 
 これがニューラルネット訓練の本体。**勾配導出を一切書かない**で済む。
 
