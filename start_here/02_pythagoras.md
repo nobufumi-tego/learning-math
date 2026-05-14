@@ -127,7 +127,7 @@ print(pythagoras(3, 4))
 uv run lab.py
 ```
 
-`start_here/notebooks/01_pythagoras.ipynb` を開くと、**スライダーで a と b を動かしながら**、斜辺の長さがどう変わるか見られます。
+[`notebooks/02_pythagoras.ipynb`](notebooks/02_pythagoras.ipynb) を開くと、**スライダーで a と b を動かしながら**、斜辺の長さがどう変わるか見られます。
 
 ## 補足: 「ルート」 √ ってなに？
 

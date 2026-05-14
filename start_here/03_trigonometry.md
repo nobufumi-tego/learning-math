@@ -146,11 +146,11 @@ Python の `math.sin` などは**ラジアン**を受け取ることを覚えて
 uv run lab.py
 ```
 
-`start_here/notebooks/02_trigonometry.ipynb` を開くと:
+[`notebooks/03_trigonometry.ipynb`](notebooks/03_trigonometry.ipynb) を開くと:
 - スライダーで角度を動かしながら、sin / cos の値の変化を見られる
 - 波の合成（ハーモニーや音色）を体験できる
 
-`start_here/notebooks/03_trig_usecases.ipynb` では:
+[`notebooks/03_trigonometry_usecases.ipynb`](notebooks/03_trigonometry_usecases.ipynb) では (本章の応用編):
 - 音波の生成と再生
 - GPS の位置計算デモ
 - アニメーション（円運動）

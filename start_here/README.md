@@ -50,13 +50,15 @@
 
 ## Jupyter ノートブック（遊んでみる）
 
-`notebooks/` の中に。Jupyter Lab で開いてセルを実行・編集できる。
+各 md (解説) と対応する ipynb (実行) がペアになっています。Jupyter Lab で開いてセルを実行・編集できる。
 
-| ノートブック | 何で遊べる？ |
-|---|---|
-| [`01_pythagoras.ipynb`](notebooks/01_pythagoras.ipynb) | 直角三角形の辺の長さをスライダーで動かす |
-| [`02_trigonometry.ipynb`](notebooks/02_trigonometry.ipynb) | sin/cos の波を動かしてみる |
-| [`03_trig_usecases.ipynb`](notebooks/03_trig_usecases.ipynb) | 音波・GPS・アニメ・フーリエ変換のデモ |
+| md (読む) | ipynb (動かす) | 何で遊べる？ |
+|---|---|---|
+| [`01_why_math.md`](01_why_math.md) | (なし — 読み物章) | — |
+| [`02_pythagoras.md`](02_pythagoras.md) | [`notebooks/02_pythagoras.ipynb`](notebooks/02_pythagoras.ipynb) | 直角三角形の辺の長さをスライダーで動かす |
+| [`03_trigonometry.md`](03_trigonometry.md) | [`notebooks/03_trigonometry.ipynb`](notebooks/03_trigonometry.ipynb) | sin/cos の波を動かしてみる |
+| 同上 (応用編) | [`notebooks/03_trigonometry_usecases.ipynb`](notebooks/03_trigonometry_usecases.ipynb) | 音波・GPS・アニメ・フーリエ変換のデモ |
+| [`04_logarithm.md`](04_logarithm.md) | [`notebooks/04_logarithm.ipynb`](notebooks/04_logarithm.ipynb) | 桁の圧縮・対数グラフ・クロスエントロピー |
 
 ### Jupyter Lab を起動する
 
