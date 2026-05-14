@@ -1,21 +1,85 @@
-MIT License
+# License Guide
 
-Copyright (c) 2026 Nobufumi Yoshida
+This repository uses a **dual license** scheme so that source code samples
+remain maximally reusable, while educational text content is protected from
+unauthorized commercial repackaging.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+> 🇯🇵 本リポジトリは **デュアルライセンス** を採用しています。コードは自由に再利用でき、
+> 教育的な文書コンテンツは無断商用利用を制限しています。
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+---
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OF OR OTHER DEALINGS IN
-THE SOFTWARE.
+## Quick Summary / 概要
+
+| Content Type / 対象 | License | File |
+|---|---|---|
+| **Source code** — `*.py`, `lab.py`, `scripts/`, code cells in notebooks (`*.ipynb`), config files | **MIT License** | [`LICENSE-CODE`](LICENSE-CODE) |
+| **Documentation** — `*.md`, markdown cells in notebooks, columns, glossaries, figures | **CC BY-NC-SA 4.0** | [`LICENSE-DOCS`](LICENSE-DOCS) |
+
+---
+
+## Why Dual License? / なぜ分けるのか
+
+### Code (MIT)
+
+The code samples are intentionally simple and educational. Use them in your own
+projects — commercial or otherwise — with no friction. Just keep the MIT notice.
+
+> コードはサンプルなので、商用・非商用を問わず自由に使ってください。
+> MIT ライセンス表記だけは残してください。
+
+### Documentation (CC BY-NC-SA 4.0)
+
+The explanations, columns, structural design, glossaries, and editorial choices
+represent significant authorial effort. They are licensed for **non-commercial
+use only**, with attribution, and any derivative works must use the same license.
+
+> 解説・コラム・構造設計・用語集・編集判断には相応の労力が投じられています。
+> **非商用利用のみ** 許可し、改変版も同条件で公開してください。
+
+You **MAY**:
+- ✅ Read, share, and redistribute for personal study and education
+- ✅ Adapt, translate, or remix for non-commercial purposes
+- ✅ Use AI tools (Claude / Gemini / Codex etc.) to extend or customize
+- ✅ Use in classrooms, study groups, and academic teaching (non-paid)
+
+You **MAY NOT** (without prior written permission):
+- ❌ Sell, repackage, or commercialize the content (book publication, paid courses, paid SaaS, etc.)
+- ❌ Use for paid corporate training or revenue-generating workshops
+- ❌ Strip the attribution and republish as your own
+- ❌ Re-license under more permissive terms (e.g., MIT) to circumvent NC restrictions
+
+---
+
+## File Classification / ファイル区分の判定
+
+When in doubt:
+
+| File extension / location | Treated as |
+|---|---|
+| `*.py`, `*.toml`, `*.yml`, `*.yaml`, `*.json`, `Makefile`, shell scripts | **Code** (MIT) |
+| `*.md`, `*.txt`, image files (`*.png`, `*.svg`, etc.) created for this repo | **Documentation** (CC BY-NC-SA 4.0) |
+| `*.ipynb` notebooks | **Mixed** — code cells under MIT, markdown cells under CC BY-NC-SA 4.0 |
+| Third-party content (cited papers, external images) | Original author's license; see in-text citation |
+
+---
+
+## Commercial Use / 商用利用について
+
+Want to use this content for any commercial purpose (book, paid course,
+corporate training, paid SaaS, resale, etc.)?
+
+See [`DISCLAIMER.md`](DISCLAIMER.md) for the contact channel. Commercial
+licenses are negotiated case by case.
+
+> 商用利用 (書籍化・有料講座・企業研修・有償配布等) をご希望の場合は、
+> [`DISCLAIMER.md`](DISCLAIMER.md) の窓口経由でご相談ください。
+> ケースバイケースで個別に有償許諾します。
+
+---
+
+## Copyright
+
+Copyright (c) 2026 Nobufumi Yoshida (and contributors)
+
+All rights not explicitly granted by the above licenses are reserved.

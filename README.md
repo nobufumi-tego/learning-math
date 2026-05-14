@@ -1,5 +1,9 @@
 # Leaning Math — 大学院数学基礎 × Python × 生成AI
 
+[![Docs License: CC BY-NC-SA 4.0](https://img.shields.io/badge/Docs-CC_BY--NC--SA_4.0-lightgrey.svg)](LICENSE-DOCS)
+[![Code License: MIT](https://img.shields.io/badge/Code-MIT-blue.svg)](LICENSE-CODE)
+[![Status: Personal Learning](https://img.shields.io/badge/status-personal_learning_(unreviewed)-orange.svg)](DISCLAIMER.md)
+
 「数学を全く知らない人」から「最先端AIの数学を理解する人」まで、**1つの道のり** で学ぶための個人学習リポジトリです。
 
 > ## ⚠️ 免責事項 (必読 / Must Read)
@@ -14,6 +18,17 @@
 > - 引用・転載・SNS 共有時は **「個人作成の未検証教材」 と明示** してください
 >
 > 詳細は **[`DISCLAIMER.md`](DISCLAIMER.md)** を参照。誤りの指摘は Issue / PR で歓迎しますが対応保証はありません。
+
+> ## 📜 ライセンス (デュアルライセンス)
+>
+> | 対象 | ライセンス |
+> |---|---|
+> | **コード** (`*.py`, スクリプト等) | [**MIT**](LICENSE-CODE) — 商用・非商用問わず自由に利用可 |
+> | **文書** (`*.md`, notebook の markdown セル, コラム等) | [**CC BY-NC-SA 4.0**](LICENSE-DOCS) — **非商用利用のみ** 許可、改変版も同条件で公開 |
+>
+> 個人学習・研究室・無償の勉強会での利用は自由です。
+> **書籍化・有料講座・企業研修・有償配布等の商用利用は事前にご相談ください** ([`DISCLAIMER.md`](DISCLAIMER.md#-商用利用について--commercial-use))。
+> 詳細・判定基準は [`LICENSE`](LICENSE) を参照。
 
 ---
 

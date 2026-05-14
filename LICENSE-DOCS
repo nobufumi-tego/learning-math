@@ -1,0 +1,104 @@
+# Documentation License — CC BY-NC-SA 4.0
+
+The documentation content in this repository is licensed under the
+**Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International**
+License (CC BY-NC-SA 4.0).
+
+Copyright (c) 2026 Nobufumi Yoshida
+
+---
+
+## Scope
+
+This license applies to:
+
+- All Markdown files (`*.md`)
+- Markdown cells in Jupyter notebooks (`*.ipynb`)
+- All textual explanations, columns, glossaries, navigation, and
+  diagrams contained therein
+- Images and figures specifically created for this repository (`*.png`, `*.svg`, etc.)
+
+It does NOT apply to source code; see `LICENSE-CODE` (MIT) for code.
+For an overview of the dual license scheme, see `LICENSE`.
+
+---
+
+## Summary (human-readable)
+
+You are free to:
+
+- **Share** — copy and redistribute the material in any medium or format
+- **Adapt** — remix, transform, and build upon the material
+
+Under the following terms:
+
+- **Attribution (BY)** — You must give appropriate credit, provide a link
+  to the license, and indicate if changes were made. You may do so in any
+  reasonable manner, but not in any way that suggests the licensor endorses
+  you or your use.
+- **NonCommercial (NC)** — You may not use the material for commercial
+  purposes.
+- **ShareAlike (SA)** — If you remix, transform, or build upon the material,
+  you must distribute your contributions under the same license as the
+  original.
+- **No additional restrictions** — You may not apply legal terms or
+  technological measures that legally restrict others from doing anything
+  the license permits.
+
+---
+
+## Examples
+
+### ✅ Permitted (no permission needed)
+
+- Fork the repository for personal study
+- Translate chapters into another language and publish on a personal blog
+  (with attribution + same CC BY-NC-SA 4.0)
+- Use the content in a free university lecture or study group
+- Use AI tools (Claude / Gemini / Codex etc.) to extend or customize the content
+- Cite a paragraph in a blog post or paper with attribution
+- Print copies for personal study or non-paid classroom distribution
+
+### ❌ NOT permitted (requires prior written permission)
+
+- Publish a commercial book based on this content
+- Create a paid online course reusing the explanations
+- Use as paid corporate training material
+- Resell access to the content (paywall, subscription, etc.)
+- Re-license under more permissive terms (e.g., MIT) to bypass NC
+- Use the content to generate paid AI-as-a-service products without attribution and license compliance
+
+---
+
+## Full Legal Text
+
+The full legal code of CC BY-NC-SA 4.0 is available at:
+
+  https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+The human-readable deed is at:
+
+  https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+In case of conflict between this summary and the official legal code,
+**the legal code prevails**.
+
+---
+
+## Attribution
+
+When reusing or adapting this content, please use an attribution similar to:
+
+```
+Adapted from "leaning-math" by Nobufumi Yoshida,
+licensed under CC BY-NC-SA 4.0.
+Source: https://github.com/nobufumi-tego/learning-math
+```
+
+---
+
+## Commercial Use
+
+For commercial use (book publication, paid courses, corporate training,
+resale, paid SaaS, etc.), please contact the author via the channel
+listed in `DISCLAIMER.md`. Commercial licenses are negotiated case by case.
