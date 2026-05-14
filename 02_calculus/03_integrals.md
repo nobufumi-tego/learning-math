@@ -16,7 +16,7 @@ uv run lab.py
 >
 > **このページの前提**:
 > - [`02_derivatives.md`](02_derivatives.md) — 微分 (積分は微分の "逆")
-> - [`00_notation/05_summation_product.md`](../00_notation/05_summation_product.md) — `∫` `Σ` の感覚
+> - [`00_notation/05_summation_product.md`](../00_notation/05_summation_product.md) — $\int$ $\sum$ の感覚
 
 ---
 
@@ -39,56 +39,47 @@ uv run lab.py
 
 | 記号 | 読み方 | 意味 |
 |---|---|---|
-| `∫ f(x) dx` | "the integral of f of x dee-x" | 不定積分 (関数を返す) |
-| `∫_a^b f(x) dx` | "integral from a to b of f(x) dx" | **定積分** (a〜b の面積、数値を返す) |
-| `dx` | "dee x" | 「x について積分する」の記号 |
-| `F(x)` | "big F" | f の不定積分 (原始関数) |
+| $\displaystyle\int f(x)\,dx$ | "the integral of f(x) dx" | 不定積分 (関数を返す) |
+| $\displaystyle\int_a^b f(x)\,dx$ | "integral from a to b" | **定積分** ($a \sim b$ の面積、数値を返す) |
+| $dx$ | "dee x" | 「$x$ について積分する」の記号 |
+| $F(x)$ | "big F" | $f$ の不定積分 (原始関数) |
 
 **微積分学の基本定理** (これが超重要):
-```
-∫_a^b f(x) dx = F(b) - F(a)        ただし F'(x) = f(x)
-```
 
-訳: 「**面積を計算するには、原始関数 F を見つけて、両端での値の差を取る**」
+$$
+\int_a^b f(x)\,dx = F(b) - F(a)
+\qquad \text{ただし } F'(x) = f(x)
+$$
+
+訳: 「**面積を計算するには、原始関数 $F$ を見つけて、両端での値の差を取る**」
 = **微分の逆操作で積分が解ける**。
 
 ---
 
 ## 3. 直感: 「短冊の和」が「面積」になる
 
-絵で考えると:
+「**短冊の幅を限りなく細くしていく → 真の面積**」 が積分の定義:
 
-```
-        f(x)
-         │
-   ┌────╮
-   │    │╮
-   │    │╮╮             ← グラフ
-   │    │  ╮╮╮
-   ├────┤    ╮╮
-   │ ▮  │ ▮  │  ▮       ← 短冊で近似
-   │ ▮  │ ▮  │  ▮
-   └────┴────┴────→ x
-   a    ...     b
-```
+$$
+\int_a^b f(x)\,dx = \lim_{n \to \infty} \sum_{i=1}^n f(x_i) \Delta x
+$$
 
-「**短冊の幅を限りなく細くしていく → 真の面積**」 が積分の定義。
-これを **リーマン和** と呼びます (大学数学で出てくる)。
+これを **リーマン和** と呼びます。
 
 ---
 
 ## 4. 主要な公式
 
-| f(x) | ∫ f(x) dx (+C) |
+| $f(x)$ | $\int f(x)\,dx \;(+C)$ |
 |---|---|
-| `定数 c` | `c·x` |
-| `xⁿ` | `xⁿ⁺¹ / (n+1)` (n ≠ -1) |
-| `1/x` | `ln|x|` |
-| `e^x` | `e^x` |
-| `sin x` | `-cos x` |
-| `cos x` | `sin x` |
+| $c$ (定数) | $cx$ |
+| $x^n$ ($n \neq -1$) | $\dfrac{x^{n+1}}{n+1}$ |
+| $\dfrac{1}{x}$ | $\ln \lvert x \rvert$ |
+| $e^x$ | $e^x$ |
+| $\sin x$ | $-\cos x$ |
+| $\cos x$ | $\sin x$ |
 
-> 💡 `+C` (積分定数) は不定積分でつく。**定積分では消える**ので気にしなくていい場面多い。
+> 💡 $+C$ (積分定数) は不定積分でつく。**定積分では消える**ので気にしなくていい場面多い。
 
 ---
 
@@ -109,13 +100,19 @@ print(sp.integrate(f, x))          # x³/3
 print(sp.integrate(f, (x, 0, 2)))  # 8/3
 ```
 
+得られる結果:
+
+$$
+\int x^2\,dx = \frac{x^3}{3} + C, \qquad \int_0^2 x^2\,dx = \frac{8}{3}
+$$
+
 複雑な関数も:
 ```python
 # ∫ sin(x) dx = -cos(x)
-print(sp.integrate(sp.sin(x), x))            # -cos(x)
+print(sp.integrate(sp.sin(x), x))
 
 # ∫₀^π sin(x) dx = 2
-print(sp.integrate(sp.sin(x), (x, 0, sp.pi)))  # 2
+print(sp.integrate(sp.sin(x), (x, 0, sp.pi)))
 ```
 
 ### 標準形式 2: SciPy (数値積分 — 速くて実用的)
@@ -137,7 +134,7 @@ print(f'結果: {result:.6f},  誤差推定: {error:.2e}')
 
 ### 多重積分
 
-二重積分 ∫∫ f(x,y) dxdy:
+二重積分 $\displaystyle\iint f(x, y)\,dx\,dy$:
 
 ```python
 from scipy import integrate
@@ -177,12 +174,13 @@ print(trapezoid(lambda x: x**2, 0.0, 2.0))   # 約 2.667
 
 ### 期待値 = 積分
 
-確率変数 X の期待値:
-```
-E[X] = ∫ x · p(x) dx
-```
+確率変数 $X$ の期待値:
 
-**確率密度関数 p(x)** で重み付けして x を全部足す = 積分。
+$$
+\mathbb{E}[X] = \int x \cdot p(x)\,dx
+$$
+
+**確率密度関数 $p(x)$** で重み付けして $x$ を全部足す = 積分。
 
 ```python
 from scipy import integrate
@@ -198,7 +196,7 @@ print(result)   # ≈ 0.0  (理論通り)
 
 ### 確率の規格化条件
 
-確率密度 p(x) は必ず `∫ p(x) dx = 1` を満たす:
+確率密度 $p(x)$ は必ず $\displaystyle\int p(x)\,dx = 1$ を満たす:
 
 ```python
 def gaussian(x):
@@ -211,9 +209,10 @@ print(result)   # 1.0  (規格化されている)
 ### 損失の汎化誤差
 
 理論上、機械学習モデルの「**汎化損失**」は:
-```
-L = ∫ ℓ(model(x), y) p(x, y) dx dy
-```
+
+$$
+L = \int \ell\bigl(\text{model}(x), y\bigr)\, p(x, y)\,dx\,dy
+$$
 
 実際は積分が解けないので、データの平均で近似する → これが**経験リスク**。
 
@@ -221,8 +220,8 @@ L = ∫ ℓ(model(x), y) p(x, y) dx dy
 
 ## 7. ハマりポイント
 
-- **`+C` (積分定数)** を忘れない (不定積分では必須)
-- **被積分関数の特異点**: `1/x` を 0 を含む区間で積分すると発散
+- **$+C$ (積分定数)** を忘れない (不定積分では必須)
+- **被積分関数の特異点**: $\dfrac{1}{x}$ を $0$ を含む区間で積分すると発散
 - **数値積分の精度**: 振動が激しい関数は `quad` でも誤差大 → 区間を分割する
 - **無限区間**: `quad(f, -np.inf, np.inf)` も使えるが、収束しない関数もある
 - **JAX で積分の勾配**: `quad` は JAX-traceable じゃない。台形則を自分で書くと OK
@@ -233,10 +232,10 @@ L = ∫ ℓ(model(x), y) p(x, y) dx dy
 
 | 概念 | 数式 | Python |
 |---|---|---|
-| 不定積分 | `∫ f(x) dx = F(x) + C` | `sympy.integrate(f, x)` |
-| 定積分 | `∫_a^b f(x) dx` | `sympy.integrate(f, (x, a, b))` |
+| 不定積分 | $\int f(x)\,dx = F(x) + C$ | `sympy.integrate(f, x)` |
+| 定積分 | $\int_a^b f(x)\,dx$ | `sympy.integrate(f, (x, a, b))` |
 | 数値定積分 | – | `scipy.integrate.quad(f, a, b)` |
-| 二重積分 | `∫∫ f dx dy` | `scipy.integrate.dblquad` |
+| 二重積分 | $\iint f\,dx\,dy$ | `scipy.integrate.dblquad` |
 | 台形則 (JAX) | – | 自分で書ける、`vmap` で高速 |
 
 **この章のキー**: 積分 = グラフの下の面積、もしくは「微小な量の累積」。微分の逆操作。

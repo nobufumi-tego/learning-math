@@ -102,7 +102,72 @@ CLI に不安がある学習者を**置き去りにしない**ことを最優先
 - コラムは「本流に戻る」リンクを次ページ欄に置く
 - **「📚 全体 TOP」は ROOT README へのリンク**。深さに応じて `../README.md`, `../../README.md`, `../../../README.md` を使い分ける
 
-### (4) Jupyter notebook (.ipynb) も「二段ナビ」を必ず入れる
+### (4) 数式は LaTeX で書く (コードブロックは Python 専用)
+
+**コピペ不要な「読む数式」は、すべて LaTeX で書く**。
+GitHub も Jupyter Lab も MathJax で論文と同じ綺麗なレンダリングが効く。
+
+#### インライン数式
+```markdown
+関数 $f(x) = x^2$ の微分は $f'(x) = 2x$。
+```
+→ レンダリング: 関数 $f(x) = x^2$ の微分は $f'(x) = 2x$。
+
+#### ブロック数式 (中央寄せ・大きく表示)
+```markdown
+$$
+\int_a^b f(x)\, dx = F(b) - F(a)
+$$
+```
+
+#### 多行 / 行揃え
+```markdown
+$$
+\begin{aligned}
+y &= wx + b \\
+\frac{\partial L}{\partial w} &= -2x(y - wx - b)
+\end{aligned}
+$$
+```
+
+#### 行列・ベクトル
+```markdown
+$$
+A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}
+$$
+```
+
+#### よく使う LaTeX 早見表
+
+| やりたい | LaTeX |
+|---|---|
+| 上付き/下付き | `x^2`, `x_i`, `x_{i,j}` |
+| 分数 | `\frac{a}{b}` |
+| 平方根 | `\sqrt{x}`, `\sqrt[n]{x}` |
+| 総和 | `\sum_{i=1}^n a_i` |
+| 総乗 | `\prod_{i=1}^n a_i` |
+| 積分 | `\int_a^b f(x)\,dx` |
+| 偏微分 | `\frac{\partial f}{\partial x}` |
+| 勾配 | `\nabla f` |
+| 極限 | `\lim_{x \to a}` |
+| 矢印 | `\to`, `\Rightarrow`, `\Leftrightarrow` |
+| 数の集合 | `\mathbb{R}`, `\mathbb{N}`, `\mathbb{Z}`, `\mathbb{Q}`, `\mathbb{C}` |
+| ノルム | `\|x\|`, `\|x\|_2` |
+| 内積 | `\langle u, v \rangle` または `u \cdot v` |
+| ギリシャ文字 | `\alpha`, `\beta`, `\gamma`, ..., `\Sigma`, `\Pi`, `\Lambda` |
+| 論理記号 | `\forall`, `\exists`, `\in`, `\notin`, `\subset`, `\cup`, `\cap` |
+| 関数記号 | `\sin`, `\cos`, `\exp`, `\log`, `\ln` (バックスラッシュ必須) |
+
+#### コードブロックを使ってよい場合
+- Python コード (`​```python`)
+- bash / PowerShell コード (`​```bash`, `​```powershell`)
+- JSON / YAML 設定
+- ASCII アート (`​```` (言語指定なし))
+- ターミナル出力
+
+**「読むための数式」にはコードブロックを使わない**こと。
+
+### (5) Jupyter notebook (.ipynb) も「二段ナビ」を必ず入れる
 
 GitHub で .ipynb を閲覧したときも迷子にならないよう、各 notebook に以下 2 つの markdown セルを設置する:
 
