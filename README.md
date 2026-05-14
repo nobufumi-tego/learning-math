@@ -380,7 +380,10 @@ JAX を最終到達点に据えることで、研究論文の最先端コード 
 | [`docs/learning_path.md`](docs/learning_path.md) | 学習ロードマップ (Phase −1 〜 8、約3か月コース) |
 | [`docs/ai_environment_setup.md`](docs/ai_environment_setup.md) | clone / ZIP 直後から本環境と同等の AI 体験を実現する仕組み |
 | [`pyproject.toml`](pyproject.toml) | Python 依存関係 |
-| [`LICENSE`](LICENSE) | MIT License |
+| [`LICENSE`](LICENSE) | デュアルライセンスのガイド (Code: MIT / Docs: CC BY-NC-SA 4.0) |
+| [`LICENSE-CODE`](LICENSE-CODE) | コード用ライセンス (MIT 本文) |
+| [`LICENSE-DOCS`](LICENSE-DOCS) | 文書用ライセンス (CC BY-NC-SA 4.0 サマリ + 公式 legalcode へのリンク) |
+| [`DISCLAIMER.md`](DISCLAIMER.md) | 免責事項 + 商用利用の連絡窓口 |
 
 ---
 
@@ -392,8 +395,23 @@ JAX を最終到達点に据えることで、研究論文の最先端コード 
 
 ## ライセンス
 
-[MIT License](LICENSE) — 自由に使用・改変・再配布できます。
+本リポジトリは **デュアルライセンス** で公開しています。詳細とファイル区分の判定基準は [`LICENSE`](LICENSE) を参照してください。
+
+| 対象 | ライセンス | 利用条件の要約 |
+|---|---|---|
+| **コード** (`*.py`, `lab.py`, `scripts/`, notebook の code セル, 設定ファイル等) | [**MIT**](LICENSE-CODE) | 商用・非商用問わず自由に使用・改変・再配布可。MIT ライセンス表記を残してください |
+| **文書** (`*.md`, notebook の markdown セル, コラム, 用語集, 図等) | [**CC BY-NC-SA 4.0**](LICENSE-DOCS) | **非商用利用のみ** 許可。改変版も同条件で公開してください (ShareAlike) |
+
+### 何が許可され、何が要相談か
+
+- ✅ **個人学習・研究室・無料の勉強会・大学のゼミ等での利用** — 自由 (どちらのライセンスも許可)
+- ✅ **コードを自分のプロジェクト (商用含む) で再利用** — MIT なので自由
+- ✅ **fork して AI と組んで章を拡張、非商用で再公開** — CC BY-NC-SA 4.0 で同条件公開なら自由
+- ❌ **書籍化 / 有料講座 / 企業内研修 / 有償配布 / paid SaaS への組み込み等の商用利用** — **要相談** ([`DISCLAIMER.md` の連絡窓口](DISCLAIMER.md#-商用利用について--commercial-use))
+- ❌ **改変して MIT 等のより緩いライセンスに変えて再公開 (ShareAlike 違反)** — 不可
+
+ライセンスは「無断で儲ける人をブロック」 するためのものであり、**学習者・研究者の自由な利用は積極的に推奨します**。
 
 ## 貢献
 
-個人学習用リポジトリですが、誤りの指摘や改善提案は Issue / PR で歓迎します。
+個人学習用リポジトリですが、誤りの指摘や改善提案は Issue / PR で歓迎します ([`DISCLAIMER.md`](DISCLAIMER.md#contributions) の通り、対応は保証されません)。
