@@ -9,6 +9,7 @@ dependencies = [
     "scipy>=1.11",
     "sympy>=1.12",
     "matplotlib>=3.8",
+    "japanize-matplotlib>=1.1",  # matplotlib に IPAex Gothic を自動設定 (日本語豆腐化対策)
     "jupyterlab>=4.0",
     "ipykernel>=6.29",
     "ipywidgets>=8.1",

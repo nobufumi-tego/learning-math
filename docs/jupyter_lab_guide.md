@@ -258,6 +258,61 @@ Jupyter Lab で開ける主なファイル:
 
 ---
 
+## 9.5. matplotlib で日本語を文字化けさせない (豆腐化対策)
+
+`matplotlib` でグラフを描くとき、デフォルトでは日本語フォントが入っていないため、`plt.title("二次関数")` のような日本語が **□□□ (豆腐)** になります。
+
+本リポジトリは **[`japanize-matplotlib`](https://github.com/uehara1414/japanize-matplotlib)** を依存関係に含めており、**1 行 import するだけ** で IPAex Gothic フォントが自動適用されます。
+
+### 使い方
+
+```python
+import japanize_matplotlib  # noqa: F401  ← import するだけで設定完了
+import matplotlib.pyplot as plt
+
+plt.title("二次関数 $y = x^2$")   # 日本語が豆腐化せずに表示される ✅
+plt.xlabel("変数 x")
+plt.ylabel("値 y")
+plt.show()
+```
+
+> 💡 `noqa: F401` は「未使用 import 警告を出さないで」 という linter ヒント。実際には `import` した時点で副作用として `rcParams['font.family'] = ['IPAexGothic']` が走るので使用しています。
+
+### よくあるパターン: notebook の冒頭セルにまとめて書く
+
+```python
+# === ライブラリ import (notebook の最初のセル) ===
+import numpy as np
+import matplotlib.pyplot as plt
+import japanize_matplotlib  # noqa: F401
+
+# 以降のセルで日本語ラベルが自由に使える
+```
+
+### 既に matplotlib を import した後でも OK
+
+```python
+import matplotlib.pyplot as plt
+plt.title("豆腐になる前")
+import japanize_matplotlib  # ← この後の描画は日本語 OK
+plt.title("豆腐にならない")
+```
+
+ただし**毎回 1 行追加するのが面倒** なので、冒頭でまとめて読み込むのを推奨します。
+
+### Seaborn を使う場合
+
+`japanize-matplotlib` は内部で matplotlib の rcParams を変更するため、**seaborn も同様に日本語化されます** (seaborn は matplotlib 上に乗っているため)。
+
+```python
+import japanize_matplotlib  # noqa: F401
+import seaborn as sns
+sns.set_theme()
+sns.barplot(x=["りんご", "みかん", "バナナ"], y=[3, 5, 2])  # 日本語 OK
+```
+
+---
+
 ## 10. ショートカット早見表
 
 これだけ覚えておけば 95% 困りません:
