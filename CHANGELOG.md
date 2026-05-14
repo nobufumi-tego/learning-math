@@ -28,6 +28,7 @@
 
 - `c996d60` fix(docs): pet_terminal README の「例」を実際の見栄えで表示
 - `ae2bf28` fix(bayes): underbrace+日本語 text の LaTeX 崩れを修正
+- `94e8fa2` fix(setup): Windows 起動スクリプトのエンコード問題を解消
 
 ### 📝 ドキュメント
 
@@ -65,4 +66,4 @@
 
 ---
 
-_Total commits indexed: **35**_
+_Total commits indexed: **36**_
