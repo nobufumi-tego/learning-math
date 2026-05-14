@@ -101,8 +101,11 @@ Issues and PRs welcome, but no guarantee of response or fix (this is a hobby pro
 | チャネル | URL / 形式 |
 |---|---|
 | **GitHub Issue** (推奨) | https://github.com/nobufumi-tego/learning-math/issues — タイトル先頭に `[Commercial]` を付けてください |
-| **GitHub Discussions** | リポジトリの Discussions タブ |
-| **Email** | `nobufumi.yoshida@tegosacloud.com` — 件名に `[leaning-math / Commercial]` を付けてください |
+| **GitHub Discussions** | リポジトリの Discussions タブ — オープンな質問・相談向け |
+
+> 💡 **email は意図的に公開していません**。スパム・営業対策のため、初回連絡は必ず上記の GitHub チャネル経由でお願いします。
+> 継続的なやり取りや契約手続きが必要になった段階で、Issue 内で別途連絡手段を案内します。
+> GitHub アカウントをお持ちでない場合は、無料で作成できます (https://github.com/signup)。
 
 ご相談内容に応じて、**個別ライセンス契約 / 有償許諾 / 共同企画** 等を相談します。
 内容によっては無償許諾もあり得ます (教育機関の非営利利用等)。
