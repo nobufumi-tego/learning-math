@@ -24,6 +24,7 @@
 - `b1448ef` feat(setup): リポ取得後ワンショットで Jupyter Lab を起動するスクリプトを追加
 - `e840a3b` feat(setup): Windows ダブルクリック起動の start.bat を追加
 - `b3f1db7` feat(launch): start スクリプトで README.md を JupyterLab に自動オープン
+- `c743b1c` feat(deps): matplotlib の日本語豆腐化対策に japanize-matplotlib を追加
 
 ### 🐛 バグ修正
 
@@ -72,4 +73,4 @@
 
 ---
 
-_Total commits indexed: **42**_
+_Total commits indexed: **43**_
