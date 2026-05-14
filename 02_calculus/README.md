@@ -78,8 +78,8 @@ df = jax.grad(f)                       # ← 自動
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次の章 → |
-|---|---|---|
-| [`../01_linear_algebra/04_decompositions.md`](../01_linear_algebra/04_decompositions.md) | (このページが章 TOP) | [`../03_probability_statistics/README.md`](../03_probability_statistics/README.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次の章 → |
+|---|---|---|---|
+| [`../01_linear_algebra/04_decompositions.md`](../01_linear_algebra/04_decompositions.md) | (このページが章 TOP) | [📚 ROOT README](../README.md) | [`../03_probability_statistics/README.md`](../03_probability_statistics/README.md) |
 
 > ⚠️ この章は現在 **README + サンプルのみ** の骨格状態です。本文の md は今後拡充予定。

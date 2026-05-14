@@ -109,6 +109,6 @@ np.linalg.svd(A)      ↔   jnp.linalg.svd(A)
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次 → |
-|---|---|---|
-| [`../00_notation/06_greek_letters.md`](../00_notation/06_greek_letters.md) | (このページが章 TOP) | [`01_vectors.md`](01_vectors.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [`../00_notation/06_greek_letters.md`](../00_notation/06_greek_letters.md) | (このページが章 TOP) | [📚 ROOT README](../README.md) | [`01_vectors.md`](01_vectors.md) |

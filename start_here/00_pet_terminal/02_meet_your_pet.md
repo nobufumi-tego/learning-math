@@ -157,6 +157,6 @@ echo こんにちは
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次 → |
-|---|---|---|
-| [`01_what_is_terminal.md`](01_what_is_terminal.md) | [章 TOP](README.md) | [`03_first_commands.md`](03_first_commands.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [`01_what_is_terminal.md`](01_what_is_terminal.md) | [章 TOP](README.md) | [📚 ROOT README](../../README.md) | [`03_first_commands.md`](03_first_commands.md) |

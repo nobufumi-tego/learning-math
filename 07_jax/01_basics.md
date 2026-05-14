@@ -126,6 +126,6 @@ keys = jax.random.split(key, num=10)   # 10個のキーを一気に作る
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次 → |
-|---|---|---|
-| [章 TOP](README.md) | [章 TOP](README.md) | [`02_autodiff.md`](02_autodiff.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [章 TOP](README.md) | [章 TOP](README.md) | [📚 ROOT README](../README.md) | [`02_autodiff.md`](02_autodiff.md) |

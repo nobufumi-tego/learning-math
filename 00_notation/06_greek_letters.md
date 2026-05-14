@@ -118,8 +118,8 @@ print(grad)  # [2*x, 3]
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次の章 → |
-|---|---|---|
-| [`05_summation_product.md`](05_summation_product.md) | [章 TOP](README.md) | [`../01_linear_algebra/README.md`](../01_linear_algebra/README.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次の章 → |
+|---|---|---|---|
+| [`05_summation_product.md`](05_summation_product.md) | [章 TOP](README.md) | [📚 ROOT README](../README.md) | [`../01_linear_algebra/README.md`](../01_linear_algebra/README.md) |
 
 🎉 記号読解章卒業！次は線形代数の世界へ。

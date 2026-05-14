@@ -80,8 +80,8 @@ grad_f = jax.grad(f)
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次の章 → |
-|---|---|---|
-| [`../03_probability_statistics/README.md`](../03_probability_statistics/README.md) | (このページが章 TOP) | [`../06_ml_math_bridge/README.md`](../06_ml_math_bridge/README.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次の章 → |
+|---|---|---|---|
+| [`../03_probability_statistics/README.md`](../03_probability_statistics/README.md) | (このページが章 TOP) | [📚 ROOT README](../README.md) | [`../06_ml_math_bridge/README.md`](../06_ml_math_bridge/README.md) |
 
 > ⚠️ この章は現在 **README + サンプルのみ** の骨格状態です。本文の md は今後拡充予定。

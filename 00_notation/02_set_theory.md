@@ -89,6 +89,6 @@ print(S)  # {0, 1, 2, 3, 4}
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次 → |
-|---|---|---|
-| [`01_basic_symbols.md`](01_basic_symbols.md) | [章 TOP](README.md) | [`03_logic_symbols.md`](03_logic_symbols.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [`01_basic_symbols.md`](01_basic_symbols.md) | [章 TOP](README.md) | [📚 ROOT README](../README.md) | [`03_logic_symbols.md`](03_logic_symbols.md) |

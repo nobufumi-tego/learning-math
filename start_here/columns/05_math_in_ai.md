@@ -158,6 +158,6 @@ Attention(Q, K, V) = softmax(Q × K^T / √d) × V
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次 → |
-|---|---|---|
-| [`04_e_and_pi.md`](04_e_and_pi.md) | [章 TOP](../README.md) | 本流の続き: [`../04_logarithm.md`](../04_logarithm.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [`04_e_and_pi.md`](04_e_and_pi.md) | [章 TOP](../README.md) | [📚 ROOT README](../../README.md) | 本流の続き: [`../04_logarithm.md`](../04_logarithm.md) |

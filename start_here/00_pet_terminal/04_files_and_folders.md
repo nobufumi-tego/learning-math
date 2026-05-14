@@ -285,6 +285,6 @@ rm -ri practice    # -ri なら確認してから消してくれる
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次 → |
-|---|---|---|
-| [`03_first_commands.md`](03_first_commands.md) | [章 TOP](README.md) | [`05_pipes_and_combine.md`](05_pipes_and_combine.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [`03_first_commands.md`](03_first_commands.md) | [章 TOP](README.md) | [📚 ROOT README](../../README.md) | [`05_pipes_and_combine.md`](05_pipes_and_combine.md) |

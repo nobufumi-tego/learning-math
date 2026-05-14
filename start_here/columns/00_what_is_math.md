@@ -105,8 +105,8 @@
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次の読み物 → |
-|---|---|---|
-| [章 TOP](../README.md) | [章 TOP](../README.md) | [`01_pythagoras_story.md`](01_pythagoras_story.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次の読み物 → |
+|---|---|---|---|
+| [章 TOP](../README.md) | [章 TOP](../README.md) | [📚 ROOT README](../../README.md) | [`01_pythagoras_story.md`](01_pythagoras_story.md) |
 
 本流に戻る → [`../01_why_math.md`](../01_why_math.md)

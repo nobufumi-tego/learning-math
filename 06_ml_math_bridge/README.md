@@ -118,8 +118,8 @@ loss_val, grads = jax.value_and_grad(mse_loss)(params, X, y)
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次の章 → |
-|---|---|---|
-| [`../05_optimization/README.md`](../05_optimization/README.md) | (このページが章 TOP) | [`../07_jax/README.md`](../07_jax/README.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次の章 → |
+|---|---|---|---|
+| [`../05_optimization/README.md`](../05_optimization/README.md) | (このページが章 TOP) | [📚 ROOT README](../README.md) | [`../07_jax/README.md`](../07_jax/README.md) |
 
 > ⚠️ この章は現在 **README + サンプルのみ** の骨格状態です。本文の md は今後拡充予定。

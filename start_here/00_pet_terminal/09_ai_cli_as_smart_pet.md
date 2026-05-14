@@ -206,8 +206,8 @@ AI が、あなたのレベルに合わせて教えてくれます。
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次の章 → |
-|---|---|---|
-| [`08_uv_keeps_pet_healthy.md`](08_uv_keeps_pet_healthy.md) | [章 TOP](README.md) | [start_here: 数学初心者の入口 →](../01_why_math.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次の章 → |
+|---|---|---|---|
+| [`08_uv_keeps_pet_healthy.md`](08_uv_keeps_pet_healthy.md) | [章 TOP](README.md) | [📚 ROOT README](../../README.md) | [start_here: 数学初心者の入口 →](../01_why_math.md) |
 
 🎉 ターミナル章卒業おめでとうございます！次は数学の世界へ。

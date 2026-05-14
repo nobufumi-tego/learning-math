@@ -222,6 +222,6 @@ uv run python 01_linear_algebra/examples/vectors_and_matrices.py
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次 → |
-|---|---|---|
-| [`06_why_cli_in_modern_work.md`](06_why_cli_in_modern_work.md) | [章 TOP](README.md) | [`08_uv_keeps_pet_healthy.md`](08_uv_keeps_pet_healthy.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [`06_why_cli_in_modern_work.md`](06_why_cli_in_modern_work.md) | [章 TOP](README.md) | [📚 ROOT README](../../README.md) | [`08_uv_keeps_pet_healthy.md`](08_uv_keeps_pet_healthy.md) |

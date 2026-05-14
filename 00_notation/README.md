@@ -39,6 +39,6 @@
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次 → |
-|---|---|---|
-| [`../start_here/04_logarithm.md`](../start_here/04_logarithm.md) | (このページが章 TOP) | [`01_basic_symbols.md`](01_basic_symbols.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [`../start_here/04_logarithm.md`](../start_here/04_logarithm.md) | (このページが章 TOP) | [📚 ROOT README](../README.md) | [`01_basic_symbols.md`](01_basic_symbols.md) |

@@ -480,6 +480,6 @@ print(np.linalg.norm(error))          # 0.244...
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次 → |
-|---|---|---|
-| [章 TOP](README.md) | [章 TOP](README.md) | [`02_matrices.md`](02_matrices.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [章 TOP](README.md) | [章 TOP](README.md) | [📚 ROOT README](../README.md) | [`02_matrices.md`](02_matrices.md) |

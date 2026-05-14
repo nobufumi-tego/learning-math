@@ -199,8 +199,8 @@ UNIX の哲学を一行で:
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次の読み物 → |
-|---|---|---|
-| [`00_history_of_computer.md`](00_history_of_computer.md) | [章 TOP](../README.md) | [`02_keyboard_age.md`](02_keyboard_age.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次の読み物 → |
+|---|---|---|---|
+| [`00_history_of_computer.md`](00_history_of_computer.md) | [章 TOP](../README.md) | [📚 ROOT README](../../../README.md) | [`02_keyboard_age.md`](02_keyboard_age.md) |
 
 本流に戻る → [`../09_ai_cli_as_smart_pet.md`](../09_ai_cli_as_smart_pet.md)

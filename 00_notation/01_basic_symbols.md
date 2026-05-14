@@ -91,6 +91,6 @@ print(sp.limit(1/x, x, sp.oo)) # 0  (lim x→∞ 1/x = 0)
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次 → |
-|---|---|---|
-| [章 TOP](README.md) | [章 TOP](README.md) | [`02_set_theory.md`](02_set_theory.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [章 TOP](README.md) | [章 TOP](README.md) | [📚 ROOT README](../README.md) | [`02_set_theory.md`](02_set_theory.md) |

@@ -166,6 +166,6 @@ params = jax.tree.map(lambda p, g: p - lr * g, params, grads)
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次 → |
-|---|---|---|
-| [`01_basics.md`](01_basics.md) | [章 TOP](README.md) | [`03_jit_vmap.md`](03_jit_vmap.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [`01_basics.md`](01_basics.md) | [章 TOP](README.md) | [📚 ROOT README](../README.md) | [`03_jit_vmap.md`](03_jit_vmap.md) |

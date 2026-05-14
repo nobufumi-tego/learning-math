@@ -37,17 +37,22 @@
 ```
 
 ### 章末ナビゲーションブロック (必須)
-各章 md の末尾に以下を必ず置く:
+各章 md の末尾に以下の **4 カラム表** を必ず置く:
 
 ```markdown
 ---
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次 → |
-|---|---|---|
-| [前ページタイトル](prev.md) | [章のREADME](README.md) | [次ページタイトル](next.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [前ページタイトル](prev.md) | [章のREADME](README.md) | [ROOT README](../README.md) | [次ページタイトル](next.md) |
 ```
+
+「📚 全体 TOP」は ROOT README へのリンク。ファイルの深さに応じて:
+- 1 階層: `../README.md`
+- 2 階層: `../../README.md`
+- 3 階層: `../../../README.md`
 
 学習フローの順序は `AGENTS.md` および `docs/learning_path.md` 参照。
 

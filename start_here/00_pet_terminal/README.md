@@ -101,6 +101,6 @@
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次 → |
-|---|---|---|
-| [start_here 入口](../README.md) | (このページが章 TOP) | [`01_what_is_terminal.md`](01_what_is_terminal.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [start_here 入口](../README.md) | (このページが章 TOP) | [📚 ROOT README](../../README.md) | [`01_what_is_terminal.md`](01_what_is_terminal.md) |

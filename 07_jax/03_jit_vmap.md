@@ -157,8 +157,8 @@ fast_grad_fn = jax.jit(grad_fn)
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次の章 → |
-|---|---|---|
-| [`02_autodiff.md`](02_autodiff.md) | [章 TOP](README.md) | [`../04_discrete_math/README.md`](../04_discrete_math/README.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次の章 → |
+|---|---|---|---|
+| [`02_autodiff.md`](02_autodiff.md) | [章 TOP](README.md) | [📚 ROOT README](../README.md) | [`../04_discrete_math/README.md`](../04_discrete_math/README.md) |
 
 🎉 JAX 章卒業！残るは離散数学のみ (補助章)。

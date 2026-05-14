@@ -87,8 +87,8 @@
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次の読み物 → |
-|---|---|---|
-| [`00_what_is_math.md`](00_what_is_math.md) | [章 TOP](../README.md) | [`02_trig_in_real_world.md`](02_trig_in_real_world.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次の読み物 → |
+|---|---|---|---|
+| [`00_what_is_math.md`](00_what_is_math.md) | [章 TOP](../README.md) | [📚 ROOT README](../../README.md) | [`02_trig_in_real_world.md`](02_trig_in_real_world.md) |
 
 本流に戻る → [`../02_pythagoras.md`](../02_pythagoras.md)

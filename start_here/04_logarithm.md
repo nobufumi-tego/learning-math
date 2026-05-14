@@ -149,8 +149,8 @@ print(-np.log(p))   # 4.605...   ← 外したときの損失は大きい
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次の章 → |
-|---|---|---|
-| [`03_trigonometry.md`](03_trigonometry.md) | [章 TOP](README.md) | [`../00_notation/README.md`](../00_notation/README.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次の章 → |
+|---|---|---|---|
+| [`03_trigonometry.md`](03_trigonometry.md) | [章 TOP](README.md) | [📚 ROOT README](../README.md) | [`../00_notation/README.md`](../00_notation/README.md) |
 
 🎉 数学初心者章卒業！次は本格的に数学記号の世界へ。

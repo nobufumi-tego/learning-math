@@ -106,6 +106,6 @@ def iff(P: bool, Q: bool) -> bool:
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次 → |
-|---|---|---|
-| [`02_set_theory.md`](02_set_theory.md) | [章 TOP](README.md) | [`04_function_notation.md`](04_function_notation.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [`02_set_theory.md`](02_set_theory.md) | [章 TOP](README.md) | [📚 ROOT README](../README.md) | [`04_function_notation.md`](04_function_notation.md) |

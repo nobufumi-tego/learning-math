@@ -476,6 +476,6 @@ Attention(Q, K, V) = softmax(Q Kᵀ / √d) V
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次 → |
-|---|---|---|
-| [`01_vectors.md`](01_vectors.md) | [章 TOP](README.md) | [`03_eigenvalues.md`](03_eigenvalues.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [`01_vectors.md`](01_vectors.md) | [章 TOP](README.md) | [📚 ROOT README](../README.md) | [`03_eigenvalues.md`](03_eigenvalues.md) |

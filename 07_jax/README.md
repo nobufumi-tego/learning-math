@@ -94,6 +94,6 @@ x = jax.random.normal(subkey, shape=(3,))
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次 → |
-|---|---|---|
-| [`../06_ml_math_bridge/README.md`](../06_ml_math_bridge/README.md) | (このページが章 TOP) | [`01_basics.md`](01_basics.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [`../06_ml_math_bridge/README.md`](../06_ml_math_bridge/README.md) | (このページが章 TOP) | [📚 ROOT README](../README.md) | [`01_basics.md`](01_basics.md) |

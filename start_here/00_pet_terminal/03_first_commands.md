@@ -233,6 +233,6 @@ cd Doc[Tab]      # → cd Documents/ になる
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次 → |
-|---|---|---|
-| [`02_meet_your_pet.md`](02_meet_your_pet.md) | [章 TOP](README.md) | [`04_files_and_folders.md`](04_files_and_folders.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [`02_meet_your_pet.md`](02_meet_your_pet.md) | [章 TOP](README.md) | [📚 ROOT README](../../README.md) | [`04_files_and_folders.md`](04_files_and_folders.md) |

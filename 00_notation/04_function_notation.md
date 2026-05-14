@@ -135,6 +135,6 @@ print(M[0, 1])  # 2  （数学の M_{1,2} に相当）
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次 → |
-|---|---|---|
-| [`03_logic_symbols.md`](03_logic_symbols.md) | [章 TOP](README.md) | [`05_summation_product.md`](05_summation_product.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [`03_logic_symbols.md`](03_logic_symbols.md) | [章 TOP](README.md) | [📚 ROOT README](../README.md) | [`05_summation_product.md`](05_summation_product.md) |

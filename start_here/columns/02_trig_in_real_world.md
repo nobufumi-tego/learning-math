@@ -119,8 +119,8 @@ PE(pos, 2i+1) = cos(pos / 10000^(2i/d))
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次の読み物 → |
-|---|---|---|
-| [`01_pythagoras_story.md`](01_pythagoras_story.md) | [章 TOP](../README.md) | [`03_zero_invention.md`](03_zero_invention.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次の読み物 → |
+|---|---|---|---|
+| [`01_pythagoras_story.md`](01_pythagoras_story.md) | [章 TOP](../README.md) | [📚 ROOT README](../../README.md) | [`03_zero_invention.md`](03_zero_invention.md) |
 
 本流に戻る → [`../03_trigonometry.md`](../03_trigonometry.md)

@@ -178,8 +178,8 @@ Macintosh の有名な広告 (Super Bowl の "1984") は今でも語り継がれ
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次の読み物 → |
-|---|---|---|
-| [章 TOP](../README.md) | [章 TOP](../README.md) | [`01_unix_philosophy.md`](01_unix_philosophy.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次の読み物 → |
+|---|---|---|---|
+| [章 TOP](../README.md) | [章 TOP](../README.md) | [📚 ROOT README](../../../README.md) | [`01_unix_philosophy.md`](01_unix_philosophy.md) |
 
 本流に戻る → [`../09_ai_cli_as_smart_pet.md`](../09_ai_cli_as_smart_pet.md)

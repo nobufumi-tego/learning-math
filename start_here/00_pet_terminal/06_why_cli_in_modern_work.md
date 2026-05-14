@@ -215,6 +215,6 @@ ChatGPT や Claude に:
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次 → |
-|---|---|---|
-| [`05_pipes_and_combine.md`](05_pipes_and_combine.md) | [章 TOP](README.md) | [`07_python_for_pets.md`](07_python_for_pets.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [`05_pipes_and_combine.md`](05_pipes_and_combine.md) | [章 TOP](README.md) | [📚 ROOT README](../../README.md) | [`07_python_for_pets.md`](07_python_for_pets.md) |

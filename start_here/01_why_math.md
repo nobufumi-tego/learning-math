@@ -76,6 +76,6 @@
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次 → |
-|---|---|---|
-| [`00_pet_terminal/09_ai_cli_as_smart_pet.md`](00_pet_terminal/09_ai_cli_as_smart_pet.md) | [章 TOP](README.md) | [`02_pythagoras.md`](02_pythagoras.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [`00_pet_terminal/09_ai_cli_as_smart_pet.md`](00_pet_terminal/09_ai_cli_as_smart_pet.md) | [章 TOP](README.md) | [📚 ROOT README](../README.md) | [`02_pythagoras.md`](02_pythagoras.md) |

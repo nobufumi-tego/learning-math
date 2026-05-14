@@ -188,6 +188,6 @@ print(ev)  # 3.5
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 目次 | 次 → |
-|---|---|---|
-| [`04_function_notation.md`](04_function_notation.md) | [章 TOP](README.md) | [`06_greek_letters.md`](06_greek_letters.md) |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [`04_function_notation.md`](04_function_notation.md) | [章 TOP](README.md) | [📚 ROOT README](../README.md) | [`06_greek_letters.md`](06_greek_letters.md) |
