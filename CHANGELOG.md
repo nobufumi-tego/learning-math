@@ -58,6 +58,7 @@
 - `e52388e` docs(launch): 各章 README の起動方法ブロックに待ち時間注意を追加
 - `cdf2b39` docs(jupyter): JupyterLab 完全ビギナーガイドを新設 + 全所からリンク
 - `690a9f6` docs(jupyter): 残り 2 章 (00_notation, 07_jax) にも JupyterLab ガイドリンク追加
+- `83c84bb` docs(jupyter): セルが [*] で止まる症状を WebSocket 切れ視点で詳解
 
 ### 🤖 CI/CD
 
@@ -74,4 +75,4 @@
 
 ---
 
-_Total commits indexed: **44**_
+_Total commits indexed: **45**_
