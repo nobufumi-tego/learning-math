@@ -23,6 +23,7 @@
 - `3dbba76` feat(appendix): 章別おすすめ書籍・Web リソース集を追加
 - `b1448ef` feat(setup): リポ取得後ワンショットで Jupyter Lab を起動するスクリプトを追加
 - `e840a3b` feat(setup): Windows ダブルクリック起動の start.bat を追加
+- `b3f1db7` feat(launch): start スクリプトで README.md を JupyterLab に自動オープン
 
 ### 🐛 バグ修正
 
@@ -69,4 +70,4 @@
 
 ---
 
-_Total commits indexed: **39**_
+_Total commits indexed: **40**_
