@@ -194,25 +194,31 @@ uv run lab.py             # Jupyter Lab 起動
 
 ---
 
-### Phase 5: ⛰️ 最適化 (骨格)
+### Phase 5: ⛰️ 最適化
 
 📂 [`05_optimization/`](05_optimization/README.md) — 章 TOP
 
-> ⚠️ 本文 md は今後拡充予定 (現在は README + サンプルのみ)
+| # | 解説 (md) | 動かす (ipynb) | 内容 |
+|---|---|---|---|
+| 01 | [`01_basic_concepts.md`](05_optimization/01_basic_concepts.md) | [`01_basic_concepts.ipynb`](05_optimization/notebooks/01_basic_concepts.ipynb) | 最小化・凸関数・ヘッセ行列 |
+| 02 | [`02_gradient_descent.md`](05_optimization/02_gradient_descent.md) | [`02_gradient_descent.ipynb`](05_optimization/notebooks/02_gradient_descent.ipynb) | GD/SGD/Mini-batch/Momentum/Adam |
 
-🐍 サンプル:
+🐍 CLI 実行サンプル:
 - [`examples/gradient_descent_demo.py`](05_optimization/examples/gradient_descent_demo.py) — 標準形式 (手で勾配導出)
 - [`examples/gradient_descent_demo_jax.py`](05_optimization/examples/gradient_descent_demo_jax.py) — JAX形式 (`jax.grad`)
 
 ---
 
-### Phase 6: 🌉 機械学習への橋渡し (骨格)
+### Phase 6: 🌉 機械学習への橋渡し
 
 📂 [`06_ml_math_bridge/`](06_ml_math_bridge/README.md) — 章 TOP
 
-> ⚠️ 本文 md は今後拡充予定 (現在は README + サンプルのみ)
+| # | 解説 (md) | 動かす (ipynb) | 内容 |
+|---|---|---|---|
+| 01 | [`01_loss_functions.md`](06_ml_math_bridge/01_loss_functions.md) | [`01_loss_functions.ipynb`](06_ml_math_bridge/notebooks/01_loss_functions.ipynb) | MSE・クロスエントロピー・正則化 |
+| 02 | [`02_backprop.md`](06_ml_math_bridge/02_backprop.md) | [`02_backprop.ipynb`](06_ml_math_bridge/notebooks/02_backprop.ipynb) | 誤差逆伝播・手書き vs JAX |
 
-🐍 サンプル:
+🐍 CLI 実行サンプル:
 - [`examples/loss_and_gradient.py`](06_ml_math_bridge/examples/loss_and_gradient.py) — 線形回帰 + クロスエントロピー (NumPy)
 - [`examples/loss_and_gradient_jax.py`](06_ml_math_bridge/examples/loss_and_gradient_jax.py) — JAX で線形回帰 (自動微分)
 

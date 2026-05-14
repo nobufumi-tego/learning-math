@@ -8,80 +8,99 @@
 - 損失関数の形状（凸 / 非凸、局所最適）が学習に直結
 - 学習率・モーメンタム・Adam などの理解に必要
 
+---
+
+## 💡 動かす前に
+
+このフォルダのコードは **Jupyter Lab** で対話的に動かすのが推奨です。
+
+```bash
+uv run lab.py
+```
+
+ブラウザが開いたら、左のファイルツリーから `05_optimization/notebooks/` を開いて、`01_basic_concepts.ipynb` から順に。
+
+> 🐧 **「`uv` ってなに?」「ターミナルがわからない」方** は:
+> - [`start_here/00_pet_terminal/`](../start_here/00_pet_terminal/README.md) — ペンタと学ぶターミナル基礎
+>
+> **数学の前提が不安なら**:
+> - [`02_calculus/05_gradient_jacobian.md`](../02_calculus/05_gradient_jacobian.md) — 勾配・ヘッセ行列
+
+---
+
 ## 学習ステップ
 
-| ファイル | 内容 | 所要時間 |
-|---|---|---|
-| `01_basic_concepts.md` | 最小化問題、凸関数 | 1.5時間 |
-| `02_gradient_descent.md` | 勾配降下法、学習率、収束 | 2時間 |
+| md (解説) | ipynb (動かす) | 内容 | 所要時間 |
+|---|---|---|---|
+| [`01_basic_concepts.md`](01_basic_concepts.md) | [`notebooks/01_basic_concepts.ipynb`](notebooks/01_basic_concepts.ipynb) | 最小化問題、凸関数、ヘッセ行列 | 1.5時間 |
+| [`02_gradient_descent.md`](02_gradient_descent.md) | [`notebooks/02_gradient_descent.ipynb`](notebooks/02_gradient_descent.ipynb) | GD/SGD/Mini-batch/Momentum/Adam | 2時間 |
+
+各 md は読み物、各 ipynb は手を動かす場所。**両方をペアで進めるのが効果的**です。
 
 ## キーとなる Python ツール
 
 ```python
-import numpy as np
-from scipy.optimize import minimize
+import jax
+import jax.numpy as jnp
+import optax
 
-def f(x: np.ndarray) -> float:
-    """目的関数: f(x) = (x[0] - 3)² + (x[1] + 2)²."""
-    return (x[0] - 3) ** 2 + (x[1] + 2) ** 2
+# JAX で勾配自動計算
+loss_fn = lambda params: ...
+grad_fn = jax.grad(loss_fn)
 
-# 最小化
-x0 = np.array([0.0, 0.0])  # 初期値
-result = minimize(f, x0)
-print(result.x)  # ≈ [3, -2]
+# 最適化器 (Optax)
+optimizer = optax.adam(learning_rate=1e-3)
+opt_state = optimizer.init(params)
+
+# 訓練 1 ステップ
+@jax.jit
+def step(params, opt_state):
+    grads = grad_fn(params)
+    updates, opt_state = optimizer.update(grads, opt_state)
+    params = optax.apply_updates(params, updates)
+    return params, opt_state
 ```
 
 ## 重要な記法
 
-| 記号 | 読み方 | 意味 |
-|---|---|---|
-| `argmin f(x)` | argmin | f を最小にする x |
-| `argmax f(x)` | argmax | f を最大にする x |
-| `min f(x)` | min | f の最小値（値） |
-| `s.t.` | subject to | 制約付き最適化の条件 |
+| 記号 | 意味 |
+|---|---|
+| $\arg\min f(\mathbf{x})$ | $f$ を最小にする $\mathbf{x}$ |
+| $\arg\max f(\mathbf{x})$ | $f$ を最大にする $\mathbf{x}$ |
+| $\min f(\mathbf{x})$ | $f$ の最小値（値） |
+| s.t. | subject to (制約条件) |
 
 更新式（勾配降下法）:
-```
-θ_{t+1} = θ_t − η ∇L(θ_t)
-```
+
+$$
+\boldsymbol{\theta}_{t+1} = \boldsymbol{\theta}_t - \eta \nabla L(\boldsymbol{\theta}_t)
+$$
 
 | 記号 | 意味 |
 |---|---|
-| `θ` | パラメータ |
-| `η` | 学習率 (learning rate) |
-| `∇L` | 損失関数の勾配 |
+| $\boldsymbol{\theta}$ | パラメータ |
+| $\eta$ | 学習率 (learning rate) |
+| $\nabla L$ | 損失関数の勾配 |
 
 ## ML への接続
 - SGD, Momentum, Adam（学習アルゴリズム）
-- 学習率スケジューリング
+- 学習率スケジューリング (warmup + cosine)
 - バッチ正規化、勾配クリッピング
 - 凸最適化 → SVM, ロジスティック回帰
 
-## サンプル
-- `examples/gradient_descent_demo.py`: 勾配を**手で導出**して降下（標準形式）
-- `examples/gradient_descent_demo_jax.py`: `jax.grad` で**自動微分**して降下（JAX形式）
+## CLI 実行用サンプル
 
-### この章で JAX が効くポイント
-
-複雑な目的関数の勾配を**手で導出する手間が消える**:
-
-```python
-# 標準形式: 目的関数が変わるたびに勾配を手で書き直す
-def grad_f(p): return np.array([2*(p[0]-3), 2*(p[1]+2)])
-
-# JAX形式: 目的関数だけ書けば勾配は自動
-def f(p): return (p[0]-3)**2 + (p[1]+2)**2
-grad_f = jax.grad(f)
+```bash
+uv run python 05_optimization/examples/gradient_descent_demo.py
 ```
 
-これに `@jit` を付けると更に高速化されるので、現代の研究コードはこちらが標準。
+- [`examples/gradient_descent_demo.py`](examples/gradient_descent_demo.py) — 標準形式
+- [`examples/gradient_descent_demo_jax.py`](examples/gradient_descent_demo_jax.py) — JAX形式
 
 ---
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次の章 → |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
 |---|---|---|---|
-| [`../03_probability_statistics/README.md`](../03_probability_statistics/README.md) | (このページが章 TOP) | [📚 ROOT README](../README.md) | [`../06_ml_math_bridge/README.md`](../06_ml_math_bridge/README.md) |
-
-> ⚠️ この章は現在 **README + サンプルのみ** の骨格状態です。本文の md は今後拡充予定。
+| [`../03_probability_statistics/04_bayes.md`](../03_probability_statistics/04_bayes.md) | (このページが章 TOP) | [📚 ROOT README](../README.md) | [`01_basic_concepts.md`](01_basic_concepts.md) |
