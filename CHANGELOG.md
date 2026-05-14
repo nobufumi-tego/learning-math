@@ -45,6 +45,7 @@
 - `44fa470` docs(license): デュアルライセンス導入 (Code: MIT, Docs: CC BY-NC-SA 4.0)
 - `504137f` docs(license): 各章 README にライセンスバナー追加 + 連絡先 email 追加
 - `c265a59` docs(disclaimer): 連絡先から email を削除し GitHub チャネルに一本化
+- `405fb31` docs(readme): ライセンス記述をデュアルライセンスに統一
 
 ### 🤖 CI/CD
 
@@ -60,4 +61,4 @@
 
 ---
 
-_Total commits indexed: **30**_
+_Total commits indexed: **31**_
