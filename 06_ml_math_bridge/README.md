@@ -113,6 +113,18 @@ uv run python 06_ml_math_bridge/examples/loss_and_gradient.py
 
 ---
 
+## 📚 さらに学ぶ
+
+- 📕 **[ゼロから作るDeep Learning](../appendix/books.md#ゼロから作るdeep-learning)** (斎藤康毅) — NumPy で NN 実装、シリーズ全 5 巻
+- 📕 **[Pattern Recognition and Machine Learning (PRML)](../appendix/books.md#pattern-recognition-and-machine-learning-prml)** (Bishop) — ML 理論の決定版
+- 📕 **[Deep Learning](../appendix/books.md#deep-learning)** (Goodfellow et al.) — **無料 PDF**
+- 🌐 **[Karpathy: Neural Networks Zero to Hero](../appendix/online.md#karpathy-neural-networks-zero-to-hero)** — GPT を 1 から実装
+- 🌐 [fast.ai](../appendix/online.md#fastai-practical-deep-learning-for-coders) — 実装ファースト DL 講座
+
+→ 全リソース一覧: [`appendix/`](../appendix/README.md)
+
+---
+
 ## 📍 ナビゲーション
 
 | ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次の章 → |

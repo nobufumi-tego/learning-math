@@ -262,6 +262,25 @@ uv run lab.py             # Jupyter Lab 起動
 
 ---
 
+## 📚 さらに学びたい人へ — Appendix (書籍 + Web リソース)
+
+📂 [`appendix/`](appendix/README.md) — **本リポジトリの後どこへ進むか** を網羅したガイド
+
+| ファイル | 内容 |
+|---|---|
+| [`appendix/README.md`](appendix/README.md) | 章別おすすめ早見表 + 学習目標別ロードマップ |
+| [`appendix/books.md`](appendix/books.md) | **書籍 50 冊** — 日英・初級〜上級・有料/無料、なぜおすすめか付き |
+| [`appendix/online.md`](appendix/online.md) | **オンライン教材** — YouTube / MOOC / 公式ドキュメント / 論文サイト |
+| [`appendix/learning_paths.md`](appendix/learning_paths.md) | 大学院・MLエンジニア・LLM開発・データサイエンティスト 別の進路 |
+
+**最初の 1 歩**:
+- 📕 [数学ガール](appendix/books.md#数学ガール) (結城浩) — 数学アレルギーをなくす物語
+- 📕 [プログラミングのための線形代数](appendix/books.md#プログラミングのための線形代数) — エンジニア向けの ML 基礎
+- 🌐 [3Blue1Brown](appendix/online.md#3blue1brown) — 数学を動画で直感的に
+- 🌐 [Karpathy: Neural Networks Zero to Hero](appendix/online.md#karpathy-neural-networks-zero-to-hero) — GPT を 1 から実装
+
+---
+
 ## 🛠️ Python 実装の方針: 「標準形式」 + 「JAX形式」 の併記
 
 各章の `examples/` には以下の2形式を併置します:

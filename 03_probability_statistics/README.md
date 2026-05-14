@@ -88,6 +88,18 @@ cdf = stats.norm.cdf(1.96)  # ≈ 0.975
 
 ---
 
+## 📚 さらに学ぶ
+
+- 📕 **[統計学入門 (赤本)](../appendix/books.md#統計学入門)** (東大出版会) — 統計学入門の決定版
+- 📕 **[データ解析のための統計モデリング入門 (緑本)](../appendix/books.md#データ解析のための統計モデリング入門)** (久保拓弥)
+- 📕 **[ベイズ推論による機械学習入門](../appendix/books.md#ベイズ推論による機械学習入門)** (須山敦志)
+- 🌐 **[StatQuest](../appendix/online.md#statquest-with-josh-starmer)** — 統計を楽しく分かりやすく
+- 🌐 **[Seeing Theory](../appendix/online.md#seeing-theory-brown-university)** — 確率をインタラクティブに体感
+
+→ 全リソース一覧: [`appendix/`](../appendix/README.md)
+
+---
+
 ## 📍 ナビゲーション
 
 | ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |

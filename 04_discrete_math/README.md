@@ -87,6 +87,16 @@ $$
 
 ---
 
+## 📚 さらに学ぶ
+
+- 📕 **[離散数学への招待](../appendix/books.md#離散数学への招待)** (Matoušek) — 体系的入門
+- 📕 **[Concrete Mathematics](../appendix/books.md#concrete-mathematics)** (Knuth, Graham, Patashnik) — TAOCP の Knuth による名著
+- 🌐 **[MIT 6.042 Math for CS](../appendix/online.md#mit-6042--60042-mathematics-for-computer-science)** — MIT 公開講義
+
+→ 全リソース一覧: [`appendix/`](../appendix/README.md)
+
+---
+
 ## 📍 ナビゲーション
 
 | ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |

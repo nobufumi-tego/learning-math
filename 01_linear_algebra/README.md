@@ -105,6 +105,17 @@ np.linalg.svd(A)      ↔   jnp.linalg.svd(A)
 
 線形代数を終えたら → [`02_calculus/`](../02_calculus/README.md) (微積分)
 
+## 📚 さらに学ぶ
+
+この章を終えて「もっと深く」と思った方は:
+
+- 📕 **[プログラミングのための線形代数](../appendix/books.md#プログラミングのための線形代数)** (平岡和幸・堀玄) — エンジニア向け本格解説
+- 📕 **[Linear Algebra Done Right](../appendix/books.md#linear-algebra-done-right)** (Axler) — 無料 PDF、エレガントな構成
+- 🌐 **[3Blue1Brown: Essence of Linear Algebra](../appendix/online.md#3blue1brown)** — 線形代数の直感を 3 時間で
+- 🌐 **[Strang MIT 18.06](../appendix/online.md#strang-mit-1806-linear-algebra)** — MIT の伝説的講義 (英語、無料)
+
+→ 全リソース一覧: [`appendix/`](../appendix/README.md)
+
 ---
 
 ## 📍 ナビゲーション

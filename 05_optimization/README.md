@@ -99,6 +99,17 @@ uv run python 05_optimization/examples/gradient_descent_demo.py
 
 ---
 
+## 📚 さらに学ぶ
+
+- 📕 **[これなら分かる最適化数学](../appendix/books.md#これなら分かる最適化数学)** (金谷健一) — 日本語の入門
+- 📕 **[Convex Optimization](../appendix/books.md#convex-optimization)** (Boyd & Vandenberghe) — **無料 PDF**、世界標準
+- 🌐 **[Boyd: Convex Optimization (Stanford)](../appendix/online.md#boyd-convex-optimization-stanford-ee364a)** — 講義動画も無料
+- 🌐 [Optax 公式ドキュメント](https://optax.readthedocs.io/) — JAX 用 optimizer
+
+→ 全リソース一覧: [`appendix/`](../appendix/README.md)
+
+---
+
 ## 📍 ナビゲーション
 
 | ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |

@@ -92,6 +92,17 @@ x = jax.random.normal(subkey, shape=(3,))
 
 ---
 
+## 📚 さらに学ぶ
+
+- 📕 **[Probabilistic Machine Learning](../appendix/books.md#probabilistic-machine-learning-murphy)** (Murphy) — JAX で実装された最新 ML 教科書、**無料 PDF**
+- 🌐 **[JAX 公式ドキュメント](../appendix/online.md#jax-公式)** — `jit`, `grad`, `vmap` の真髄
+- 🌐 [Optax 公式](https://optax.readthedocs.io/) — JAX 用最適化ライブラリ
+- 🌐 [Flax 公式](https://flax.readthedocs.io/) — JAX 用ニューラルネットライブラリ
+
+→ 全リソース一覧: [`appendix/`](../appendix/README.md)
+
+---
+
 ## 📍 ナビゲーション
 
 | ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |

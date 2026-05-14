@@ -104,6 +104,17 @@ df = jax.grad(f)                       # ← 自動
 
 ---
 
+## 📚 さらに学ぶ
+
+- 📕 **[やさしく学べる微分積分](../appendix/books.md#やさしく学べる微分積分)** (石村園子) — 計算重視の入門
+- 📕 **[微分積分学](../appendix/books.md#微分積分学-高木貞治)** (高木貞治) — 100 年読まれる古典
+- 🌐 **[3Blue1Brown: Essence of Calculus](../appendix/online.md#3blue1brown)** — 微積分の直感を動画で
+- 🌐 **[ヨビノリたくみ](../appendix/online.md#ヨビノリたくみ)** — 大学微積分を日本語で
+
+→ 全リソース一覧: [`appendix/`](../appendix/README.md)
+
+---
+
 ## 📍 ナビゲーション
 
 | ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
