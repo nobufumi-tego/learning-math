@@ -116,6 +116,6 @@ Copy-Item .claude\memory\*.md $target
 - [ ] `/project:column ピタゴラスの定理` でエッセイが返る
 - [ ] `uv sync` 成功
 - [ ] `uv run lab.py` でブラウザが開く
-- [ ] `start_here/notebooks/01_pythagoras.ipynb` のセルが実行できる
+- [ ] `start_here/notebooks/02_pythagoras.ipynb` のセルが実行できる
 
 すべてOKなら、本環境と同等の AI ドリブン学習体験が手に入っています。

@@ -128,7 +128,7 @@ uv run lab.py
 
 ブラウザが自動で開き、Jupyter Lab の画面が表示されます。
 
-左のファイルツリーから `start_here/notebooks/01_pythagoras.ipynb` を開いて、上から順にセル実行 (Shift+Enter) してみてください。
+左のファイルツリーから `start_here/notebooks/02_pythagoras.ipynb` を開いて、上から順にセル実行 (Shift+Enter) してみてください。
 
 > 💡 **`lab.py` って何?**
 > リポジトリ ルートの [`lab.py`](../lab.py) は、本リポジトリ専用の JupyterLab 設定 (`.jupyter/lab/user-settings/`) を読み込んでから JupyterLab を起動するラッパースクリプトです。
@@ -193,7 +193,7 @@ JupyterLab のダイアログは **デフォルトで英語** です。
 
 ```
 ┌─ Save your work ─────────────────────┐
-│ Save changes in "01_pythagoras.ipynb" │
+│ Save changes in "02_pythagoras.ipynb" │
 │ before closing?                       │
 │                                       │
 │      [Discard]  [Cancel]  [Save]      │

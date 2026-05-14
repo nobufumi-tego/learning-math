@@ -48,10 +48,10 @@
 - [ ] `start_here/README.md` を読む (5分)
 - [ ] `start_here/01_why_math.md` — そもそも数学って何の役に立つ？ (15分)
 - [ ] `start_here/02_pythagoras.md` — ピタゴラスの定理 (30分)
-- [ ] `start_here/notebooks/01_pythagoras.ipynb` で**スライダーを動かして遊ぶ** (15分)
+- [ ] `start_here/notebooks/02_pythagoras.ipynb` で**スライダーを動かして遊ぶ** (15分)
 - [ ] `start_here/03_trigonometry.md` — 三角関数 (45分)
-- [ ] `start_here/notebooks/02_trigonometry.ipynb` で sin/cos を可視化 (20分)
-- [ ] `start_here/notebooks/03_trig_usecases.ipynb` で音波・GPS・フーリエ (30分)
+- [ ] `start_here/notebooks/03_trigonometry.ipynb` で sin/cos を可視化 (20分)
+- [ ] `start_here/notebooks/03_trigonometry_usecases.ipynb` で音波・GPS・フーリエ (30分)
 - [ ] `start_here/04_logarithm.md` — 対数・地震・デシベル (30分)
 
 ### 読み物コラム（疲れたとき・移動中・休憩時に）

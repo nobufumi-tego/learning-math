@@ -133,7 +133,7 @@ git clone https://github.com/nobufumi-tego/learning-math.git
 
 > 🧪 **Jupyter Lab を初めて使う方** → **[`docs/jupyter_lab_guide.md`](docs/jupyter_lab_guide.md)** で完全ビギナーガイドを用意しています (Shift+Enter でセル実行する基本から、トラブル対処法、起動コマンドの使い分けまで)。
 
-最初の学習は **[`start_here/notebooks/01_pythagoras.ipynb`](start_here/notebooks/01_pythagoras.ipynb)** から始めるのがおすすめです (上記 README 内のリンクからも辿れます)。
+最初の学習は **[`start_here/notebooks/02_pythagoras.ipynb`](start_here/notebooks/02_pythagoras.ipynb)** から始めるのがおすすめです (上記 README 内のリンクからも辿れます)。
 
 #### ⏰ 待ち時間の目安 — 「フリーズしてない?」 と心配しないでください
 
@@ -282,12 +282,13 @@ Jupyter Lab を停止するには、起動したターミナル / PowerShell ウ
 
 📂 [`start_here/`](start_here/README.md) — 章 TOP
 
-| # | ページ | 内容 |
-|---|---|---|
-| 01 | [`01_why_math.md`](start_here/01_why_math.md) | そもそも数学って何の役に立つ？ |
-| 02 | [`02_pythagoras.md`](start_here/02_pythagoras.md) | ピタゴラスの定理 (家・GPS・AI) |
-| 03 | [`03_trigonometry.md`](start_here/03_trigonometry.md) | 三角関数 (スマホ・音楽・アニメ) |
-| 04 | [`04_logarithm.md`](start_here/04_logarithm.md) | 対数 (地震・デシベル・pH) |
+| # | 解説 (md) | 動かす (ipynb) | 内容 |
+|---|---|---|---|
+| 01 | [`01_why_math.md`](start_here/01_why_math.md) | (読み物章) | そもそも数学って何の役に立つ？ |
+| 02 | [`02_pythagoras.md`](start_here/02_pythagoras.md) | [`02_pythagoras.ipynb`](start_here/notebooks/02_pythagoras.ipynb) | ピタゴラスの定理 (家・GPS・AI) |
+| 03 | [`03_trigonometry.md`](start_here/03_trigonometry.md) | [`03_trigonometry.ipynb`](start_here/notebooks/03_trigonometry.ipynb) | 三角関数 (スマホ・音楽・アニメ) |
+| 03b | (同上 応用編) | [`03_trigonometry_usecases.ipynb`](start_here/notebooks/03_trigonometry_usecases.ipynb) | 音波・GPS・フーリエ変換のデモ |
+| 04 | [`04_logarithm.md`](start_here/04_logarithm.md) | [`04_logarithm.ipynb`](start_here/notebooks/04_logarithm.ipynb) | 対数 (地震・デシベル・pH・クロスエントロピー) |
 
 📖 コラム:
 - [`columns/00_what_is_math.md`](start_here/columns/00_what_is_math.md) — 数学はどこから来たか (5000年史)
@@ -297,28 +298,23 @@ Jupyter Lab を停止するには、起動したターミナル / PowerShell ウ
 - [`columns/04_e_and_pi.md`](start_here/columns/04_e_and_pi.md) — π と e の不思議
 - [`columns/05_math_in_ai.md`](start_here/columns/05_math_in_ai.md) — 今のAIは数学のどこで動いているか
 
-📓 Jupyter ノートブック (対話的に遊べる):
-- [`notebooks/01_pythagoras.ipynb`](start_here/notebooks/01_pythagoras.ipynb) — ピタゴラスの定理
-- [`notebooks/02_trigonometry.ipynb`](start_here/notebooks/02_trigonometry.ipynb) — 三角関数
-- [`notebooks/03_trig_usecases.ipynb`](start_here/notebooks/03_trig_usecases.ipynb) — 音波・GPS・フーリエ
-
 ---
 
 ### Phase 1: 📐 数学記号と論理
 
 📂 [`00_notation/`](00_notation/README.md) — 章 TOP
 
-| # | ページ | 内容 |
-|---|---|---|
-| 01 | [`01_basic_symbols.md`](00_notation/01_basic_symbols.md) | 等号・不等号・無限・数の集合 (ℕℤℚℝℂ) |
-| 02 | [`02_set_theory.md`](00_notation/02_set_theory.md) | 集合 ∈ ∉ ⊂ ⊃ ∪ ∩ |
-| 03 | [`03_logic_symbols.md`](00_notation/03_logic_symbols.md) | 論理 ∀ ∃ ⇒ ⇔ ∧ ∨ ¬ |
-| 04 | [`04_function_notation.md`](00_notation/04_function_notation.md) | 関数記法 f: A → B, ↦ |
-| 05 | [`05_summation_product.md`](00_notation/05_summation_product.md) | Σ (総和) / Π (総乗) / ∫ (積分) |
-| 06 | [`06_greek_letters.md`](00_notation/06_greek_letters.md) | ギリシャ文字一覧と慣習 |
+| # | 解説 (md) | 動かす (ipynb) | 内容 |
+|---|---|---|---|
+| 01 | [`01_basic_symbols.md`](00_notation/01_basic_symbols.md) | [`01_basic_symbols.ipynb`](00_notation/notebooks/01_basic_symbols.ipynb) | 等号・不等号・無限・± |
+| 02 | [`02_set_theory.md`](00_notation/02_set_theory.md) | [`02_set_theory.ipynb`](00_notation/notebooks/02_set_theory.ipynb) | 集合 ∈ ∉ ⊂ ⊆ ∪ ∩ ∅ |
+| 03 | [`03_logic_symbols.md`](00_notation/03_logic_symbols.md) | [`03_logic_symbols.ipynb`](00_notation/notebooks/03_logic_symbols.ipynb) | 論理 ∀ ∃ ⇒ ⇔ ∧ ∨ ¬ |
+| 04 | [`04_function_notation.md`](00_notation/04_function_notation.md) | [`04_function_notation.ipynb`](00_notation/notebooks/04_function_notation.ipynb) | 関数記法 f: A → B, ↦ |
+| 05 | [`05_summation_product.md`](00_notation/05_summation_product.md) | [`05_summation_product.ipynb`](00_notation/notebooks/05_summation_product.ipynb) | Σ (総和) / Π (総乗) / ∫ (積分) |
+| 06 | [`06_greek_letters.md`](00_notation/06_greek_letters.md) | [`06_greek_letters.ipynb`](00_notation/notebooks/06_greek_letters.ipynb) | ギリシャ文字一覧 + LaTeX 記法 |
 
-🐍 サンプル:
-- [`examples/notation_to_python.py`](00_notation/examples/notation_to_python.py) — 記号 → Python 対応例
+🐍 補助サンプル:
+- [`examples/notation_to_python.py`](00_notation/examples/notation_to_python.py) — 記号 → Python 対応例 (CLI 実行用)
 
 ---
 
@@ -407,13 +403,13 @@ Jupyter Lab を停止するには、起動したターミナル / PowerShell ウ
 
 📂 [`07_jax/`](07_jax/README.md) — 章 TOP
 
-| # | ページ | 内容 |
-|---|---|---|
-| 01 | [`01_basics.md`](07_jax/01_basics.md) | `jax.numpy`・配列の不変性・PRNGキー |
-| 02 | [`02_autodiff.md`](07_jax/02_autodiff.md) | `jax.grad`・`value_and_grad`・高階微分・ヤコビアン・ヘッシアン |
-| 03 | [`03_jit_vmap.md`](07_jax/03_jit_vmap.md) | `@jit` で高速化・`vmap` でベクトル化 |
+| # | 解説 (md) | 動かす (ipynb) | 内容 |
+|---|---|---|---|
+| 01 | [`01_basics.md`](07_jax/01_basics.md) | [`01_basics.ipynb`](07_jax/notebooks/01_basics.ipynb) | `jax.numpy`・配列の不変性・PRNGキー |
+| 02 | [`02_autodiff.md`](07_jax/02_autodiff.md) | [`02_autodiff.ipynb`](07_jax/notebooks/02_autodiff.ipynb) | `jax.grad`・`value_and_grad`・高階微分・ヤコビアン・ヘッシアン |
+| 03 | [`03_jit_vmap.md`](07_jax/03_jit_vmap.md) | [`03_jit_vmap.ipynb`](07_jax/notebooks/03_jit_vmap.ipynb) | `@jit` で高速化・`vmap` でベクトル化 |
 
-🐍 サンプル:
+🐍 補助サンプル (CLI 実行用):
 - [`examples/jax_basics.py`](07_jax/examples/jax_basics.py) — NumPy と JAX の対応
 - [`examples/grad_demo.py`](07_jax/examples/grad_demo.py) — 自動微分の威力
 - [`examples/jit_vmap_demo.py`](07_jax/examples/jit_vmap_demo.py) — JIT と vmap のベンチマーク
