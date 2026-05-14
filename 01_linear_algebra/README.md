@@ -15,7 +15,7 @@
 このフォルダのコードは **Jupyter Lab** で対話的に動かすのが推奨です。
 
 ```bash
-uv run jupyter lab
+uv run lab.py
 ```
 
 ブラウザが開いたら、左のファイルツリーから `01_linear_algebra/notebooks/` を開いて、`01_vectors.ipynb` から順に。

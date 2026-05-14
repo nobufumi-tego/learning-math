@@ -92,12 +92,20 @@ uv sync
 
 ```bash
 uv run python hello.py            # Python ファイル実行
-uv run jupyter lab                 # Jupyter Lab 起動
-uv run pytest                       # テスト実行
+uv run lab.py                     # Jupyter Lab 起動 (リポジトリ専用設定込み)
+uv run jupyter lab                # Jupyter Lab 起動 (素のまま、個人設定で)
+uv run pytest                     # テスト実行
 ```
 
 `uv run` を頭につけると、自動で「**さっき整えた環境**」を使ってくれます。
 **毎回 `source .venv/bin/activate` のような呪文を唱えなくていい**のがありがたい。
+
+> 💡 **`uv run lab.py` と `uv run jupyter lab` の違い**
+>
+> このリポジトリには [`lab.py`](../../lab.py) というラッパースクリプトがあります。
+> これを使うと、`.md` ファイルをダブルクリックしたときに **Markdown Preview モード**(綺麗な見た目)で開いてくれます。
+>
+> 普通の `uv run jupyter lab` だと、`.md` ファイルが**生のテキスト編集モード**で開いてしまい、初心者には見にくいので、本リポジトリでは **`uv run lab.py` を推奨** しています。
 
 ### 3. `uv add <package>` — 新しいライブラリを追加
 
@@ -142,7 +150,7 @@ cd path/to/leaning-math
 uv sync
 
 # 3. Jupyter Lab 起動
-uv run jupyter lab
+uv run lab.py
 
 # 4. または Python スクリプトを直接実行
 uv run python 00_notation/examples/notation_to_python.py

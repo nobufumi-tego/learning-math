@@ -13,7 +13,7 @@ leaning-math プロジェクトでは、**学習体験の質**を高めるため
 2. **数式ゼロの説明** — `/project:teach-baby` コマンドで起動。たとえ話のみで説明
 3. **コラム欄** (`start_here/columns/`) — 歴史・偉人エピソード・現代の使われ方を読み物風に
 4. **Jupyter notebook** (`start_here/notebooks/`) — ipywidgets でスライダー対話的に遊べる
-5. **クロスプラットフォーム** — Windows/Mac/Linux すべてで `uv sync && uv run jupyter lab` で起動
+5. **クロスプラットフォーム** — Windows/Mac/Linux すべてで `uv sync && uv run lab.py` で起動
 
 **Why:** ユーザー自身が「数学アレルギー」かつ「実生活で何の役に立つのか分からない」状態を表明。技術的内容だけだと読んでいて疲れるので、歴史や現代の使われ方の話を読み物として混ぜたい、という明示的なフィードバック。
 

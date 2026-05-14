@@ -124,7 +124,7 @@ print(pythagoras(3, 4))
 ## もっと遊びたい人は Jupyter Lab で
 
 ```bash
-uv run jupyter lab
+uv run lab.py
 ```
 
 `start_here/notebooks/01_pythagoras.ipynb` を開くと、**スライダーで a と b を動かしながら**、斜辺の長さがどう変わるか見られます。

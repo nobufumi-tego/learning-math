@@ -11,7 +11,7 @@ leaning-math プロジェクトでは、各章のサンプル実行は **Jupyter
 
 ## 各章 md の冒頭に必ず置く要素
 1. **「💡 このページのコードを動かすには」ボックス**
-2. `uv run jupyter lab` のコマンド
+2. `uv run lab.py` のコマンド
 3. 該当 `<章>/notebooks/<該当>.ipynb` のファイルツリー上のパス
 4. **🐧 CLI/uv が分からない人** への [`start_here/00_pet_terminal/`](../start_here/00_pet_terminal/README.md) 誘導
 5. **数学の前提が不安な人** への [`start_here/`](../start_here/README.md) や [`00_notation/`](../00_notation/README.md) 誘導

@@ -9,7 +9,7 @@
 このページのコード例は **Jupyter Lab** で対話的に試せます。
 
 ```bash
-uv run jupyter lab
+uv run lab.py
 ```
 
 ブラウザが開いたら、左のファイルツリーから `01_linear_algebra/notebooks/01_vectors.ipynb` を開いて、上から順に **Shift+Enter** でセル実行してください。

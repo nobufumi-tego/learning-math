@@ -27,7 +27,7 @@ cd path/to/learning-math
 uv sync
 
 # 4. Jupyter Lab を起動
-uv run jupyter lab
+uv run lab.py
 ```
 
 ブラウザが自動で開いたら **[`start_here/notebooks/01_pythagoras.ipynb`](start_here/notebooks/01_pythagoras.ipynb)** を開いてください。

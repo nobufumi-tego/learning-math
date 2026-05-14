@@ -19,7 +19,7 @@
 
 各章 md の冒頭に「**💡 このページのコードを動かすには**」ボックスを置き、以下を必ず含める:
 
-1. `uv run jupyter lab` のコマンド
+1. `uv run lab.py` のコマンド
 2. 該当 notebook へのファイルツリー上のパス
 3. `start_here/00_pet_terminal/` への誘導（CLI/uv が分からない人向け）
 4. `start_here/` および `00_notation/` への誘導（数学の前提知識が不安な人向け）

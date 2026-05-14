@@ -113,7 +113,7 @@ clone 後、以下が動けば AI 環境は本環境と同等:
 - [ ] `/project:explain-symbol ∀` で記号解説が返る
 - [ ] `/project:column ピタゴラスの定理` でエッセイが返る
 - [ ] `uv sync` 成功
-- [ ] `uv run jupyter lab` でブラウザが開く
+- [ ] `uv run lab.py` でブラウザが開く
 - [ ] `start_here/notebooks/01_pythagoras.ipynb` のセルが実行できる
 
 すべてOKなら、本環境と同等の AI ドリブン学習体験が手に入っています。

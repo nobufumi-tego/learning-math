@@ -143,7 +143,7 @@ Python の `math.sin` などは**ラジアン**を受け取ることを覚えて
 ## Jupyter Lab で遊ぶ
 
 ```bash
-uv run jupyter lab
+uv run lab.py
 ```
 
 `start_here/notebooks/02_trigonometry.ipynb` を開くと:

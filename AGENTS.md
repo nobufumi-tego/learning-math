@@ -29,7 +29,7 @@
 ```
 uv run python <script.py>         # スクリプト実行
 uv run pytest tests/ -v           # テスト実行
-uv run jupyter lab                # ノートブック起動
+uv run lab.py                # ノートブック起動
 uv run python -c "import sympy; sympy.init_printing(); ..."  # 数式描画
 ```
 
@@ -55,7 +55,7 @@ uv run python -c "import sympy; sympy.init_printing(); ..."  # 数式描画
 このページのコード例は **Jupyter Lab** で対話的に試せます。
 
 ```bash
-uv run jupyter lab
+uv run lab.py
 ```
 
 ブラウザが開いたら、左のファイルツリーから `<相対パス>/notebooks/<該当>.ipynb` を開いて、上から順に **Shift+Enter** でセル実行してください。

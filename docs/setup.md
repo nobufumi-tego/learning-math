@@ -54,12 +54,19 @@ uv sync
 ## ステップ 3: Jupyter Lab を起動
 
 ```bash
-uv run jupyter lab
+uv run lab.py
 ```
 
 ブラウザが自動で開き、Jupyter Lab の画面が表示されます。
 
 左のファイルツリーから `start_here/notebooks/01_pythagoras.ipynb` を開いて、上から順にセル実行 (Shift+Enter) してみてください。
+
+> 💡 **`lab.py` って何?**
+> リポジトリ ルートの [`lab.py`](../lab.py) は、本リポジトリ専用の JupyterLab 設定 (`.jupyter/lab/user-settings/`) を読み込んでから JupyterLab を起動するラッパースクリプトです。
+> これにより、`.md` ファイルをダブルクリックしたときに **自動的に Markdown Preview モード** で表示されます (raw な markdown を編集モードで開かなくて済む)。
+>
+> 通常の `uv run jupyter lab` でも起動できますが、その場合は本リポジトリの設定は適用されません。
+> 詳細は [`.jupyter/README.md`](../.jupyter/README.md) を参照。
 
 ## ステップ 4: Python スクリプトを直接実行する
 

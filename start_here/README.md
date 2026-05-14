@@ -20,7 +20,7 @@
 
 → **[`00_pet_terminal/`](00_pet_terminal/README.md)** — ペンギンの **ペンタ** と一緒に、ターミナル基礎をゼロから学ぶ章
 
-ここを終えてから下記の数学パートに進めば、`uv run jupyter lab` などの呪文も理解した上で実行できます。
+ここを終えてから下記の数学パートに進めば、`uv run lab.py` などの呪文も理解した上で実行できます。
 
 ## 学習順序
 
@@ -60,7 +60,7 @@
 ```bash
 # プロジェクトルートで（Windows・Mac・Linux共通）
 uv sync                  # 初回のみ
-uv run jupyter lab
+uv run lab.py
 ```
 
 ブラウザが自動で開きます。`start_here/notebooks/01_pythagoras.ipynb` を開いて、上から順にセルを実行（Shift + Enter）してみてください。

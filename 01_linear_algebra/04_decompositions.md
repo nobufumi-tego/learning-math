@@ -7,7 +7,7 @@
 ## 💡 このページのコードを動かすには
 
 ```bash
-uv run jupyter lab
+uv run lab.py
 ```
 
 ファイルツリーから `01_linear_algebra/notebooks/04_decompositions.ipynb` を開いて、上から順に **Shift+Enter**。
