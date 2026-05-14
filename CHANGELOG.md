@@ -34,6 +34,10 @@
 - `d881292` fix(notebooks): matplotlib 使用 22 notebook に japanize_matplotlib 追加
 - `4613179` fix(notebooks): 実行時の UserWarning / DeprecationWarning を抑制
 
+### ♻️ リファクタリング
+
+- `24e9af2` refactor(start_here): notebook を md と番号一致 + 04_logarithm.ipynb 新設
+
 ### 📝 ドキュメント
 
 - `5ae486d` docs(nav): 各章末にナビゲーションブロックを追加 + ファイル名のリンク化規約
@@ -76,4 +80,4 @@
 
 ---
 
-_Total commits indexed: **46**_
+_Total commits indexed: **47**_
