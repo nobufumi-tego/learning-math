@@ -55,6 +55,7 @@
 - `f2d568f` docs(setup): 初回起動の待ち時間と進捗の見方を明示
 - `e52388e` docs(launch): 各章 README の起動方法ブロックに待ち時間注意を追加
 - `cdf2b39` docs(jupyter): JupyterLab 完全ビギナーガイドを新設 + 全所からリンク
+- `690a9f6` docs(jupyter): 残り 2 章 (00_notation, 07_jax) にも JupyterLab ガイドリンク追加
 
 ### 🤖 CI/CD
 
@@ -71,4 +72,4 @@
 
 ---
 
-_Total commits indexed: **41**_
+_Total commits indexed: **42**_
