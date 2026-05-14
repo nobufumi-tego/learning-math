@@ -4,6 +4,9 @@
 CLAUDE.local.md
 GEMINI.local.md
 
+# 個人メモ・会話ログ（git に上げない）
+notes/
+
 # Python
 __pycache__/
 *.pyc
