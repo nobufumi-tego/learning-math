@@ -48,6 +48,7 @@
 - `504137f` docs(license): 各章 README にライセンスバナー追加 + 連絡先 email 追加
 - `c265a59` docs(disclaimer): 連絡先から email を削除し GitHub チャネルに一本化
 - `405fb31` docs(readme): ライセンス記述をデュアルライセンスに統一
+- `7b36eda` docs(launch): 各章 README にワンショット起動方法 (start.bat/sh/ps1) を反映
 
 ### 🤖 CI/CD
 
@@ -64,4 +65,4 @@
 
 ---
 
-_Total commits indexed: **34**_
+_Total commits indexed: **35**_
