@@ -32,6 +32,7 @@
 - `ae2bf28` fix(bayes): underbrace+日本語 text の LaTeX 崩れを修正
 - `94e8fa2` fix(setup): Windows 起動スクリプトのエンコード問題を解消
 - `d881292` fix(notebooks): matplotlib 使用 22 notebook に japanize_matplotlib 追加
+- `4613179` fix(notebooks): 実行時の UserWarning / DeprecationWarning を抑制
 
 ### 📝 ドキュメント
 
@@ -75,4 +76,4 @@
 
 ---
 
-_Total commits indexed: **45**_
+_Total commits indexed: **46**_
