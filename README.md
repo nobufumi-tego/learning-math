@@ -95,6 +95,7 @@ uv run lab.py             # Jupyter Lab 起動
 - [`columns/01_unix_philosophy.md`](start_here/00_pet_terminal/columns/01_unix_philosophy.md) — UNIX の哲学
 - [`columns/02_keyboard_age.md`](start_here/00_pet_terminal/columns/02_keyboard_age.md) — キーボードがマウスより速い理由
 - [`columns/03_open_source.md`](start_here/00_pet_terminal/columns/03_open_source.md) — オープンソースの物語
+- 🎯 **[`columns/04_git_challenge.md`](start_here/00_pet_terminal/columns/04_git_challenge.md) — チャレンジ章: Git 入門** (一人でもチームでも強すぎる味方)
 
 ---
 

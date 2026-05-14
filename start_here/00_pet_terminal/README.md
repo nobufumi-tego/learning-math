@@ -61,6 +61,7 @@
 | [`columns/01_unix_philosophy.md`](columns/01_unix_philosophy.md) | UNIX の哲学 — 小さく作って組み合わせる |
 | [`columns/02_keyboard_age.md`](columns/02_keyboard_age.md) | なぜ今もキーボードが王様なのか |
 | [`columns/03_open_source.md`](columns/03_open_source.md) | なぜ世界の道具がタダで配られているのか |
+| [`columns/04_git_challenge.md`](columns/04_git_challenge.md) | **チャレンジ**: Git 入門 — 一人でも、チームでも強すぎる味方 |
 
 ## あなたの OS は何でも大丈夫
 

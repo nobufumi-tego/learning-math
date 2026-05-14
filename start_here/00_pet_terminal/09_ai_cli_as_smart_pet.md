@@ -179,11 +179,12 @@ AI が、あなたのレベルに合わせて教えてくれます。
 - [`columns/01_unix_philosophy.md`](columns/01_unix_philosophy.md) — UNIX の哲学
 - [`columns/02_keyboard_age.md`](columns/02_keyboard_age.md) — キーボードがマウスより速い理由
 - [`columns/03_open_source.md`](columns/03_open_source.md) — オープンソースの物語
+- **[`columns/04_git_challenge.md`](columns/04_git_challenge.md)** — 🎯 **チャレンジ**: Git 入門 (一人でも・チームでも強すぎる味方)
 
 ```
        ／￣￣＼
       |  ・ω・  |   ここまでよく頑張ったね！
-      |   ⌒    |   これからもよろしく。
+      |   ⌒    |   余裕があったら、git にもチャレンジしてみてね。
        ＼____／
 ```
 

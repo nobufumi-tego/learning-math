@@ -224,6 +224,8 @@ OpenSSL のメンテナーは数人で、年間予算は **2,000ドル** (たっ
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次の読み物 → |
 |---|---|---|---|
-| [`02_keyboard_age.md`](02_keyboard_age.md) | [章 TOP](../README.md) | [📚 ROOT README](../../../README.md) | 本流へ戻る: [`../09_ai_cli_as_smart_pet.md`](../09_ai_cli_as_smart_pet.md) |
+| [`02_keyboard_age.md`](02_keyboard_age.md) | [章 TOP](../README.md) | [📚 ROOT README](../../../README.md) | [`04_git_challenge.md`](04_git_challenge.md) (チャレンジ章) |
+
+本流に戻る → [`../09_ai_cli_as_smart_pet.md`](../09_ai_cli_as_smart_pet.md)
