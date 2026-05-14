@@ -15,6 +15,7 @@ dependencies = [
     "ipywidgets>=8.1",
     "jax>=0.4.30",
     "jaxlib>=0.4.30",
+    "optax>=0.2",  # JAX 用の最適化ライブラリ (05_optimization / 06_ml_math_bridge / 07_jax で使用)
 ]
 
 [dependency-groups]
