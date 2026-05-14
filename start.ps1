@@ -66,12 +66,20 @@ if (-not (Get-Command uv -ErrorAction SilentlyContinue)) {
 }
 
 # 2. 依存関係を sync
-Write-Host "📦 依存関係を確認・更新します... (初回は数分かかります)" -ForegroundColor Cyan
+Write-Host "📦 依存関係を確認・更新します..." -ForegroundColor Cyan
+Write-Host "   ⏰ 初回は 3〜10 分かかります (NumPy・JAX・JupyterLab 等を合計 500MB〜1GB ダウンロード)" -ForegroundColor Yellow
+Write-Host "   ☕ コーヒーを淹れる時間です。途中で Ctrl+C せず最後まで待ってください。" -ForegroundColor Yellow
+Write-Host "   📊 進捗: 'Resolved'/'Downloading'/'Installed' が表示されていれば作業中" -ForegroundColor Yellow
+Write-Host "   🪟 「応答なし」 と出ても OS の表示更新が追いつかないだけです。焦らず待つ。" -ForegroundColor Yellow
+Write-Host ""
 uv sync
+Write-Host ""
+Write-Host "✅ 依存関係の準備が完了しました" -ForegroundColor Green
 Write-Host ""
 
 # 3. Jupyter Lab 起動
-Write-Host "🚀 Jupyter Lab を起動します。ブラウザが自動で開きます。" -ForegroundColor Green
+Write-Host "🚀 Jupyter Lab を起動します..." -ForegroundColor Green
+Write-Host "   ⏰ 初回起動は 10〜30 秒かかります。ブラウザが自動で開いたら準備完了です。" -ForegroundColor Green
 Write-Host "   📛 停止するには、このウィンドウで Ctrl+C を 2 回押してください。" -ForegroundColor Green
 Write-Host ""
 uv run lab.py

@@ -48,12 +48,19 @@ else
 fi
 
 # 2. 依存関係を sync
-echo "📦 依存関係を確認・更新します... (初回は数分かかります)"
+echo "📦 依存関係を確認・更新します..."
+echo "   ⏰ 初回は 3〜10 分かかります (NumPy・JAX・JupyterLab 等を合計 500MB〜1GB ダウンロード)"
+echo "   ☕ コーヒーを淹れる時間です。途中で Ctrl+C せず最後まで待ってください。"
+echo "   📊 進捗: 'Resolved'/'Downloading'/'Installed' が表示されていれば作業中"
+echo ""
 uv sync
+echo ""
+echo "✅ 依存関係の準備が完了しました"
 echo ""
 
 # 3. Jupyter Lab 起動
-echo "🚀 Jupyter Lab を起動します。ブラウザが自動で開きます。"
+echo "🚀 Jupyter Lab を起動します..."
+echo "   ⏰ 初回起動は 10〜30 秒かかります。ブラウザが自動で開いたら準備完了です。"
 echo "   📛 停止するには、このターミナルで Ctrl+C を 2 回押してください。"
 echo ""
 exec uv run lab.py
