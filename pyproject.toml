@@ -1,8 +1,9 @@
 [project]
 name = "leaning-math"
 version = "0.1.0"
-description = "大学院数学基礎 学習リポジトリ"
+description = "大学院数学基礎 学習リポジトリ (Code: MIT / Docs: CC BY-NC-SA 4.0 — see LICENSE)"
 requires-python = ">=3.10"
+license = { file = "LICENSE" }
 dependencies = [
     "numpy>=1.26",
     "scipy>=1.11",
