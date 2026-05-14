@@ -13,16 +13,33 @@
 
 ## 学習順序
 
-| ファイル | 内容 | 所要時間目安 |
-|---|---|---|
-| `01_basic_symbols.md` | 等号・不等号・無限・etc. | 30分 |
-| `02_set_theory.md` | 集合 ∈ ∉ ⊂ ⊃ ∪ ∩ など | 1時間 |
-| `03_logic_symbols.md` | 論理 ∀ ∃ ⇒ ⇔ ∧ ∨ ¬ | 1時間 |
-| `04_function_notation.md` | 関数記法 f: A → B, ↦ | 30分 |
-| `05_summation_product.md` | Σ（総和）, Π（総乗）, ∫（積分） | 1時間 |
-| `06_greek_letters.md` | ギリシャ文字一覧と慣習 | 30分 |
+| md (読む) | ipynb (動かす) | 内容 | 所要時間目安 |
+|---|---|---|---|
+| [`01_basic_symbols.md`](01_basic_symbols.md) | [`notebooks/01_basic_symbols.ipynb`](notebooks/01_basic_symbols.ipynb) | 等号・不等号・無限・± | 30 分 |
+| [`02_set_theory.md`](02_set_theory.md) | [`notebooks/02_set_theory.ipynb`](notebooks/02_set_theory.ipynb) | 集合 ∈ ∉ ⊂ ⊆ ∪ ∩ ∅ | 1 時間 |
+| [`03_logic_symbols.md`](03_logic_symbols.md) | [`notebooks/03_logic_symbols.ipynb`](notebooks/03_logic_symbols.ipynb) | 論理 ∀ ∃ ⇒ ⇔ ∧ ∨ ¬ | 1 時間 |
+| [`04_function_notation.md`](04_function_notation.md) | [`notebooks/04_function_notation.ipynb`](notebooks/04_function_notation.ipynb) | 関数記法 f: A → B, ↦ | 30 分 |
+| [`05_summation_product.md`](05_summation_product.md) | [`notebooks/05_summation_product.ipynb`](notebooks/05_summation_product.ipynb) | Σ・Π・∫・$n!$・$\binom{n}{k}$ | 1 時間 |
+| [`06_greek_letters.md`](06_greek_letters.md) | [`notebooks/06_greek_letters.ipynb`](notebooks/06_greek_letters.ipynb) | ギリシャ文字 + LaTeX 記法 | 30 分 |
 
-合計約4-5時間で「読める目」が手に入ります。
+合計約 4〜5 時間で「読める目」 が手に入ります。各 md は読み物、各 ipynb は手を動かす場所。**両方をペアで進める** のが効果的です。
+
+---
+
+## 💡 動かす前に
+
+このフォルダのコードは **Jupyter Lab** で対話的に動かすのが推奨です。
+
+🚀 **起動方法** (リポジトリのルートで実行):
+- 🪟 **Windows**: [`start.bat`](../start.bat) を **ダブルクリック** ⭐
+- 🍎 **Mac** / 🐧 **Linux**: ターミナルで `./start.sh`
+- 🪟 **PowerShell 派**: `.\start.ps1`
+- 🛠️ **すでに環境がある人**: `uv run lab.py`
+
+> ⏰ **初回起動は 5〜15 分かかります**。詳細・トラブルシューティングは ROOT [`README.md`](../README.md#step-2--ワンショットスクリプトで起動-推奨) 参照。
+> 🧪 **Jupyter Lab の使い方** (Shift+Enter でセル実行など) は [`docs/jupyter_lab_guide.md`](../docs/jupyter_lab_guide.md) を参照。
+
+---
 
 ## 学習方法
 

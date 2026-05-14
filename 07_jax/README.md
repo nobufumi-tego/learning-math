@@ -26,11 +26,30 @@ NumPy との対応:
 
 ## 学習ステップ
 
-| ファイル | 内容 | 所要時間 |
-|---|---|---|
-| `01_basics.md` | `jax.numpy`, 配列の不変性, PRNGキー | 1時間 |
-| `02_autodiff.md` | `grad`, `value_and_grad`, 高階微分 | 1.5時間 |
-| `03_jit_vmap.md` | `jit` で高速化, `vmap` でベクトル化 | 1.5時間 |
+| md (読む) | ipynb (動かす) | 内容 | 所要時間 |
+|---|---|---|---|
+| [`01_basics.md`](01_basics.md) | [`notebooks/01_basics.ipynb`](notebooks/01_basics.ipynb) | `jax.numpy`, 配列の不変性, PRNGキー | 1 時間 |
+| [`02_autodiff.md`](02_autodiff.md) | [`notebooks/02_autodiff.ipynb`](notebooks/02_autodiff.ipynb) | `grad`, `value_and_grad`, Jacobian, Hessian, 高階微分 | 1.5 時間 |
+| [`03_jit_vmap.md`](03_jit_vmap.md) | [`notebooks/03_jit_vmap.ipynb`](notebooks/03_jit_vmap.ipynb) | `@jit` で高速化, `vmap` でベクトル化, 変換の合成 | 1.5 時間 |
+
+各 md は読み物、各 ipynb は手を動かす場所。**両方をペアで進める** のが効果的です。
+
+---
+
+## 💡 動かす前に
+
+このフォルダのコードは **Jupyter Lab** で対話的に動かすのが推奨です。
+
+🚀 **起動方法** (リポジトリのルートで実行):
+- 🪟 **Windows**: [`start.bat`](../start.bat) を **ダブルクリック** ⭐
+- 🍎 **Mac** / 🐧 **Linux**: ターミナルで `./start.sh`
+- 🪟 **PowerShell 派**: `.\start.ps1`
+- 🛠️ **すでに環境がある人**: `uv run lab.py`
+
+> ⏰ **初回起動は 5〜15 分かかります**。詳細は ROOT [`README.md`](../README.md#step-2--ワンショットスクリプトで起動-推奨) 参照。
+> 🧪 **Jupyter Lab の使い方** (Shift+Enter でセル実行など) は [`docs/jupyter_lab_guide.md`](../docs/jupyter_lab_guide.md) を参照。
+
+---
 
 ## キーとなるAPI
 
