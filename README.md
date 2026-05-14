@@ -13,25 +13,36 @@
 
 ## 🚀 3分で始める (Windows / Mac / Linux 共通)
 
+### Step 1: リポジトリを取得 — 2 つの方法から選ぶ
+
+**🟢 ZIP ダウンロード (git 未経験者向け・カンタン)**
+1. このページの上部にある緑色の **`<> Code`** → **`Download ZIP`**
+2. ダウンロードした ZIP をダブルクリックで展開
+
+**🔵 git clone (git に慣れている人向け)**
 ```bash
-# 1. uv をインストール (初回のみ)
-# Mac/Linux:
+git clone https://github.com/nobufumi-tego/learning-math.git
+```
+
+### Step 2: uv インストール (初回のみ)
+
+```bash
+# Mac/Linux
 curl -LsSf https://astral.sh/uv/install.sh | sh
-# Windows:
+# Windows (PowerShell)
 # powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
 
-# 2. リポジトリのフォルダに移動
-cd path/to/learning-math
+### Step 3: 依存関係インストール + Jupyter Lab 起動
 
-# 3. 依存関係のインストール
-uv sync
-
-# 4. Jupyter Lab を起動
-uv run lab.py
+```bash
+cd learning-math          # ZIP の場合は learning-math-main
+uv sync                   # 依存関係インストール (初回のみ、数分)
+uv run lab.py             # Jupyter Lab 起動
 ```
 
 ブラウザが自動で開いたら **[`start_here/notebooks/01_pythagoras.ipynb`](start_here/notebooks/01_pythagoras.ipynb)** を開いてください。
-詳細な手順は [`docs/setup.md`](docs/setup.md) を参照。
+詳細な手順 (ZIP の展開方法・トラブルシューティング含む) は [`docs/setup.md`](docs/setup.md) を参照。
 
 ---
 
@@ -267,7 +278,7 @@ JAX を最終到達点に据えることで、研究論文の最先端コード 
 - **Codex CLI** (`codex`) — `AGENTS.md` をネイティブで読む
 
 3ツールすべて [`AGENTS.md`](AGENTS.md) を共通指示書として読みます。
-**clone した瞬間から本環境と同等の AI 体験** が手に入る仕組みについては [`docs/ai_environment_setup.md`](docs/ai_environment_setup.md) を参照。
+**clone / ZIP 展開 した瞬間から本環境と同等の AI 体験** が手に入る仕組みについては [`docs/ai_environment_setup.md`](docs/ai_environment_setup.md) を参照。
 
 ---
 
@@ -278,7 +289,7 @@ JAX を最終到達点に据えることで、研究論文の最先端コード 
 | [`AGENTS.md`](AGENTS.md) | AI 共通指示書 (3ツール共通の説明スタイル・規約) |
 | [`docs/setup.md`](docs/setup.md) | セットアップ詳細 (OS別トラブルシューティング含む) |
 | [`docs/learning_path.md`](docs/learning_path.md) | 学習ロードマップ (Phase −1 〜 8、約3か月コース) |
-| [`docs/ai_environment_setup.md`](docs/ai_environment_setup.md) | clone 直後から本環境と同等の AI 体験を実現する仕組み |
+| [`docs/ai_environment_setup.md`](docs/ai_environment_setup.md) | clone / ZIP 直後から本環境と同等の AI 体験を実現する仕組み |
 | [`pyproject.toml`](pyproject.toml) | Python 依存関係 |
 | [`LICENSE`](LICENSE) | MIT License |
 

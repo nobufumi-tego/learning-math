@@ -31,12 +31,59 @@ uv --version
 
 バージョンが表示されればOK。
 
-## ステップ 1: リポジトリを取得して移動
+## ステップ 1: リポジトリを取得する
+
+このリポジトリを自分の PC に持ってくる方法は **2 通り** あります。
+
+### 🥇 方法 A: ZIP ダウンロード (git を使ったことがない人向け)
+
+**git のインストールも、コマンドも不要**。一番カンタン。
+
+1. ブラウザで **https://github.com/nobufumi-tego/learning-math** を開く
+2. 緑色の **`<> Code`** ボタンをクリック
+3. メニューの一番下 **`Download ZIP`** をクリック
+4. ダウンロードされた `learning-math-main.zip` をダブルクリックで展開
+   - Windows: 「すべて展開」 → 任意の場所を指定
+   - Mac: ダブルクリックで自動展開
+   - Linux: 右クリック → 「ここに展開」
+5. 展開された **`learning-math-main`** フォルダができる
+
+これだけ。ターミナルで以下を実行:
 
 ```bash
-# 自分のローカルにこのリポジトリがある前提
-cd path/to/leaning-math
+# Mac / Linux
+cd ~/Downloads/learning-math-main          # 展開した場所に合わせて
+
+# Windows (PowerShell)
+cd $env:USERPROFILE\Downloads\learning-math-main
 ```
+
+> ⚠️ **ZIP 方式の制限**:
+> - **更新を取り込めない**: あとでリポジトリが更新されたら、再度 ZIP をダウンロードして上書き展開する必要があります
+> - **個人の変更を git で管理できない**: 自分でメモを書き加えても、変更履歴は残せません
+> - **問題ない場合**: 「読むのが目的」「ノートブックを動かして遊ぶだけ」なら ZIP で十分
+
+### 🥈 方法 B: git clone (今後 git も使いたい人向け)
+
+**git** がインストール済みであれば:
+
+```bash
+# 任意の場所で
+git clone https://github.com/nobufumi-tego/learning-math.git
+cd learning-math
+```
+
+> 💡 **git のメリット**:
+> - 更新があったら **`git pull`** だけで最新化
+> - 自分でも変更を git で管理できる (個人ブランチを作るなど)
+> - GitHub に PR を送って改善提案できる
+>
+> git のインストール方法は [git 公式サイト](https://git-scm.com/downloads) を参照。
+> もし git の使い方を学びたければ → [`../start_here/00_pet_terminal/`](../start_here/00_pet_terminal/README.md) (ペンタと学ぶターミナル基礎) を一通り終えた後、git の入門書/動画にチャレンジ。
+
+### どちらの方式でもこの先は同じ
+
+`learning-math` (または `learning-math-main`) フォルダに移動できたら、次のステップへ。
 
 ## ステップ 2: 依存関係のインストール (初回のみ)
 
