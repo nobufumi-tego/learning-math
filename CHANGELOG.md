@@ -42,10 +42,18 @@
 - `dac5b71` docs(appendix): コラム「AIがコードを書く時代に大学院生はどう学ぶか」追加
 - `a34f517` docs(chapters): 各章 README にコラム「AI時代の大学院生の学び方」へのリンク追加
 
+### 🤖 CI/CD
+
+- `e130b90` ci(changelog): CHANGELOG 自動生成 (GitHub Actions + git log)
+
+### 🔧 その他の整備
+
+- `78f7681` chore(gitignore): notes/ を git 管理対象外に追加
+
 ### 📌 その他
 
 - `a0b4e12` Initial commit: Leaning Math (大学院数学基礎 × Python × 生成AI)
 
 ---
 
-_Total commits indexed: **24**_
+_Total commits indexed: **26**_
