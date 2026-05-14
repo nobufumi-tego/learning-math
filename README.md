@@ -58,30 +58,65 @@ git clone https://github.com/nobufumi-tego/learning-math.git
 
 リポジトリのフォルダに移動して、自分の OS のスクリプトを実行するだけです:
 
-| OS | コマンド |
-|---|---|
-| **Mac / Linux** | `./start.sh` |
-| **Windows (PowerShell)** | `.\start.ps1` |
+| OS | 起動方法 | 備考 |
+|---|---|---|
+| **🪟 Windows (初心者・GUI 派)** | エクスプローラから [`start.bat`](start.bat) を **ダブルクリック** | 管理者権限不要・PowerShell 設定変更不要 |
+| 🪟 Windows (PowerShell 派) | `.\start.ps1` | 実行ポリシーで止まる場合は下の補足を参照 |
+| **🍎 Mac / 🐧 Linux** | `./start.sh` | ターミナルで実行 |
 
 スクリプトが以下を全部自動でやってくれます:
-1. **uv** が未インストールなら公式インストーラを実行
-2. **依存関係を sync** (初回は数分)
-3. **Jupyter Lab を起動** (ブラウザが自動で開く)
+1. **uv** が未インストールなら公式インストーラを実行 (ユーザー領域、管理者権限不要)
+2. **依存関係を sync** (初回は数分かかります)
+3. **Jupyter Lab を起動** (ブラウザが自動で開きます)
 
 ブラウザが開いたら **[`start_here/notebooks/01_pythagoras.ipynb`](start_here/notebooks/01_pythagoras.ipynb)** を開いてください。
 
-> 🪟 **Windows で「スクリプトの実行が無効」 と出た場合** は以下のいずれかで実行:
-> ```powershell
-> # このセッションのみ Bypass で実行
-> powershell -ExecutionPolicy Bypass -File .\start.ps1
-> # または、今後ずっと有効化 (PowerShell を 1 回だけ管理者で開いて)
-> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-> ```
->
-> 🐧 **Mac / Linux で「Permission denied」 と出た場合**:
-> ```bash
-> chmod +x start.sh && ./start.sh
-> ```
+#### 🆘 つまずきポイントとフォールバック
+
+<details>
+<summary><b>🪟 Windows で「スクリプトの実行が無効」 と出た場合</b></summary>
+
+以下のいずれかを試してください:
+
+- **方法 A (一番カンタン)**: いったんウィンドウを閉じて、エクスプローラから [`start.bat`](start.bat) を**ダブルクリック** — `.bat` は ExecutionPolicy の影響を受けません
+- **方法 B (PowerShell で 1 回だけ Bypass)**:
+  ```powershell
+  powershell -ExecutionPolicy Bypass -File .\start.ps1
+  ```
+- **方法 C (今後ずっと有効化)** — PowerShell を 1 回だけ開いて:
+  ```powershell
+  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+  ```
+  (管理者権限不要、`CurrentUser` スコープなのであなたのユーザーだけに影響)
+
+</details>
+
+<details>
+<summary><b>🪟 Windows で ZIP 展開後に「ブロックされたファイル」 警告が出る場合 (Mark of the Web)</b></summary>
+
+GitHub から ZIP で取得して展開した `.ps1` / `.bat` には「インターネットから来た」 マークが付き、警告が出ることがあります。
+
+- **解決法 A**: 展開した `learning-math-main` フォルダを右クリック → **プロパティ** → 下部の **「☐ 許可する (Unblock)」 にチェック** → OK
+  → フォルダ内のすべてのファイルが一括で許可されます
+- **解決法 B (PowerShell で一発)**: フォルダで PowerShell を開き、
+  ```powershell
+  Get-ChildItem -Recurse | Unblock-File
+  ```
+
+`git clone` で取得した場合は、この警告は出ません。
+
+</details>
+
+<details>
+<summary><b>🐧 Mac / Linux で「Permission denied」 と出た場合</b></summary>
+
+```bash
+chmod +x start.sh && ./start.sh
+```
+
+git clone なら実行ビット付きで取得されるはずですが、ZIP 展開だと外れることがあります。
+
+</details>
 
 ### 🛑 停止方法
 

@@ -1,15 +1,21 @@
-# leaning-math: Jupyter Lab ワンショット起動スクリプト (Windows)
+# leaning-math: Jupyter Lab ワンショット起動スクリプト (Windows / PowerShell)
 #
-# 使い方:
+# ⭐ 初心者の方へ: より簡単な方法があります
+#   エクスプローラから start.bat をダブルクリックするだけで起動できます。
+#   PowerShell を開く必要も、実行ポリシーを変更する必要もありません。
+#
+# 使い方 (PowerShell から直接):
 #   .\start.ps1
 #
 # 初回実行時に「このシステムではスクリプトの実行が無効になっている」
 # と出る場合、以下のいずれかを実行してください:
 #
-#   方法 A (このセッションのみ): 起動コマンドを以下に変更
+#   方法 A (推奨): 一旦終了して、エクスプローラで start.bat をダブルクリック
+#
+#   方法 B (このセッションのみ): 起動コマンドを以下に変更
 #     powershell -ExecutionPolicy Bypass -File .\start.ps1
 #
-#   方法 B (今後ずっと有効): PowerShell を 1 回管理者で開いて
+#   方法 C (今後ずっと有効): PowerShell を 1 回開いて
 #     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 #
 # 動作:

@@ -13,12 +13,13 @@
 
 リポジトリのルートで以下を実行するだけで、uv インストール → 依存関係取得 → Jupyter Lab 起動まで全部自動で完了します。
 
-| OS | コマンド |
-|---|---|
-| **Mac / Linux** | `./start.sh` |
-| **Windows (PowerShell)** | `.\start.ps1` |
+| OS | 起動方法 | 備考 |
+|---|---|---|
+| **🪟 Windows (初心者)** | `start.bat` をダブルクリック | 管理者権限・PowerShell 設定変更どちらも不要 |
+| 🪟 Windows (PowerShell 派) | `.\start.ps1` | ExecutionPolicy で止まれば README の補足参照 |
+| **🍎 Mac / 🐧 Linux** | `./start.sh` | ターミナルで実行 |
 
-詳細は ROOT [`README.md`](../README.md) の Quick Start セクションを参照。**初心者の方はこちらを推奨します**。
+詳細・トラブルシューティングは ROOT [`README.md`](../README.md) の Quick Start セクションを参照。**初心者の方はこちらを推奨します**。
 
 以下は「**仕組みを理解したい / スクリプトを使わず手動でやりたい**」 方向けの手動手順です。
 
