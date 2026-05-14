@@ -41,6 +41,7 @@
 - `f9675fd` docs(readme): トップに Appendix への案内を追加
 - `dac5b71` docs(appendix): コラム「AIがコードを書く時代に大学院生はどう学ぶか」追加
 - `a34f517` docs(chapters): 各章 README にコラム「AI時代の大学院生の学び方」へのリンク追加
+- `75ac7a8` docs(disclaimer): 未検証教材としての免責事項を全章に明示
 
 ### 🤖 CI/CD
 
@@ -56,4 +57,4 @@
 
 ---
 
-_Total commits indexed: **26**_
+_Total commits indexed: **27**_
