@@ -54,25 +54,42 @@
 git clone https://github.com/nobufumi-tego/learning-math.git
 ```
 
-### Step 2: uv インストール (初回のみ)
+### Step 2: ⭐ ワンショットスクリプトで起動 (推奨)
 
-```bash
-# Mac/Linux
-curl -LsSf https://astral.sh/uv/install.sh | sh
-# Windows (PowerShell)
-# powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-```
+リポジトリのフォルダに移動して、自分の OS のスクリプトを実行するだけです:
 
-### Step 3: 依存関係インストール + Jupyter Lab 起動
+| OS | コマンド |
+|---|---|
+| **Mac / Linux** | `./start.sh` |
+| **Windows (PowerShell)** | `.\start.ps1` |
 
-```bash
-cd learning-math          # ZIP の場合は learning-math-main
-uv sync                   # 依存関係インストール (初回のみ、数分)
-uv run lab.py             # Jupyter Lab 起動
-```
+スクリプトが以下を全部自動でやってくれます:
+1. **uv** が未インストールなら公式インストーラを実行
+2. **依存関係を sync** (初回は数分)
+3. **Jupyter Lab を起動** (ブラウザが自動で開く)
 
-ブラウザが自動で開いたら **[`start_here/notebooks/01_pythagoras.ipynb`](start_here/notebooks/01_pythagoras.ipynb)** を開いてください。
-詳細な手順 (ZIP の展開方法・トラブルシューティング含む) は [`docs/setup.md`](docs/setup.md) を参照。
+ブラウザが開いたら **[`start_here/notebooks/01_pythagoras.ipynb`](start_here/notebooks/01_pythagoras.ipynb)** を開いてください。
+
+> 🪟 **Windows で「スクリプトの実行が無効」 と出た場合** は以下のいずれかで実行:
+> ```powershell
+> # このセッションのみ Bypass で実行
+> powershell -ExecutionPolicy Bypass -File .\start.ps1
+> # または、今後ずっと有効化 (PowerShell を 1 回だけ管理者で開いて)
+> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+> ```
+>
+> 🐧 **Mac / Linux で「Permission denied」 と出た場合**:
+> ```bash
+> chmod +x start.sh && ./start.sh
+> ```
+
+### 🛑 停止方法
+
+Jupyter Lab を停止するには、起動したターミナル / PowerShell ウィンドウで **Ctrl+C を 2 回** 押してください。
+
+### 🔧 各ステップを手動で実行したい方
+
+スクリプトを使わず仕組みを理解しながら進めたい方は、[`docs/setup.md`](docs/setup.md) の **手動セットアップ** セクションを参照してください (uv インストール → `uv sync` → `uv run lab.py` の 3 段階)。トラブルシューティング情報も同じ場所にあります。
 
 ---
 
