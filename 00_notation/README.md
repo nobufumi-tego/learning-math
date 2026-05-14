@@ -2,6 +2,7 @@
 
 > ⚠️ **未検証の個人学習教材**: 本章は AI 協働で作成され、専門家の監修を受けていません。誤りを含む可能性があるため、必ず一次情報源で検証してください ([詳細](../DISCLAIMER.md))。
 > 📜 **ライセンス**: 文書 [CC BY-NC-SA 4.0](../LICENSE-DOCS) / コード [MIT](../LICENSE-CODE) — 商用利用 (書籍化・有料講座・企業研修等) は[要相談](../DISCLAIMER.md#-商用利用について--commercial-use)
+> 🧪 **Jupyter Lab で読むのがおすすめ**: 起動方法と使い方 (Shift+Enter 等) は [`docs/jupyter_lab_guide.md`](../docs/jupyter_lab_guide.md) を参照。.md ファイルが整形プレビューで読めます。
 
 **ゴール**: 数学論文・教科書・生成AIの出力に出てくる**記号を恐れずに読める**ようになる。
 
