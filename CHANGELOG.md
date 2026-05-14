@@ -65,6 +65,7 @@
 - `cdf2b39` docs(jupyter): JupyterLab 完全ビギナーガイドを新設 + 全所からリンク
 - `690a9f6` docs(jupyter): 残り 2 章 (00_notation, 07_jax) にも JupyterLab ガイドリンク追加
 - `83c84bb` docs(jupyter): セルが [*] で止まる症状を WebSocket 切れ視点で詳解
+- `361e66b` docs: 残存する旧 notebook パスを修正 + Phase 0/1/7 を解説/動かすペア表に統一
 
 ### 🤖 CI/CD
 
@@ -81,4 +82,4 @@
 
 ---
 
-_Total commits indexed: **48**_
+_Total commits indexed: **49**_
