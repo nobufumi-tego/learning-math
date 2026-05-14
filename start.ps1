@@ -1,4 +1,4 @@
-# leaning-math: Jupyter Lab ワンショット起動スクリプト (Windows / PowerShell)
+﻿# leaning-math: Jupyter Lab ワンショット起動スクリプト (Windows / PowerShell)
 #
 # ⭐ 初心者の方へ: より簡単な方法があります
 #   エクスプローラから start.bat をダブルクリックするだけで起動できます。
@@ -27,6 +27,14 @@
 #   Jupyter Lab が動いているウィンドウで Ctrl+C を 2 回押す
 
 $ErrorActionPreference = "Stop"
+
+# 日本語出力が文字化けしないよう、コンソールの入出力エンコーディングを UTF-8 に固定
+# (Windows 10/11 の PowerShell 5.1 / 7 両方で有効)
+try {
+    [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+    [Console]::InputEncoding  = [System.Text.Encoding]::UTF8
+    $OutputEncoding           = [System.Text.Encoding]::UTF8
+} catch { }
 
 # スクリプト自身があるフォルダに移動 (どこから呼ばれても動くように)
 Set-Location -Path $PSScriptRoot
