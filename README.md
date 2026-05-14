@@ -292,6 +292,13 @@ uv run lab.py             # Jupyter Lab 起動
 
 ---
 
+## 📋 更新履歴
+
+このリポジトリの変更履歴は [`CHANGELOG.md`](CHANGELOG.md) で確認できます。
+**`main` への push 毎に GitHub Actions が git ログから自動生成・更新** するので、最新状態が常に反映されます ([ワークフロー定義](.github/workflows/changelog.yml) / [生成スクリプト](scripts/generate_changelog.py))。
+
+---
+
 ## 🛠️ Python 実装の方針: 「標準形式」 + 「JAX形式」 の併記
 
 各章の `examples/` には以下の2形式を併置します:
