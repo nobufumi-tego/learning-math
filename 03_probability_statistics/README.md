@@ -8,14 +8,38 @@
 - 損失関数の多くは確率モデルから導かれる（クロスエントロピー = 対数尤度）
 - 生成AI (LLM) は次トークンの確率分布を予測している
 
+---
+
+## 💡 動かす前に
+
+このフォルダのコードは **Jupyter Lab** で対話的に動かすのが推奨です。
+
+```bash
+uv run lab.py
+```
+
+ブラウザが開いたら、左のファイルツリーから `03_probability_statistics/notebooks/` を開いて、`01_probability_basics.ipynb` から順に。
+
+> 🐧 **「`uv` ってなに?」「ターミナルがわからない」方** は、まず以下を:
+> - [`start_here/00_pet_terminal/`](../start_here/00_pet_terminal/README.md) — ペンタと学ぶターミナル基礎
+> - 特に [`08_uv_keeps_pet_healthy.md`](../start_here/00_pet_terminal/08_uv_keeps_pet_healthy.md) — uv の使い方
+>
+> **数学に苦手意識のある方** は:
+> - [`start_here/`](../start_here/README.md) — 数式ゼロから始める数学
+> - [`00_notation/`](../00_notation/README.md) — 数学記号の読み解き
+
+---
+
 ## 学習ステップ
 
-| ファイル | 内容 | 所要時間 |
-|---|---|---|
-| `01_probability_basics.md` | 確率、独立性、条件付き確率 | 1.5時間 |
-| `02_distributions.md` | 正規分布、二項分布、ポアソン分布 | 2時間 |
-| `03_expectation_variance.md` | 期待値、分散、共分散 | 1.5時間 |
-| `04_bayes.md` | ベイズの定理、事前・事後分布 | 2時間 |
+| md (解説) | ipynb (動かす) | 内容 | 所要時間 |
+|---|---|---|---|
+| [`01_probability_basics.md`](01_probability_basics.md) | [`notebooks/01_probability_basics.ipynb`](notebooks/01_probability_basics.ipynb) | 確率、独立性、条件付き確率、大数の法則 | 1.5時間 |
+| [`02_distributions.md`](02_distributions.md) | [`notebooks/02_distributions.ipynb`](notebooks/02_distributions.ipynb) | 正規・二項・ポアソン・指数、中心極限定理 | 2時間 |
+| [`03_expectation_variance.md`](03_expectation_variance.md) | [`notebooks/03_expectation_variance.ipynb`](notebooks/03_expectation_variance.ipynb) | 期待値、分散、共分散、相関、標準化 | 1.5時間 |
+| [`04_bayes.md`](04_bayes.md) | [`notebooks/04_bayes.ipynb`](notebooks/04_bayes.ipynb) | ベイズの定理、ベイズ更新、ナイーブベイズ | 2時間 |
+
+各 md は読み物、各 ipynb は手を動かす場所。**両方をペアで進めるのが効果的**です。
 
 ## キーとなる Python ツール
 
@@ -46,17 +70,17 @@ cdf = stats.norm.cdf(1.96)  # ≈ 0.975
 
 | 記号 | 読み方 | 意味 |
 |---|---|---|
-| `P(A)` | A の確率 | 事象 A が起こる確率 |
-| `P(A \| B)` | A given B | B が起きたという条件のもとでの A の確率 |
-| `P(A ∩ B)` | A and B | A と B が同時に起こる確率 |
-| `E[X]` | X の期待値 | 確率変数 X の平均 |
-| `Var[X]` | X の分散 | 散らばり具合 |
-| `X ~ N(μ, σ²)` | X は正規分布に従う | 確率変数の分布の宣言 |
+| $P(A)$ | A の確率 | 事象 A が起こる確率 |
+| $P(A \mid B)$ | A given B | B が起きたという条件のもとでの A の確率 |
+| $P(A \cap B)$ | A and B | A と B が同時に起こる確率 |
+| $\mathbb{E}[X]$ | X の期待値 | 確率変数 X の平均 |
+| $\mathrm{Var}[X]$ | X の分散 | 散らばり具合 |
+| $X \sim \mathcal{N}(\mu, \sigma^2)$ | X は正規分布に従う | 確率変数の分布の宣言 |
 
 ## ML への接続
 - 最尤推定 (MLE): 尤度関数を最大化
-- ベイズ推定: 事後分布 P(θ|D) = P(D|θ)P(θ)/P(D)
-- 交差エントロピー損失: −Σ y log(ŷ)
+- ベイズ推定: 事後分布 $P(\theta \mid D) = P(D \mid \theta) P(\theta) / P(D)$
+- 交差エントロピー損失: $-\sum y \log(\hat{y})$
 - 変分推論、生成モデル (VAE, Diffusion)
 
 ## サンプル
@@ -66,8 +90,6 @@ cdf = stats.norm.cdf(1.96)  # ≈ 0.975
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次の章 → |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
 |---|---|---|---|
-| [`../02_calculus/README.md`](../02_calculus/README.md) | (このページが章 TOP) | [📚 ROOT README](../README.md) | [`../05_optimization/README.md`](../05_optimization/README.md) |
-
-> ⚠️ この章は現在 **README + サンプルのみ** の骨格状態です。本文の md は今後拡充予定。
+| [`../02_calculus/05_gradient_jacobian.md`](../02_calculus/05_gradient_jacobian.md) | (このページが章 TOP) | [📚 ROOT README](../README.md) | [`01_probability_basics.md`](01_probability_basics.md) |

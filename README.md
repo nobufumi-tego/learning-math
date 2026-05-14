@@ -178,13 +178,18 @@ uv run lab.py             # Jupyter Lab 起動
 
 ---
 
-### Phase 4: 🎲 確率・統計 (骨格)
+### Phase 4: 🎲 確率・統計
 
 📂 [`03_probability_statistics/`](03_probability_statistics/README.md) — 章 TOP
 
-> ⚠️ 本文 md は今後拡充予定 (現在は README + サンプルのみ)
+| # | 解説 (md) | 動かす (ipynb) | 内容 |
+|---|---|---|---|
+| 01 | [`01_probability_basics.md`](03_probability_statistics/01_probability_basics.md) | [`01_probability_basics.ipynb`](03_probability_statistics/notebooks/01_probability_basics.ipynb) | 確率・独立性・条件付き確率・大数の法則 |
+| 02 | [`02_distributions.md`](03_probability_statistics/02_distributions.md) | [`02_distributions.ipynb`](03_probability_statistics/notebooks/02_distributions.ipynb) | 正規・二項・ポアソン・指数、中心極限定理 |
+| 03 | [`03_expectation_variance.md`](03_probability_statistics/03_expectation_variance.md) | [`03_expectation_variance.ipynb`](03_probability_statistics/notebooks/03_expectation_variance.ipynb) | 期待値・分散・共分散・標準化 |
+| 04 | [`04_bayes.md`](03_probability_statistics/04_bayes.md) | [`04_bayes.ipynb`](03_probability_statistics/notebooks/04_bayes.ipynb) | ベイズの定理・ベイズ更新・ナイーブベイズ |
 
-🐍 サンプル:
+🐍 CLI 実行サンプル:
 - [`examples/distribution_demo.py`](03_probability_statistics/examples/distribution_demo.py) — 各種分布の可視化
 
 ---
