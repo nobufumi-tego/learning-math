@@ -17,9 +17,14 @@
 
 このフォルダのコードは **Jupyter Lab** で対話的に動かすのが推奨です。
 
-```bash
-uv run lab.py
-```
+🚀 **起動方法** (リポジトリのルートで実行):
+- 🪟 **Windows**: [`start.bat`](../start.bat) を **ダブルクリック** ⭐
+- 🍎 **Mac** / 🐧 **Linux**: ターミナルで `./start.sh`
+- 🪟 **PowerShell 派**: `.\start.ps1`
+- 🛠️ **すでに環境がある人**: `uv run lab.py`
+
+uv のインストールから依存関係取得、Jupyter Lab 起動まで全部自動です。
+詳細・トラブルシューティングは ROOT [`README.md`](../README.md#step-2--ワンショットスクリプトで起動-推奨) 参照。
 
 ブラウザが開いたら、左のファイルツリーから `02_calculus/notebooks/` を開いて、`01_limits.ipynb` から順に。
 

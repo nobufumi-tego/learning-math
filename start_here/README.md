@@ -60,9 +60,19 @@
 
 ### Jupyter Lab を起動する
 
+**🚀 ワンショット起動 (推奨)** — リポジトリのルートで実行:
+
+| OS | 起動方法 |
+|---|---|
+| 🪟 Windows | [`start.bat`](../start.bat) を **ダブルクリック** ⭐ |
+| 🍎 Mac / 🐧 Linux | ターミナルで `./start.sh` |
+| 🪟 PowerShell 派 | `.\start.ps1` |
+
+uv インストール → 依存関係取得 → Jupyter Lab 起動まで全部自動です。
+詳細・トラブルシューティングは ROOT [`README.md`](../README.md#step-2--ワンショットスクリプトで起動-推奨) 参照。
+
+すでに環境ができている方は手動でも OK:
 ```bash
-# プロジェクトルートで（Windows・Mac・Linux共通）
-uv sync                  # 初回のみ
 uv run lab.py
 ```
 
