@@ -241,11 +241,15 @@ uv run lab.py             # Jupyter Lab 起動
 
 ---
 
-### Phase 8: 🔢 離散数学 (補助・骨格)
+### Phase 8: 🔢 離散数学 (補助)
 
 📂 [`04_discrete_math/`](04_discrete_math/README.md) — 章 TOP
 
-> ⚠️ 本文 md は今後拡充予定 (現在は README のみ)
+| # | 解説 (md) | 動かす (ipynb) | 内容 |
+|---|---|---|---|
+| 01 | [`01_logic.md`](04_discrete_math/01_logic.md) | [`01_logic.ipynb`](04_discrete_math/notebooks/01_logic.ipynb) | 命題論理、真理表、ド・モルガン |
+| 02 | [`02_proof_techniques.md`](04_discrete_math/02_proof_techniques.md) | [`02_proof_techniques.ipynb`](04_discrete_math/notebooks/02_proof_techniques.ipynb) | 直接証明・背理法・帰納法 |
+| 03 | [`03_combinatorics.md`](04_discrete_math/03_combinatorics.md) | [`03_combinatorics.ipynb`](04_discrete_math/notebooks/03_combinatorics.ipynb) | 順列・組合せ・二項定理・スターリング |
 
 ---
 
