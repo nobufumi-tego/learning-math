@@ -41,7 +41,15 @@ def main() -> int:
     env["JUPYTERLAB_SETTINGS_DIR"] = str(settings_dir)
 
     # JupyterLab を起動 (引数はそのまま渡す)
-    print("🚀 Starting JupyterLab...\n")
+    print("🚀 Starting JupyterLab...")
+    print()
+    print("─" * 60)
+    print("💡 停止方法: このターミナルで Ctrl+C を 2回 押してください")
+    print("   ⚠️  ブラウザのタブを × で閉じても止まりません！")
+    print("       ブラウザだけ閉じると、次回起動時に")
+    print('       "Port 8888 is already in use" エラーになります。')
+    print("─" * 60)
+    print()
     cmd = [sys.executable, "-m", "jupyter", "lab", *sys.argv[1:]]
     try:
         result = subprocess.run(cmd, env=env, check=False)

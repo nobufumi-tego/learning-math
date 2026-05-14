@@ -68,6 +68,51 @@ uv run lab.py
 > 通常の `uv run jupyter lab` でも起動できますが、その場合は本リポジトリの設定は適用されません。
 > 詳細は [`.jupyter/README.md`](../.jupyter/README.md) を参照。
 
+## ステップ 3.5: Jupyter Lab を止める ⚠️
+
+学習が終わったら、**起動したターミナル**で:
+
+**`Ctrl+C` を 2 回押す** (Mac/Linux/Windows 共通)
+
+すると "Shutdown this Jupyter server (y/[n])?" と聞かれます。
+2回押せば即停止、聞かれたら `y` でも OK。
+
+> ⚠️ **ブラウザのタブを × で閉じるだけでは止まりません！**
+> Jupyter サーバーはバックグラウンドで動き続けます。
+> 翌日 `uv run lab.py` をすると、**`Port 8888 is already in use`** というエラーが出て起動できなくなります。
+>
+> **必ず**ターミナルで `Ctrl+C` × 2 回してから閉じてください。
+
+### 別の停止方法: JupyterLab の UI から
+
+JupyterLab 画面の上部メニューから:
+**File → Shut Down** をクリック → 確認ダイアログで Shut Down
+
+これでサーバー側も停止します (ターミナルもプロンプトに戻る)。
+
+### もし停止し忘れて、再起動できなくなったら 🆘
+
+「Port 8888 is already in use」が出たら、残った Jupyter プロセスを強制終了:
+
+#### Mac / Linux
+```bash
+# 8888 ポートを使ってるプロセスを kill
+lsof -ti:8888 | xargs kill -9
+
+# または、jupyter プロセスを全部 kill
+pkill -f jupyter
+```
+
+#### Windows (PowerShell)
+```powershell
+# jupyter プロセスを停止
+Get-Process | Where-Object { $_.ProcessName -like "*jupyter*" } | Stop-Process -Force
+
+# またはタスクマネージャーから "python" を探して終了
+```
+
+これでもダメなら、PC を再起動すれば確実に止まります。
+
 ## ステップ 4: Python スクリプトを直接実行する
 
 各章の `examples/` 内のスクリプトはコマンドで直接実行できます。
