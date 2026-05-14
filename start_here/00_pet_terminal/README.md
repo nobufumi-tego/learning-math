@@ -62,6 +62,7 @@
 | [`columns/02_keyboard_age.md`](columns/02_keyboard_age.md) | なぜ今もキーボードが王様なのか |
 | [`columns/03_open_source.md`](columns/03_open_source.md) | なぜ世界の道具がタダで配られているのか |
 | [`columns/04_git_challenge.md`](columns/04_git_challenge.md) | **チャレンジ**: Git 入門 — 一人でも、チームでも強すぎる味方 |
+| [`columns/05_reading_errors.md`](columns/05_reading_errors.md) | **赤い帯は怖くない** — エラーメッセージの読み方入門 |
 
 ## あなたの OS は何でも大丈夫
 
