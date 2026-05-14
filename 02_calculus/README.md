@@ -8,62 +8,90 @@
 - 誤差逆伝播は**連鎖律**（合成関数の微分）の応用
 - 期待値・確率密度関数は**積分**で定義される
 
+---
+
+## 💡 動かす前に
+
+このフォルダのコードは **Jupyter Lab** で対話的に動かすのが推奨です。
+
+```bash
+uv run lab.py
+```
+
+ブラウザが開いたら、左のファイルツリーから `02_calculus/notebooks/` を開いて、`01_limits.ipynb` から順に。
+
+> 🐧 **「`uv` ってなに?」「ターミナルがわからない」方** は、まず以下を:
+> - [`start_here/00_pet_terminal/`](../start_here/00_pet_terminal/README.md) — ペンタと学ぶターミナル基礎
+> - 特に [`08_uv_keeps_pet_healthy.md`](../start_here/00_pet_terminal/08_uv_keeps_pet_healthy.md) — uv の使い方
+>
+> **数学に苦手意識のある方** は:
+> - [`start_here/`](../start_here/README.md) — 数式ゼロから始める数学
+> - [`00_notation/`](../00_notation/README.md) — 数学記号の読み解き
+
+---
+
 ## 学習ステップ
 
-| ファイル | 内容 | 所要時間 |
-|---|---|---|
-| `01_limits.md` | 極限 lim、連続性 | 1時間 |
-| `02_derivatives.md` | 微分、導関数、連鎖律 | 2時間 |
-| `03_integrals.md` | 積分、不定積分・定積分 | 2時間 |
-| `04_multivariable.md` | 偏微分、多変数関数 | 2時間 |
-| `05_gradient_jacobian.md` | 勾配 ∇f、ヤコビアン、ヘッシアン | 3時間 |
+| md (解説) | ipynb (動かす) | 内容 | 所要時間 |
+|---|---|---|---|
+| [`01_limits.md`](01_limits.md) | [`notebooks/01_limits.ipynb`](notebooks/01_limits.ipynb) | 極限、連続性、e の定義 | 1時間 |
+| [`02_derivatives.md`](02_derivatives.md) | [`notebooks/02_derivatives.ipynb`](notebooks/02_derivatives.ipynb) | 微分、3 形式 (SymPy/数値/JAX)、連鎖律 | 2時間 |
+| [`03_integrals.md`](03_integrals.md) | [`notebooks/03_integrals.ipynb`](notebooks/03_integrals.ipynb) | 積分、リーマン和、期待値との関係 | 2時間 |
+| [`04_multivariable.md`](04_multivariable.md) | [`notebooks/04_multivariable.ipynb`](notebooks/04_multivariable.ipynb) | 多変数関数、偏微分、勾配ベクトル | 2時間 |
+| [`05_gradient_jacobian.md`](05_gradient_jacobian.md) | [`notebooks/05_gradient_jacobian.ipynb`](notebooks/05_gradient_jacobian.ipynb) | ∇f, Jf, Hf — ML微分の総合編 | 3時間 |
+
+各 md は読み物、各 ipynb は手を動かす場所。**両方をペアで進めるのが効果的**です。
 
 ## キーとなる Python ツール
 
 ```python
-import numpy as np
 import sympy as sp
+import jax
 
-# 記号微分
-x = sp.Symbol("x")
-f = x**2 + 3*x + 1
-df_dx = sp.diff(f, x)                # 2x + 3
+# 記号微分 (厳密)
+x = sp.Symbol('x')
+df_dx = sp.diff(x**2, x)       # 2x
 
-# 偏微分（多変数）
-x, y = sp.symbols("x y")
-g = x**2 + x*y + y**2
-print(sp.diff(g, x))                 # ∂g/∂x = 2x + y
-print(sp.diff(g, y))                 # ∂g/∂y = x + 2y
+# 数値微分 (中央差分)
+def df_central(f, x, h=1e-5):
+    return (f(x+h) - f(x-h)) / (2*h)
 
-# 勾配 ∇g = (∂g/∂x, ∂g/∂y)
-grad_g = [sp.diff(g, v) for v in (x, y)]
+# JAX 自動微分 (本命)
+df = jax.grad(lambda x: x**2)
+print(df(3.0))                 # 6.0
 
-# 数値微分
-def numerical_gradient(f, x: np.ndarray, h: float = 1e-5) -> np.ndarray:
-    """前進差分による数値勾配."""
-    grad = np.zeros_like(x)
-    for i in range(len(x)):
-        x_plus = x.copy()
-        x_plus[i] += h
-        grad[i] = (f(x_plus) - f(x)) / h
-    return grad
+# 多変数の勾配
+grad_f = jax.grad(lambda p: p[0]**2 + p[1]**2)
+
+# ヤコビアン
+J = jax.jacrev(lambda p: jnp.array([p[0]+p[1], p[0]*p[1]]))
+
+# ヘッシアン
+H = jax.hessian(lambda p: p[0]**2 + p[1]**2)
 ```
 
 ## ML への接続
 - 勾配降下法: `θ ← θ − η ∇L(θ)`
 - 誤差逆伝播: 連鎖律でレイヤごとの勾配を計算
 - 自動微分 (autograd, PyTorch, JAX): 計算グラフを使った効率的な微分
+- ニュートン法: ヘッシアンを使う2次最適化
 
-## サンプル
-- `examples/derivative_demo.py`: 微分の **記号計算 (SymPy)** と **数値計算 (NumPy)**（標準形式）
-- `examples/derivative_demo_jax.py`: 同じ問題を **自動微分 (jax.grad)** で（JAX形式）
+## CLI 実行用サンプル (Jupyter を使わない場合)
 
-### この章で JAX が一番効くポイント
+`uv run python` で直接実行できる .py ファイルも置いてあります:
+- [`examples/derivative_demo.py`](examples/derivative_demo.py) — 標準形式 (SymPy/数値)
+- [`examples/derivative_demo_jax.py`](examples/derivative_demo_jax.py) — JAX 形式 (`jax.grad`)
+
+```bash
+uv run python 02_calculus/examples/derivative_demo.py
+```
+
+### この章で JAX が一番効く場面
 
 **自動微分** こそ JAX の最大の価値:
 
 ```python
-# 標準形式: 関数と勾配を別々に書く（手で導出する必要）
+# 標準形式: 関数と勾配を別々に書く
 def f(x): return x**3 + 2*x**2 + x + 1
 def df(x): return 3*x**2 + 4*x + 1   # ← 自分で計算
 
@@ -78,8 +106,6 @@ df = jax.grad(f)                       # ← 自動
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次の章 → |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
 |---|---|---|---|
-| [`../01_linear_algebra/04_decompositions.md`](../01_linear_algebra/04_decompositions.md) | (このページが章 TOP) | [📚 ROOT README](../README.md) | [`../03_probability_statistics/README.md`](../03_probability_statistics/README.md) |
-
-> ⚠️ この章は現在 **README + サンプルのみ** の骨格状態です。本文の md は今後拡充予定。
+| [`../01_linear_algebra/04_decompositions.md`](../01_linear_algebra/04_decompositions.md) | (このページが章 TOP) | [📚 ROOT README](../README.md) | [`01_limits.md`](01_limits.md) |

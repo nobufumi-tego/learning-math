@@ -160,13 +160,19 @@ uv run lab.py             # Jupyter Lab 起動
 
 ---
 
-### Phase 3: 🌀 微積分 (骨格)
+### Phase 3: 🌀 微積分
 
 📂 [`02_calculus/`](02_calculus/README.md) — 章 TOP
 
-> ⚠️ 本文 md は今後拡充予定 (現在は README + サンプルのみ)
+| # | 解説 (md) | 動かす (ipynb) | 内容 |
+|---|---|---|---|
+| 01 | [`01_limits.md`](02_calculus/01_limits.md) | [`01_limits.ipynb`](02_calculus/notebooks/01_limits.ipynb) | 極限・連続性・e の定義 |
+| 02 | [`02_derivatives.md`](02_calculus/02_derivatives.md) | [`02_derivatives.ipynb`](02_calculus/notebooks/02_derivatives.ipynb) | 微分 (SymPy/数値/JAX) ・連鎖律 |
+| 03 | [`03_integrals.md`](02_calculus/03_integrals.md) | [`03_integrals.ipynb`](02_calculus/notebooks/03_integrals.ipynb) | 積分・リーマン和・期待値 |
+| 04 | [`04_multivariable.md`](02_calculus/04_multivariable.md) | [`04_multivariable.ipynb`](02_calculus/notebooks/04_multivariable.ipynb) | 多変数関数・偏微分・勾配ベクトル |
+| 05 | [`05_gradient_jacobian.md`](02_calculus/05_gradient_jacobian.md) | [`05_gradient_jacobian.ipynb`](02_calculus/notebooks/05_gradient_jacobian.ipynb) | ∇f / Jf / Hf — ML微分の総合編 |
 
-🐍 サンプル:
+🐍 CLI 実行サンプル:
 - [`examples/derivative_demo.py`](02_calculus/examples/derivative_demo.py) — 標準形式 (SymPy / 数値差分)
 - [`examples/derivative_demo_jax.py`](02_calculus/examples/derivative_demo_jax.py) — JAX形式 (`jax.grad`)
 
