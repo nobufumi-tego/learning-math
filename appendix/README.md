@@ -13,6 +13,11 @@
 | [`books.md`](books.md) | **書籍** — 日本語/英語、初心者〜上級、有料/無料 を網羅 |
 | [`online.md`](online.md) | **オンライン教材** — YouTube / MOOC / 公式ドキュメント / 論文サイト |
 | [`learning_paths.md`](learning_paths.md) | 本リポジトリの**後どこへ進むか** — 進路別ロードマップ |
+| [`columns/`](columns/) | 📖 **読み物コラム** — 学び方そのものを考えるエッセイ |
+
+### 📖 コラム一覧
+
+- [`columns/ai_era_grad_student.md`](columns/ai_era_grad_student.md) — **AI がコードを書く時代に、大学院生はどう学ぶか** (5 章 / 数学が苦手で AI 未経験の人向け)
 
 ---
 
