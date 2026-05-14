@@ -54,6 +54,7 @@
 ### 🔧 その他の整備
 
 - `78f7681` chore(gitignore): notes/ を git 管理対象外に追加
+- `aa69420` chore(pyproject): license フィールド + デュアルライセンス表記を追加
 
 ### 📌 その他
 
@@ -61,4 +62,4 @@
 
 ---
 
-_Total commits indexed: **31**_
+_Total commits indexed: **32**_
