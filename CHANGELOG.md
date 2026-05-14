@@ -25,6 +25,7 @@
 - `e840a3b` feat(setup): Windows ダブルクリック起動の start.bat を追加
 - `b3f1db7` feat(launch): start スクリプトで README.md を JupyterLab に自動オープン
 - `c743b1c` feat(deps): matplotlib の日本語豆腐化対策に japanize-matplotlib を追加
+- `0bd6887` feat(notebooks): 00_notation 6 本 + 07_jax 3 本の ipynb を新規作成
 
 ### 🐛 バグ修正
 
@@ -80,4 +81,4 @@
 
 ---
 
-_Total commits indexed: **47**_
+_Total commits indexed: **48**_
