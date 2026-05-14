@@ -46,13 +46,73 @@
 ### Step 1: リポジトリを取得 — 2 つの方法から選ぶ
 
 **🟢 ZIP ダウンロード (git 未経験者向け・カンタン)**
-1. このページの上部にある緑色の **`<> Code`** → **`Download ZIP`**
-2. ダウンロードした ZIP をダブルクリックで展開
 
-**🔵 git clone (git に慣れている人向け)**
+1. このページの上部にある緑色の **`<> Code`** → **`Download ZIP`** をクリック
+2. ZIP を **「展開」 (解凍)** する — 「開く」 や「中身を見る」 ではダメ。OS 別の正しい手順は下の折り畳みを参照
+3. 展開して出てきた `learning-math-main/` フォルダの中で起動スクリプト (Step 2) を実行
+
+<details>
+<summary><b>🪟 Windows の展開手順 — よくある失敗とともに</b></summary>
+
+❌ **よくある失敗**: ZIP をダブルクリックすると、エクスプローラが「**フォルダのように**」 中身を表示します。これを「展開できた」 と勘違いしてしまう人が多い。
+この状態で `start.bat` を実行しても、**動きません** (依存ファイルが読めない仮想表示なので)。
+
+> 「**展開** (Extract)」 と「**開く** (Open)」 は別物です。アイコンが「ジッパーのついたフォルダ」 なら、まだ展開されていません。
+
+✅ **正しい手順**:
+
+1. ダウンロードした `learning-math-main.zip` を **右クリック**
+2. メニューから **「すべて展開...」** (英語版なら **Extract All...**) を選択
+3. 展開先フォルダが表示されるので、確認して **「展開」** ボタン
+   - パスに **日本語やスペース** が含まれない場所が無難 (例: `C:\projects\` のような短い英語パス)
+4. 展開後、`learning-math-main` フォルダが現れる
+5. その中の `start.bat` を **ダブルクリック** ✅
+
+> 💡 ファイル名末尾の `.zip` が見えない場合: エクスプローラの「表示」 → 「ファイル名拡張子」 にチェックを入れると見えます。
+
+</details>
+
+<details>
+<summary><b>🍎 Mac の展開手順</b></summary>
+
+1. ダウンロードした `learning-math-main.zip` を **ダブルクリック**
+   → 同じフォルダ (通常は `~/Downloads/`) に `learning-math-main/` が自動作成されます
+2. **ターミナル** を開く (アプリケーション → ユーティリティ → ターミナル.app)
+3. 展開したフォルダに移動:
+   ```bash
+   cd ~/Downloads/learning-math-main
+   ```
+4. 起動スクリプトを実行:
+   ```bash
+   ./start.sh
+   ```
+
+> 💡 もし「**`./start.sh`: Permission denied**」 と出たら: `chmod +x start.sh && ./start.sh` で実行権限を付与してください (ZIP 経由だと実行ビットが落ちることがあります)。
+
+</details>
+
+<details>
+<summary><b>🐧 Linux の展開手順</b></summary>
+
+CLI なら:
+```bash
+unzip learning-math-main.zip
+cd learning-math-main
+chmod +x start.sh && ./start.sh
+```
+
+GUI ファイラの場合は ZIP を右クリック → 「**ここに展開**」 / 「**Extract here**」。
+
+</details>
+
+**🔵 git clone (git に慣れている人向け、推奨)**
+
 ```bash
 git clone https://github.com/nobufumi-tego/learning-math.git
 ```
+
+> 💡 git clone なら **展開作業も実行ビット問題も Mark of the Web も全部発生しません**。
+> git に少しでも慣れている方はこちらを推奨します。git 未経験で興味のある方は [`start_here/00_pet_terminal/columns/04_git_challenge.md`](start_here/00_pet_terminal/columns/04_git_challenge.md) で git 入門ができます。
 
 ### Step 2: ⭐ ワンショットスクリプトで起動 (推奨)
 
