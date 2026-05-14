@@ -54,6 +54,7 @@
 - `2666517` docs(readme): ZIP 展開手順を OS 別に追加 (初心者の最大つまずき対策)
 - `f2d568f` docs(setup): 初回起動の待ち時間と進捗の見方を明示
 - `e52388e` docs(launch): 各章 README の起動方法ブロックに待ち時間注意を追加
+- `cdf2b39` docs(jupyter): JupyterLab 完全ビギナーガイドを新設 + 全所からリンク
 
 ### 🤖 CI/CD
 
@@ -70,4 +71,4 @@
 
 ---
 
-_Total commits indexed: **40**_
+_Total commits indexed: **41**_
