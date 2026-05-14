@@ -74,6 +74,7 @@
 - `63c04b2` docs(notebook): @jit 高速化の教育的コメントと章間クロスリンクを追加
 - `e531e7e` docs(jax): dtype セルの UserWarning を教育的に位置付け直す
 - `4e861ae` docs(column): エラー読解コラム「赤い帯は怖くない」 を新設
+- `6bb5d1e` docs(notebooks): 各章 ipynb に「よくあるエラー」 ミニセクションを散在配置
 
 ### 🤖 CI/CD
 
@@ -90,4 +91,4 @@
 
 ---
 
-_Total commits indexed: **54**_
+_Total commits indexed: **55**_
