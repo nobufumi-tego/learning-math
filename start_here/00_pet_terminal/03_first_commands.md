@@ -37,13 +37,21 @@
 
 ## 命令 1: `pwd` — 今どこ？
 
+**Mac / Linux:**
 ```bash
 pwd
 ```
 
+**Windows (PowerShell):**
+```powershell
+Get-Location
+# または: pwd ← PowerShell でもエイリアスで動く
+```
+
 返事 (例):
 ```
-/home/nobufumi
+/home/nobufumi             # Mac / Linux
+C:\Users\nobufumi          # Windows
 ```
 
 これは「**ペンタ、今あなたの部屋にいるよ**」という意味。
@@ -64,27 +72,41 @@ pwd
 
 `~` は「**家**」のイメージそのまま。「ペンタ、家に帰って」と言いたいときは:
 
+**Mac / Linux:**
 ```bash
 cd ~
+# または引数なしで:
+cd
 ```
 
-または引数なしで:
-
-```bash
-cd
+**Windows (PowerShell):**
+```powershell
+Set-Location ~
+# または:
+cd ~          # PowerShell でも ~ が使える
+cd $HOME      # こちらも有効
 ```
 
 これで一瞬で家に戻れます。
 
 ## 命令 2: `ls` — 周りに何がある?
 
+**Mac / Linux:**
 ```bash
 ls
 ```
 
+**Windows (PowerShell):**
+```powershell
+Get-ChildItem
+# または短縮形:
+ls            # alias
+dir           # alias (cmd.exeの伝統)
+```
+
 返事 (例):
 ```
-Documents  Pictures  Music  leaning-math
+Documents  Pictures  Music  learning-math
 ```
 
 「ペンタの周りに、これだけのフォルダや書類があるよ」という意味。
@@ -95,13 +117,21 @@ Documents  Pictures  Music  leaning-math
 
 `ls` にちょっとオマケをつけると、もっと教えてくれます:
 
+**Mac / Linux:**
 ```bash
 ls -l    # 詳しく (サイズ、更新日時も)
 ls -a    # 隠しファイルも
 ls -lh   # サイズを人間に読みやすい単位で
 ```
 
-`-l` `-a` `-h` のような、`-` で始まるものを **オプション** と呼びます。
+**Windows (PowerShell):**
+```powershell
+Get-ChildItem -Force                          # 隠しファイルも (= -la 相当)
+Get-ChildItem | Format-Table -AutoSize        # 整形して表示
+Get-ChildItem | Sort-Object Length -Descending # サイズ順
+```
+
+`-l` `-a` `-h` (Linux) や `-Force`/`-Recurse` (PowerShell) のような、`-` で始まるものを **オプション** と呼びます。
 ペンタへの「もっとこうしてね」というお願いです。
 
 例 (`ls -lh` の結果):
@@ -120,19 +150,28 @@ drwxr-xr-x  5 nobufumi staff  170 Jan  3 12:30 Pictures
 
 ## 命令 3: `cd` — 移動する
 
+**Mac / Linux:**
 ```bash
 cd Documents
+```
+
+**Windows (PowerShell):**
+```powershell
+Set-Location Documents
+# または:
+cd Documents              # alias でそのまま動く
 ```
 
 これで「**ペンタ、Documents の部屋に入って**」という命令。
 何も返事は無いけど、ちゃんと中に入っています。確認してみよう:
 
 ```bash
-pwd
+pwd                       # Mac/Linux/PowerShell すべてOK
 ```
 返事:
 ```
-/home/nobufumi/Documents
+/home/nobufumi/Documents       # Mac/Linux
+C:\Users\nobufumi\Documents    # Windows
 ```
 
 ほら、移動した。
@@ -141,6 +180,7 @@ pwd
 
 ### よく使う `cd` のパターン
 
+**Mac / Linux:**
 ```bash
 cd Documents       # 中の Documents へ
 cd ..              # 一つ上 (親フォルダ) へ
@@ -149,6 +189,17 @@ cd /               # ルート (家全体) へ
 cd ~               # ホームに戻る
 cd                 # 同じく、ホームへ
 cd -               # さっきいた場所に戻る (ペンタの記憶力)
+```
+
+**Windows (PowerShell):**
+```powershell
+cd Documents       # 中の Documents へ
+cd ..              # 一つ上 (親フォルダ) へ
+cd ..\..           # 二つ上へ (区切りは \ または / どちらもOK)
+cd \               # ルート (現在のドライブの最上位) へ
+cd ~               # ホームに戻る
+cd $HOME           # 同じく、ホームへ
+cd -               # さっきいた場所に戻る (PowerShell 6+ で対応)
 ```
 
 ### 「`.`」と「`..`」の意味
@@ -163,7 +214,8 @@ cd -               # さっきいた場所に戻る (ペンタの記憶力)
 
 ## やってみる: 散歩のシナリオ
 
-ターミナルを開いて、こう打ってみましょう (Mac/Linux 想定):
+ターミナルを開いて、こう打ってみましょう。
+**`ls` `cd` `pwd` は Mac/Linux/Windows すべて同じコマンド** なので、共通シナリオです:
 
 ```bash
 pwd                    # 1. 今どこ？
@@ -178,6 +230,8 @@ pwd                    # 8. ホームに戻ってる？
 
 8回の命令で、ペンタを家の中で散歩させたことになります。
 これだけで、もうあなたは「**ターミナルを使える人**」の仲間入り。
+
+> 💡 PowerShell では本来 `Get-Location` `Get-ChildItem` `Set-Location` ですが、Linux 由来の `pwd` `ls` `cd` が **alias** として全部効きます。**最初は alias だけ覚えれば OK**。
 
 ## オートコンプリート — Tabキーが救世主
 

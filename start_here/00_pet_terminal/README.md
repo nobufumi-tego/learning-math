@@ -72,6 +72,35 @@
 このリポジトリのコマンドは、ほぼすべての OS で動くように書かれています。
 細かい違いがあれば、その都度ペンタが教えてくれます。
 
+### 🪟 Windows ユーザーへ — コマンド例の見方
+
+各章のコマンド例は、原則として **「Mac / Linux」** と **「Windows (PowerShell)」** の両方を併記しています:
+
+````markdown
+**Mac / Linux:**
+```bash
+ls -la
+```
+
+**Windows (PowerShell):**
+```powershell
+Get-ChildItem -Force
+# または短縮: ls -Force  ← PowerShell では ls が alias として効く
+```
+````
+
+> 💡 **嬉しいお知らせ**: PowerShell には Linux 由来の **`ls`/`cd`/`mkdir`/`cp`/`mv`/`rm`/`cat`/`echo`** などが**そのまま alias として効きます**。
+> なので「Mac / Linux」の例の多くは **PowerShell でもコピペでだいたい動く** ことが多いです。
+>
+> 大きく違うコマンド (`grep` → `Select-String`、`wc` → `Measure-Object` など) は、各章で PowerShell 版をしっかり併記しています。
+
+#### 🐧 もう1つの選択肢: Git Bash (Windows でも Linux 風)
+
+Windows で **「Linux 風コマンドを完全に使いたい」** 場合は、**Git Bash** をインストールすると、Mac/Linux の例がそのまま動きます。
+[Git for Windows](https://git-scm.com/download/win) のインストーラに同梱されています ([`columns/04_git_challenge.md`](columns/04_git_challenge.md) 参照)。
+
+各章のコード例は、**右上の小さいコピーアイコン** をクリックすると、**1クリックでコピー** できます。OS別に分けてあるので、自分の OS のブロックだけコピペすれば OK。
+
 ## 「ググってみよう」コーナーについて
 
 このリポジトリでは、章の最後に**「ググってみよう」キーワード**を散りばめます。

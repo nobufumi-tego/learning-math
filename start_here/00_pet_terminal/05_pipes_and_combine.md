@@ -52,8 +52,16 @@ README.md  data.csv  hello.py  notes.txt  script.py
 でも、`.py` ファイルだけ見たい。
 そんなとき:
 
+**Mac / Linux:**
 ```bash
 ls | grep .py
+```
+
+**Windows (PowerShell):**
+```powershell
+ls | Select-String '\.py$'
+# または短縮 alias で:
+ls *.py
 ```
 
 返事:
@@ -61,6 +69,8 @@ ls | grep .py
 hello.py
 script.py
 ```
+
+> 💡 **PowerShell の `Select-String`** は Linux の `grep` 相当。短く `sls` という alias もあります。
 
 何が起きたか:
 1. `ls` がファイル一覧を出した
@@ -71,8 +81,16 @@ script.py
 
 ## 例 2: 「ファイルが何個あるか数える」
 
+**Mac / Linux:**
 ```bash
 ls | wc -l
+```
+
+**Windows (PowerShell):**
+```powershell
+(ls).Count
+# またはパイプで:
+ls | Measure-Object | Select-Object -ExpandProperty Count
 ```
 
 返事:
@@ -81,7 +99,7 @@ ls | wc -l
 ```
 
 - `ls` が一覧を出す
-- `wc -l` が**行数**を数える (`-l` = lines)
+- `wc -l` (Linux) / `Measure-Object` (PowerShell) が**行数**を数える
 - 結果: 5 個のファイルがある
 
 これ、Finder/エクスプローラでファイル数を数えるより**圧倒的に速い**。
@@ -89,8 +107,14 @@ ls | wc -l
 
 ## 例 3: 連続パイプ — 3段重ね、4段重ねもできる
 
+**Mac / Linux:**
 ```bash
 ls -l | grep .txt | sort | head -3
+```
+
+**Windows (PowerShell):**
+```powershell
+ls | Where-Object Name -like '*.txt' | Sort-Object Name | Select-Object -First 3
 ```
 
 意味:
@@ -106,56 +130,94 @@ GUI でやろうとしたら何分かかるか…。
 
 パイプと一緒に覚えておきたいのが**リダイレクト**:
 
+**Mac / Linux:**
 ```bash
 ls > file_list.txt           # 一覧をファイルに保存 (上書き)
 ls >> file_list.txt          # 追記
 ```
 
+**Windows (PowerShell):**
+```powershell
+ls | Out-File file_list.txt -Encoding utf8           # 上書き
+ls | Out-File file_list.txt -Encoding utf8 -Append    # 追記
+# 短く:
+ls > file_list.txt           # 動くが、文字コードに注意
+```
+
 組み合わせると:
+
+**Mac / Linux:**
 ```bash
 ls | grep .py > python_files.txt
+```
+
+**Windows (PowerShell):**
+```powershell
+ls *.py | Out-File python_files.txt -Encoding utf8
 ```
 
 「Python ファイルの一覧を、`python_files.txt` に保存」。
 
 ## よく使うパイプ仲間たち
 
-| コマンド | 何をする |
-|---|---|
-| `grep <文字列>` | 文字列を含む行だけ抽出 |
-| `sort` | 並び替え (ABC順、数値順) |
-| `uniq` | 重複削除 |
-| `wc -l` | 行数を数える |
-| `head -n N` | 先頭 N 行 |
-| `tail -n N` | 末尾 N 行 |
-| `awk '{...}'` | 列を抜き出す・計算 (玄人ツール) |
-| `sed 's/A/B/'` | 文字列を置換 (玄人ツール) |
-| `cut -f N` | N 列目を取り出す |
-| `tr 'a' 'b'` | 文字を置換 |
-| `xargs` | 結果を引数として次のコマンドへ |
+### Mac / Linux ↔ Windows PowerShell 対応表
+
+| やりたいこと | Mac / Linux | Windows PowerShell |
+|---|---|---|
+| 文字列で抽出 | `grep <文字列>` | `Select-String <文字列>` (alias `sls`) |
+| 並び替え | `sort` | `Sort-Object` (alias `sort`) |
+| 重複削除 | `uniq` | `Get-Unique` (alias `gu`) または `Sort-Object -Unique` |
+| 行数を数える | `wc -l` | `Measure-Object -Line` |
+| 先頭 N 行 | `head -n N` | `Select-Object -First N` |
+| 末尾 N 行 | `tail -n N` | `Select-Object -Last N` |
+| 列を抜き出す・計算 | `awk '{...}'` | `ForEach-Object { ... }` |
+| 文字列を置換 | `sed 's/A/B/'` | `-replace 'A','B'` (演算子) |
+| N 列目を取り出す | `cut -f N` | `% { ($_ -split "`t")[N] }` |
+| 文字を置換 | `tr 'a' 'b'` | `-replace 'a','b'` |
+| 結果を引数として次へ | `xargs` | `% { command $_ }` (パイプ + ForEach) |
+
+> 💡 **PowerShell の独特なパラダイム**: PowerShell は **テキストの行ではなく "オブジェクト" がパイプを流れる** ため、Linux のようなテキスト処理コマンドとは思想が違います。最初は戸惑いますが、`Get-Member` で「今パイプを流れているのは何か」を確認できます。
+>
+> 「Linux 風が完全に良い」場合は、Windows でも **Git Bash** を使えば `grep`/`awk`/`sed` などがそのまま動きます ([`columns/04_git_challenge.md`](columns/04_git_challenge.md))。
 
 ## 実用例: 仕事で使えるワンライナー
 
 ### 例 A: 自分が今日コミットした件数
 
+**Mac / Linux:**
 ```bash
 git log --author=$(git config user.name) --since=midnight | grep "^commit" | wc -l
+```
+
+**Windows (PowerShell):**
+```powershell
+(git log --author=(git config user.name) --since=midnight | Select-String '^commit').Count
 ```
 
 「自分が今日 commit した件数」を一瞬で。
 
 ### 例 B: フォルダで一番大きいファイル TOP 5
 
+**Mac / Linux:**
 ```bash
 ls -lhS | head -6
 ```
 
-`-S` でサイズ順ソート、`head -6` で上位 (1行はヘッダなので 6行)。
+**Windows (PowerShell):**
+```powershell
+ls | Sort-Object Length -Descending | Select-Object -First 5
+```
 
 ### 例 C: ログから "ERROR" を含む行だけ集計
 
+**Mac / Linux:**
 ```bash
 cat application.log | grep ERROR | wc -l
+```
+
+**Windows (PowerShell):**
+```powershell
+(Get-Content application.log | Select-String ERROR).Count
 ```
 
 「**ログにエラーが何回出てるか**」が即座に分かる。
@@ -163,8 +225,14 @@ DevOps エンジニアの日常です。
 
 ### 例 D: ある単語がコードに何回出てるか
 
+**Mac / Linux:**
 ```bash
 grep -r "TODO" .
+```
+
+**Windows (PowerShell):**
+```powershell
+Get-ChildItem -Recurse -File | Select-String "TODO"
 ```
 
 「カレントフォルダ以下のすべてのファイルから "TODO" を探せ」。
@@ -172,8 +240,15 @@ grep -r "TODO" .
 
 ### 例 E: 100個の写真ファイル名を CSV に整理
 
+**Mac / Linux:**
 ```bash
 ls *.jpg | awk '{print NR","$0}' > photos.csv
+```
+
+**Windows (PowerShell):**
+```powershell
+$i = 0
+ls *.jpg | ForEach-Object { $i++; "$i,$($_.Name)" } | Out-File photos.csv -Encoding utf8
 ```
 
 これだけで CSV ができあがる。
