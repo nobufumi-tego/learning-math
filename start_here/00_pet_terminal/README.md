@@ -74,9 +74,12 @@
 
 ### 🪟 Windows ユーザーへ — コマンド例の見方
 
-各章のコマンド例は、原則として **「Mac / Linux」** と **「Windows (PowerShell)」** の両方を併記しています:
+各章のコマンド例は、原則として **「Mac / Linux」** と **「Windows (PowerShell)」** の **2 つに分かれた独立コードブロック** で併記しています。
 
-````markdown
+実際の見栄えはこんな感じ ↓
+
+---
+
 **Mac / Linux:**
 ```bash
 ls -la
@@ -87,7 +90,11 @@ ls -la
 Get-ChildItem -Force
 # または短縮: ls -Force  ← PowerShell では ls が alias として効く
 ```
-````
+
+---
+
+上の 2 つのコードブロックを見てください。それぞれ**独立した枠**になっていて、**右上の小さいコピーアイコン**をクリックすると **1クリックでコピー** できます。
+**自分の OS のブロックだけ**コピペすれば OK です。
 
 > 💡 **嬉しいお知らせ**: PowerShell には Linux 由来の **`ls`/`cd`/`mkdir`/`cp`/`mv`/`rm`/`cat`/`echo`** などが**そのまま alias として効きます**。
 > なので「Mac / Linux」の例の多くは **PowerShell でもコピペでだいたい動く** ことが多いです。
@@ -98,8 +105,6 @@ Get-ChildItem -Force
 
 Windows で **「Linux 風コマンドを完全に使いたい」** 場合は、**Git Bash** をインストールすると、Mac/Linux の例がそのまま動きます。
 [Git for Windows](https://git-scm.com/download/win) のインストーラに同梱されています ([`columns/04_git_challenge.md`](columns/04_git_challenge.md) 参照)。
-
-各章のコード例は、**右上の小さいコピーアイコン** をクリックすると、**1クリックでコピー** できます。OS別に分けてあるので、自分の OS のブロックだけコピペすれば OK。
 
 ## 「ググってみよう」コーナーについて
 
