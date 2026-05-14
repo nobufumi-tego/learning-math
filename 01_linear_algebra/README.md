@@ -114,6 +114,8 @@ np.linalg.svd(A)      ↔   jnp.linalg.svd(A)
 - 🌐 **[3Blue1Brown: Essence of Linear Algebra](../appendix/online.md#3blue1brown)** — 線形代数の直感を 3 時間で
 - 🌐 **[Strang MIT 18.06](../appendix/online.md#strang-mit-1806-linear-algebra)** — MIT の伝説的講義 (英語、無料)
 
+- 📖 **学び方そのものを考える**: [AI がコードを書く時代に、大学院生はどう学ぶか](../appendix/columns/ai_era_grad_student.md) — 数学が苦手で AI 未経験の人向けの 5 章コラム
+
 → 全リソース一覧: [`appendix/`](../appendix/README.md)
 
 ---

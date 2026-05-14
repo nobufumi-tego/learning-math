@@ -111,6 +111,8 @@ df = jax.grad(f)                       # ← 自動
 - 🌐 **[3Blue1Brown: Essence of Calculus](../appendix/online.md#3blue1brown)** — 微積分の直感を動画で
 - 🌐 **[ヨビノリたくみ](../appendix/online.md#ヨビノリたくみ)** — 大学微積分を日本語で
 
+- 📖 **学び方そのものを考える**: [AI がコードを書く時代に、大学院生はどう学ぶか](../appendix/columns/ai_era_grad_student.md) — 数学が苦手で AI 未経験の人向けの 5 章コラム
+
 → 全リソース一覧: [`appendix/`](../appendix/README.md)
 
 ---

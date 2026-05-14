@@ -99,6 +99,8 @@ x = jax.random.normal(subkey, shape=(3,))
 - 🌐 [Optax 公式](https://optax.readthedocs.io/) — JAX 用最適化ライブラリ
 - 🌐 [Flax 公式](https://flax.readthedocs.io/) — JAX 用ニューラルネットライブラリ
 
+- 📖 **学び方そのものを考える**: [AI がコードを書く時代に、大学院生はどう学ぶか](../appendix/columns/ai_era_grad_student.md) — 数学が苦手で AI 未経験の人向けの 5 章コラム
+
 → 全リソース一覧: [`appendix/`](../appendix/README.md)
 
 ---

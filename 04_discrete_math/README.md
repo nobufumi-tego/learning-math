@@ -93,6 +93,8 @@ $$
 - 📕 **[Concrete Mathematics](../appendix/books.md#concrete-mathematics)** (Knuth, Graham, Patashnik) — TAOCP の Knuth による名著
 - 🌐 **[MIT 6.042 Math for CS](../appendix/online.md#mit-6042--60042-mathematics-for-computer-science)** — MIT 公開講義
 
+- 📖 **学び方そのものを考える**: [AI がコードを書く時代に、大学院生はどう学ぶか](../appendix/columns/ai_era_grad_student.md) — 数学が苦手で AI 未経験の人向けの 5 章コラム
+
 → 全リソース一覧: [`appendix/`](../appendix/README.md)
 
 ---

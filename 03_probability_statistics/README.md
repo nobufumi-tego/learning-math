@@ -96,6 +96,8 @@ cdf = stats.norm.cdf(1.96)  # ≈ 0.975
 - 🌐 **[StatQuest](../appendix/online.md#statquest-with-josh-starmer)** — 統計を楽しく分かりやすく
 - 🌐 **[Seeing Theory](../appendix/online.md#seeing-theory-brown-university)** — 確率をインタラクティブに体感
 
+- 📖 **学び方そのものを考える**: [AI がコードを書く時代に、大学院生はどう学ぶか](../appendix/columns/ai_era_grad_student.md) — 数学が苦手で AI 未経験の人向けの 5 章コラム
+
 → 全リソース一覧: [`appendix/`](../appendix/README.md)
 
 ---

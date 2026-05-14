@@ -121,6 +121,8 @@ uv run python 06_ml_math_bridge/examples/loss_and_gradient.py
 - 🌐 **[Karpathy: Neural Networks Zero to Hero](../appendix/online.md#karpathy-neural-networks-zero-to-hero)** — GPT を 1 から実装
 - 🌐 [fast.ai](../appendix/online.md#fastai-practical-deep-learning-for-coders) — 実装ファースト DL 講座
 
+- 📖 **学び方そのものを考える**: [AI がコードを書く時代に、大学院生はどう学ぶか](../appendix/columns/ai_era_grad_student.md) — 数学が苦手で AI 未経験の人向けの 5 章コラム
+
 → 全リソース一覧: [`appendix/`](../appendix/README.md)
 
 ---

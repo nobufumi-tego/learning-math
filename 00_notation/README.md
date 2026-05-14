@@ -43,6 +43,8 @@
 - 📕 **[数学ガール](../appendix/books.md#数学ガール)** (結城浩) — 記号と数式に親しむ
 - 🌐 **[高校数学の美しい物語](../appendix/online.md#高校数学の美しい物語)** — 記号の意味を辞書的に検索
 
+- 📖 **学び方そのものを考える**: [AI がコードを書く時代に、大学院生はどう学ぶか](../appendix/columns/ai_era_grad_student.md) — 数学が苦手で AI 未経験の人向けの 5 章コラム
+
 → 全リソース一覧: [`appendix/`](../appendix/README.md)
 
 ---

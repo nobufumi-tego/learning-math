@@ -106,6 +106,8 @@ uv run python 05_optimization/examples/gradient_descent_demo.py
 - 🌐 **[Boyd: Convex Optimization (Stanford)](../appendix/online.md#boyd-convex-optimization-stanford-ee364a)** — 講義動画も無料
 - 🌐 [Optax 公式ドキュメント](https://optax.readthedocs.io/) — JAX 用 optimizer
 
+- 📖 **学び方そのものを考える**: [AI がコードを書く時代に、大学院生はどう学ぶか](../appendix/columns/ai_era_grad_student.md) — 数学が苦手で AI 未経験の人向けの 5 章コラム
+
 → 全リソース一覧: [`appendix/`](../appendix/README.md)
 
 ---
