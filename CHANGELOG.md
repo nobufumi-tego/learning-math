@@ -21,6 +21,7 @@
 - `b0dc510` feat(ch5-6): 05_optimization と 06_ml_math_bridge 章を完成
 - `e668d37` feat(ch4): 04_discrete_math 章を完成 (3サブ章 + 3ノート)
 - `3dbba76` feat(appendix): 章別おすすめ書籍・Web リソース集を追加
+- `b1448ef` feat(setup): リポ取得後ワンショットで Jupyter Lab を起動するスクリプトを追加
 
 ### 🐛 バグ修正
 
@@ -62,4 +63,4 @@
 
 ---
 
-_Total commits indexed: **32**_
+_Total commits indexed: **33**_
