@@ -51,21 +51,21 @@ $$
 ベイズの定理を再掲して、各部分に名前をつけます:
 
 $$
-\underbrace{P(\theta \mid D)}_{\text{事後 (posterior)}}
-=
-\frac{\overbrace{P(D \mid \theta)}^{\text{尤度 (likelihood)}} \cdot \overbrace{P(\theta)}^{\text{事前 (prior)}}}{\underbrace{P(D)}_{\text{周辺尤度 (evidence)}}}
+P(\theta \mid D) \;=\; \frac{P(D \mid \theta) \cdot P(\theta)}{P(D)}
 $$
 
-| 名前 | 意味 |
-|---|---|
-| **事前 $P(\theta)$** | データを見る前の信念 |
-| **尤度 $P(D \mid \theta)$** | パラメータ $\theta$ の下でデータ $D$ が出る確率 |
-| **事後 $P(\theta \mid D)$** | データを見た後の信念 (更新済み) |
-| **周辺尤度 $P(D)$** | データそのものの確率 (規格化のための定数) |
+| 部分 | 名前 | 意味 |
+|---|---|---|
+| 左辺 $P(\theta \mid D)$ | **事後 (posterior)** | データを見た後の信念 (更新済み) |
+| 分子の左 $P(D \mid \theta)$ | **尤度 (likelihood)** | パラメータ $\theta$ の下でデータ $D$ が出る確率 |
+| 分子の右 $P(\theta)$ | **事前 (prior)** | データを見る前の信念 |
+| 分母 $P(D)$ | **周辺尤度 (evidence)** | データそのものの確率 (規格化のための定数) |
 
 ベイズの定理は、要するに:
 
-> **事後 ∝ 尤度 × 事前**
+$$
+\text{事後} \;\propto\; \text{尤度} \times \text{事前}
+$$
 
 「**観測データに合うように、信念を更新せよ**」 ということ。
 
