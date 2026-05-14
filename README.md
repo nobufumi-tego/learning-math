@@ -70,6 +70,17 @@ uv run lab.py             # Jupyter Lab 起動
 
 詳しい順序は [`docs/learning_path.md`](docs/learning_path.md) を参照。
 
+### 🚀 本リポジトリの先へ進みたい人 (書籍・Web リソース)
+
+→ **[`appendix/`](appendix/README.md)** — 章別おすすめ書籍 (50 冊) + オンライン教材 + 進路別ロードマップ
+
+| ファイル | 内容 |
+|---|---|
+| [`appendix/README.md`](appendix/README.md) | 章別早見表 + 学習目標別の進路 |
+| [`appendix/books.md`](appendix/books.md) | 📕 厳選書籍 50 冊 (日英・初級〜上級・有料/無料) |
+| [`appendix/online.md`](appendix/online.md) | 🌐 YouTube・MOOC・公式ドキュメント・論文サイト |
+| [`appendix/learning_paths.md`](appendix/learning_paths.md) | 🎯 大学院 / MLエンジニア / LLM / DS 別ロードマップ |
+
 ---
 
 ## 📚 全章ドキュメント案内 (すべてのページに直接アクセス)
