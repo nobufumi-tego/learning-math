@@ -18,6 +18,10 @@
 
 - `7598f2d` fix(memory): feedback_jupyter_first.md の相対パスを修正
 
+### 📝 ドキュメント
+
+- `ba3b444` docs(glossary): 記号リファレンスを大幅拡充 (ハット・書体・線形代数・統計)
+
 ## 2026-05-14
 
 ### ✨ 新機能・新規追加
@@ -101,4 +105,4 @@
 
 ---
 
-_Total commits indexed: **57**_
+_Total commits indexed: **58**_
