@@ -14,6 +14,10 @@
 
 - `4ae7fa6` feat(02_calculus): テイラー展開の章を新設 (収束半径・桁落ち)
 
+### 🐛 バグ修正
+
+- `7598f2d` fix(memory): feedback_jupyter_first.md の相対パスを修正
+
 ## 2026-05-14
 
 ### ✨ 新機能・新規追加
@@ -97,4 +101,4 @@
 
 ---
 
-_Total commits indexed: **56**_
+_Total commits indexed: **57**_
