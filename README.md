@@ -313,6 +313,7 @@ Jupyter Lab を停止するには、起動したターミナル / PowerShell ウ
 | 04 | [`04_function_notation.md`](00_notation/04_function_notation.md) | [`04_function_notation.ipynb`](00_notation/notebooks/04_function_notation.ipynb) | 関数記法 f: A → B, ↦ |
 | 05 | [`05_summation_product.md`](00_notation/05_summation_product.md) | [`05_summation_product.ipynb`](00_notation/notebooks/05_summation_product.ipynb) | Σ (総和) / Π (総乗) / ∫ (積分) |
 | 06 | [`06_greek_letters.md`](00_notation/06_greek_letters.md) | [`06_greek_letters.ipynb`](00_notation/notebooks/06_greek_letters.ipynb) | ギリシャ文字一覧 + LaTeX 記法 |
+| 07 | [`07_decorations_and_fonts.md`](00_notation/07_decorations_and_fonts.md) | [`07_decorations_and_fonts.ipynb`](00_notation/notebooks/07_decorations_and_fonts.ipynb) | 飾りと書体 — 推定のハット x̂ / 太字と shape |
 
 🐍 補助サンプル:
 - [`examples/notation_to_python.py`](00_notation/examples/notation_to_python.py) — 記号 → Python 対応例 (CLI 実行用)

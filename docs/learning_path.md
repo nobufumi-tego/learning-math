@@ -78,11 +78,14 @@
 - [ ] `00_notation/04_function_notation.md` — 関数 (30分)
 - [ ] `00_notation/05_summation_product.md` — Σ Π ∫ (1h)
 - [ ] `00_notation/06_greek_letters.md` — ギリシャ文字 (30分)
+- [ ] `00_notation/07_decorations_and_fonts.md` — 飾りと書体 x̂ x̄ 𝐱 ℝ (1h)
 - [ ] `00_notation/examples/notation_to_python.py` を実行 (30分)
 
 **チェックポイント**:
 - Claude Code に「論文によく出る `∀ε > 0, ∃δ > 0` の意味を説明して」と聞いて、自力で理解の正誤確認ができる
 - ChatGPT で機械学習の論文を1段落出して、出てきた記号をすべて識別できる
+- θ と θ̂ の違いを自分の言葉で説明できる（真の値と、データから推定した値）
+- 数式の $\mathbf{x} \in \mathbb{R}^n$ を見て、対応する Python の shape が即座に言える
 
 ### Phase 2: 線形代数（2週間 / 約10時間）
 

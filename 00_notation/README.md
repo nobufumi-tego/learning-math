@@ -21,8 +21,13 @@
 | [`04_function_notation.md`](04_function_notation.md) | [`notebooks/04_function_notation.ipynb`](notebooks/04_function_notation.ipynb) | 関数記法 f: A → B, ↦ | 30 分 |
 | [`05_summation_product.md`](05_summation_product.md) | [`notebooks/05_summation_product.ipynb`](notebooks/05_summation_product.ipynb) | Σ・Π・∫・$n!$・$\binom{n}{k}$ | 1 時間 |
 | [`06_greek_letters.md`](06_greek_letters.md) | [`notebooks/06_greek_letters.ipynb`](notebooks/06_greek_letters.ipynb) | ギリシャ文字 + LaTeX 記法 | 30 分 |
+| [`07_decorations_and_fonts.md`](07_decorations_and_fonts.md) | [`notebooks/07_decorations_and_fonts.ipynb`](notebooks/07_decorations_and_fonts.ipynb) | 飾りと書体 $\hat{x}$ $\bar{x}$ $\mathbf{x}$ $\mathbb{R}$ | 1 時間 |
 
-合計約 4〜5 時間で「読める目」 が手に入ります。各 md は読み物、各 ipynb は手を動かす場所。**両方をペアで進める** のが効果的です。
+合計約 5〜6 時間で「読める目」 が手に入ります。
+
+> 💡 **07 は「見た目がほぼ同じなのに意味が違う」記号を扱います。**
+> $\hat{\theta}$ を $\theta$ と読み違えると論文の主張ごと取り違えるので、
+> 01〜06 と同じくらい重要です。飛ばさずに進めてください。各 md は読み物、各 ipynb は手を動かす場所。**両方をペアで進める** のが効果的です。
 
 ---
 

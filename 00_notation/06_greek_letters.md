@@ -120,6 +120,8 @@ print(grad)  # [2*x, 3]
 
 | ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次の章 → |
 |---|---|---|---|
-| [`05_summation_product.md`](05_summation_product.md) | [章 TOP](README.md) | [📚 ROOT README](../README.md) | [`../01_linear_algebra/README.md`](../01_linear_algebra/README.md) |
+| [`05_summation_product.md`](05_summation_product.md) | [章 TOP](README.md) | [📚 ROOT README](../README.md) | [`07_decorations_and_fonts.md`](07_decorations_and_fonts.md) |
 
-🎉 記号読解章卒業！次は線形代数の世界へ。
+→ 次は [`07_decorations_and_fonts.md`](07_decorations_and_fonts.md)。
+ギリシャ文字の次は、その文字に乗る**飾り**（$\hat{\theta}$, $\bar{x}$）と**書体**（$\mathbb{R}$, $\mathcal{L}$, $\mathbf{x}$）です。
+この章で扱った「$\sigma$ は標準偏差か sigmoid か」と同じ多義性が、飾りにも起きます。
