@@ -13,6 +13,7 @@
 ### ✨ 新機能・新規追加
 
 - `4ae7fa6` feat(02_calculus): テイラー展開の章を新設 (収束半径・桁落ち)
+- `1876643` feat(00_notation): 文字の飾りと書体の章を新設 (ハット・太字・書体)
 
 ### 🐛 バグ修正
 
@@ -105,4 +106,4 @@
 
 ---
 
-_Total commits indexed: **58**_
+_Total commits indexed: **59**_
