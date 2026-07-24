@@ -63,6 +63,23 @@
 | 対称行列 | symmetric matrix |
 | 直交行列 | orthogonal matrix |
 | 正定値行列 | positive definite matrix |
+| 半正定値行列 | positive semi-definite matrix |
+| 単位行列 | identity matrix |
+| 対角行列 | diagonal matrix |
+| 零行列 | zero matrix |
+| 単位ベクトル | unit vector |
+| 擬似逆行列 | pseudo-inverse / Moore-Penrose inverse |
+| 共役転置 | conjugate transpose / Hermitian transpose |
+| アダマール積 (要素ごとの積) | Hadamard product / element-wise product |
+| クロネッカー積 | Kronecker product |
+| 外積 | outer product (行列を作る) / cross product (3次元) |
+| 零空間 / 核 | null space / kernel |
+| 像 / 値域 | image / range / column space |
+| 張る (スパン) | span |
+| 次元 | dimension |
+| 直交 | orthogonal |
+| フロベニウスノルム | Frobenius norm |
+| 条件数 | condition number |
 
 ## 4. 微積分・解析
 
@@ -127,6 +144,31 @@
 | ポアソン分布 | Poisson distribution |
 | 一様分布 | uniform distribution |
 | 指数分布 | exponential distribution |
+| ベータ分布 | beta distribution |
+| カイ二乗分布 | chi-squared distribution |
+| t 分布 | Student's t-distribution |
+| ベルヌーイ分布 | Bernoulli distribution |
+| 母集団 | population |
+| 標本 | sample |
+| 母平均 | population mean |
+| 標本平均 | sample mean |
+| 標本分散 | sample variance |
+| 推定量 | estimator |
+| 不偏推定量 | unbiased estimator |
+| 偏り / バイアス | bias |
+| バイアス-バリアンス分解 | bias-variance decomposition / tradeoff |
+| 平均二乗誤差 | mean squared error (MSE) |
+| 対数尤度 | log-likelihood |
+| 事後確率最大化推定 | maximum a posteriori estimation (MAP) |
+| 帰無仮説 | null hypothesis |
+| 対立仮説 | alternative hypothesis |
+| p 値 | p-value |
+| 有意水準 | significance level |
+| 指示関数 | indicator function |
+| エントロピー | entropy |
+| 交差エントロピー | cross entropy |
+| KL ダイバージェンス | Kullback-Leibler divergence |
+| 相互情報量 | mutual information |
 
 ## 6. 最適化
 

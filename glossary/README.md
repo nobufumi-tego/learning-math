@@ -14,6 +14,16 @@
 2. 載っていなければ Claude Code で `/project:explain-symbol <記号>`
 3. 学んだら自分でこのファイルに追記
 
+**よくあるつまずき別の入口**:
+
+| こういうとき | 見るところ |
+|---|---|
+| $\hat{\theta}$ や $\bar{x}$ の**帽子や棒**が何なのかわからない | [文字につく飾り](symbol_reference.md#7-文字につく飾りハットバーチルダ) |
+| $\mathbb{R}$ と $R$、$\mathcal{L}$ と $L$、太字の $\mathbf{x}$ の**違い**がわからない | [書体の違い](symbol_reference.md#8-書体の違い) |
+| 行列の記号（$A^\top$, $\odot$, $\|x\|_2$, $\lambda$）を調べたい | [線形代数](symbol_reference.md#9-線形代数) |
+| 統計の記号（$\mathbb{E}$, $\sigma$, $\perp\!\!\!\perp$, $\mathcal{N}$）を調べたい | [確率・統計](symbol_reference.md#10-確率統計) |
+| 論文の $\theta$, $\hat{y}$, $\mathcal{D}$, $\nabla_\theta \mathcal{L}$ が読めない | [機械学習で頻出](symbol_reference.md#12-機械学習で頻出) |
+
 ### 英語の数学用語に出会ったとき
 1. [`jp_en_terms.md`](jp_en_terms.md) を Ctrl+F で検索
 2. なければ追記する習慣を
