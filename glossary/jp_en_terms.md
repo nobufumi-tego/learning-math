@@ -82,7 +82,17 @@
 | 勾配 | gradient |
 | ヤコビアン | Jacobian |
 | ヘッシアン | Hessian |
-| テイラー展開 | Taylor expansion |
+| テイラー展開 | Taylor expansion / Taylor series |
+| マクローリン展開 | Maclaurin series (中心が 0 のテイラー展開) |
+| 級数 | series |
+| 部分和 | partial sum |
+| 収束半径 | radius of convergence |
+| 発散 | divergence |
+| 剰余項 | remainder term |
+| 階乗 | factorial |
+| ランダウの記号 | big-O notation |
+| 桁落ち | catastrophic cancellation |
+| 数値安定性 | numerical stability |
 | 凸関数 | convex function |
 | 凹関数 | concave function |
 

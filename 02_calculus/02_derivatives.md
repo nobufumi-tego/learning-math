@@ -315,6 +315,7 @@ print(sp.diff(loss, b))
 → [`03_integrals.md`](03_integrals.md) — 積分: 微分の逆操作、面積・期待値の道具
 
 ## 関連
+- [`06_taylor_series.md`](06_taylor_series.md) — テイラー展開: 微分から関数そのものを復元する
 - [`07_jax/02_autodiff.md`](../07_jax/02_autodiff.md) — JAX 自動微分の深掘り
 - [`05_optimization/02_gradient_descent.md`](../05_optimization/02_gradient_descent.md) — 微分を使った最適化
 
@@ -326,7 +327,7 @@ print(sp.diff(loss, b))
 - **微分演算子** — $D$, $\partial$ などの記号文化
 - **L'Hôpital の定理** — $\frac{0}{0}$ 形を微分で解く技
 - **平均値の定理** — $f'(c) = \frac{f(b)-f(a)}{b-a}$ を保証する定理
-- **テイラー展開** — 関数を微分から多項式で復元する技
+- **テイラー展開** — 関数を微分から多項式で復元する技 → [`06_taylor_series.md`](06_taylor_series.md) で扱います
 - **自動微分 (autodiff)** — 数値微分でも記号微分でもない第3の道
 - **dual number (双対数)** — JAX の forward-mode autodiff の理論的基礎
 

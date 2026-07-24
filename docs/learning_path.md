@@ -108,10 +108,12 @@
 - [ ] `02_calculus/04_multivariable.md` (2h)
 - [ ] `02_calculus/05_gradient_jacobian.md` (3h)
 - [ ] `02_calculus/examples/derivative_demo.py` 実行・改造
+- [ ] `02_calculus/06_taylor_series.md` (2h) — 🌶️ 発展編。飛ばして後で戻ってきても可
 
 **チェックポイント**:
 - 連鎖律 `(g∘f)'(x) = g'(f(x))f'(x)` を使える
 - 勾配 ∇f を SymPy と数値の両方で計算できる
+- (発展) 「近似には有効範囲がある」を、log のテイラー展開を発散させて体感した
 
 ### Phase 4: 確率・統計（2週間 / 約10時間）
 

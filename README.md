@@ -347,6 +347,9 @@ Jupyter Lab を停止するには、起動したターミナル / PowerShell ウ
 | 03 | [`03_integrals.md`](02_calculus/03_integrals.md) | [`03_integrals.ipynb`](02_calculus/notebooks/03_integrals.ipynb) | 積分・リーマン和・期待値 |
 | 04 | [`04_multivariable.md`](02_calculus/04_multivariable.md) | [`04_multivariable.ipynb`](02_calculus/notebooks/04_multivariable.ipynb) | 多変数関数・偏微分・勾配ベクトル |
 | 05 | [`05_gradient_jacobian.md`](02_calculus/05_gradient_jacobian.md) | [`05_gradient_jacobian.ipynb`](02_calculus/notebooks/05_gradient_jacobian.ipynb) | ∇f / Jf / Hf — ML微分の総合編 |
+| 06 🌶️ | [`06_taylor_series.md`](02_calculus/06_taylor_series.md) | [`06_taylor_series.ipynb`](02_calculus/notebooks/06_taylor_series.ipynb) | テイラー展開・収束半径・桁落ち (発展) |
+
+> 🌶️ **06 は発展編**。05 までで ML の微分は足ります。06 は「近似には有効範囲がある」「数学的に正しいのに計算機だと壊れる」を扱い、softmax の max shift や `log1p` の理由がわかります。
 
 🐍 CLI 実行サンプル:
 - [`examples/derivative_demo.py`](02_calculus/examples/derivative_demo.py) — 標準形式 (SymPy / 数値差分)

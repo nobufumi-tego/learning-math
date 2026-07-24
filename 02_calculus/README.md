@@ -52,8 +52,14 @@ uv のインストールから依存関係取得、Jupyter Lab 起動まで全�
 | [`03_integrals.md`](03_integrals.md) | [`notebooks/03_integrals.ipynb`](notebooks/03_integrals.ipynb) | 積分、リーマン和、期待値との関係 | 2時間 |
 | [`04_multivariable.md`](04_multivariable.md) | [`notebooks/04_multivariable.ipynb`](notebooks/04_multivariable.ipynb) | 多変数関数、偏微分、勾配ベクトル | 2時間 |
 | [`05_gradient_jacobian.md`](05_gradient_jacobian.md) | [`notebooks/05_gradient_jacobian.ipynb`](notebooks/05_gradient_jacobian.ipynb) | ∇f, Jf, Hf — ML微分の総合編 | 3時間 |
+| [`06_taylor_series.md`](06_taylor_series.md) 🌶️ | [`notebooks/06_taylor_series.ipynb`](notebooks/06_taylor_series.ipynb) | テイラー展開、収束半径、桁落ち (発展) | 2時間 |
 
 各 md は読み物、各 ipynb は手を動かす場所。**両方をペアで進めるのが効果的**です。
+
+> 🌶️ **06 は発展編です。** 05 までで ML に必要な微分の道具は揃っています。
+> 06 は「近似には有効範囲がある」「数学的に正しいのに計算機だと壊れる」という
+> **数値計算の急所**を扱う章で、softmax の max shift や `log1p` の理由がわかるようになります。
+> 急ぐ場合は先に [`03_probability_statistics/`](../03_probability_statistics/README.md) へ進み、後で戻ってきても構いません。
 
 ## キーとなる Python ツール
 

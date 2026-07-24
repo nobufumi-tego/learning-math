@@ -244,6 +244,7 @@ $$
 
 ## 関連
 - [`start_here/columns/04_e_and_pi.md`](../start_here/columns/04_e_and_pi.md) — 極限から定義される $e$
+- [`06_taylor_series.md`](06_taylor_series.md) — 無限級数の収束・発散を実際に手で確かめる
 - [`07_jax/02_autodiff.md`](../07_jax/02_autodiff.md) — JAX なら勾配を一瞬で
 
 ---
@@ -256,7 +257,8 @@ $$
 - **解析学 (analysis)** — 極限を中心に発展した数学の分野
 - **e (ネイピア数)** — $\lim_{n\to\infty}(1+1/n)^n$ で定義される自然対数の底
 - **L'Hôpital の定理** — $\frac{0}{0}$ 形の極限を解く必殺技
-- **Taylor 展開** — 関数を多項式の極限で表現する技法
+- **Taylor 展開** — 関数を多項式の極限で表現する技法 → [`06_taylor_series.md`](06_taylor_series.md) で扱います
+- **収束半径 (radius of convergence)** — 無限級数がどこまで信用できるかの境界
 
 ---
 

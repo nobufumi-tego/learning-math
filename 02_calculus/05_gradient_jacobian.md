@@ -313,14 +313,22 @@ ML では **L-BFGS** など「擬似ヘッシアン」を使う方法が実用�
 
 ---
 
-## 微積分章 完了 🎉
+## 本編おつかれさまでした 🎉
 
-これで 02_calculus 章は卒業です。
-次は確率・統計に進むと、ML の「**データから学ぶ**」側面が見えてきます。
+これで 02_calculus の**本編は完了**です。ML の微分に必要な道具はここまでで揃いました。
 
-→ [`../03_probability_statistics/README.md`](../03_probability_statistics/README.md)
+**もう 1 本、発展編として** [`06_taylor_series.md`](06_taylor_series.md) を用意しています。
+関数を多項式で近似する**テイラー展開**と、そこから見えてくる
+「**近似には必ず有効範囲がある**」という数値計算の急所を扱います。
+softmax がなぜ最大値を引き算するのか、その理由もわかります。
+
+急ぐ場合は飛ばして次の章に進んでも構いません。
+
+→ 発展: [`06_taylor_series.md`](06_taylor_series.md) — テイラー展開・収束半径・桁落ち
+→ 次の章: [`../03_probability_statistics/README.md`](../03_probability_statistics/README.md)
 
 ## 関連
+- [`06_taylor_series.md`](06_taylor_series.md) — ヘッセ行列は多変数テイラー展開の 2 次の項
 - [`07_jax/02_autodiff.md`](../07_jax/02_autodiff.md) — JAX 自動微分の本格学習
 - [`05_optimization/02_gradient_descent.md`](../05_optimization/02_gradient_descent.md) — 勾配降下法
 - [`06_ml_math_bridge/02_backprop.md`](../06_ml_math_bridge/02_backprop.md) — 誤差逆伝播
@@ -344,4 +352,4 @@ ML では **L-BFGS** など「擬似ヘッシアン」を使う方法が実用�
 
 | ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次の章 → |
 |---|---|---|---|
-| [`04_multivariable.md`](04_multivariable.md) | [章 TOP](README.md) | [📚 ROOT README](../README.md) | [`../03_probability_statistics/README.md`](../03_probability_statistics/README.md) |
+| [`04_multivariable.md`](04_multivariable.md) | [章 TOP](README.md) | [📚 ROOT README](../README.md) | [`06_taylor_series.md`](06_taylor_series.md) (発展) |
