@@ -23,11 +23,25 @@
 | [`06_greek_letters.md`](06_greek_letters.md) | [`notebooks/06_greek_letters.ipynb`](notebooks/06_greek_letters.ipynb) | ギリシャ文字 + LaTeX 記法 | 30 分 |
 | [`07_decorations_and_fonts.md`](07_decorations_and_fonts.md) | [`notebooks/07_decorations_and_fonts.ipynb`](notebooks/07_decorations_and_fonts.ipynb) | 飾りと書体 $\hat{x}$ $\bar{x}$ $\mathbf{x}$ $\mathbb{R}$ | 1 時間 |
 
-合計約 5〜6 時間で「読める目」 が手に入ります。
+合計約 5〜6 時間で「読める目」 が手に入ります。各 md は読み物、各 ipynb は手を動かす場所。**両方をペアで進める** のが効果的です。
 
 > 💡 **07 は「見た目がほぼ同じなのに意味が違う」記号を扱います。**
 > $\hat{\theta}$ を $\theta$ と読み違えると論文の主張ごと取り違えるので、
-> 01〜06 と同じくらい重要です。飛ばさずに進めてください。各 md は読み物、各 ipynb は手を動かす場所。**両方をペアで進める** のが効果的です。
+> 01〜06 と同じくらい重要です。飛ばさずに進めてください。
+
+## ✒️ コラム欄（読み物・記号の由来）
+
+記号は**丸暗記より、生まれた理由を知るほうが定着します**。
+`columns/` フォルダに、記号にまつわる歴史の読み物を置いています。疲れたときの息抜きにどうぞ。
+
+| ファイル | 話のジャンル |
+|---|---|
+| [`00_birth_of_equals.md`](columns/00_birth_of_equals.md) | 等号 `=` の誕生 —「2本の平行線ほど等しいものはない」 |
+| [`01_leibniz_vs_newton.md`](columns/01_leibniz_vs_newton.md) | 記号の優劣がイギリスの数学を 100 年遅らせた話 |
+| [`02_sin_mistranslation.md`](columns/02_sin_mistranslation.md) | `sin` は誤訳から生まれた — 1000 年の伝言ゲーム |
+| [`03_logic_symbols_are_new.md`](columns/03_logic_symbols_are_new.md) | `∀ ∃ ∈ ∅` は 100 年の新参者 |
+
+各章の本文にも「**✒️ この記号の生まれ**」として短い由来を挟んであります。そこから該当コラムに飛べます。
 
 ---
 

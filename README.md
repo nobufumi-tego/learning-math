@@ -315,6 +315,12 @@ Jupyter Lab を停止するには、起動したターミナル / PowerShell ウ
 | 06 | [`06_greek_letters.md`](00_notation/06_greek_letters.md) | [`06_greek_letters.ipynb`](00_notation/notebooks/06_greek_letters.ipynb) | ギリシャ文字一覧 + LaTeX 記法 |
 | 07 | [`07_decorations_and_fonts.md`](00_notation/07_decorations_and_fonts.md) | [`07_decorations_and_fonts.ipynb`](00_notation/notebooks/07_decorations_and_fonts.ipynb) | 飾りと書体 — 推定のハット x̂ / 太字と shape |
 
+✒️ コラム (記号の由来・歴史の読み物):
+- [`columns/00_birth_of_equals.md`](00_notation/columns/00_birth_of_equals.md) — 等号 `=` の誕生 (1557年)
+- [`columns/01_leibniz_vs_newton.md`](00_notation/columns/01_leibniz_vs_newton.md) — 記号の優劣が数学を 100 年遅らせた
+- [`columns/02_sin_mistranslation.md`](00_notation/columns/02_sin_mistranslation.md) — `sin` は誤訳から生まれた
+- [`columns/03_logic_symbols_are_new.md`](00_notation/columns/03_logic_symbols_are_new.md) — `∀ ∃ ∈ ∅` は 100 年の新参者
+
 🐍 補助サンプル:
 - [`examples/notation_to_python.py`](00_notation/examples/notation_to_python.py) — 記号 → Python 対応例 (CLI 実行用)
 

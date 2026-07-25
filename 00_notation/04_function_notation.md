@@ -89,6 +89,7 @@ print(g_compose_f(2.0))  # 9.0
 | `exp(x)`, `e^x` | 指数関数 | `np.exp(x)` |
 | `log(x)`, `ln(x)` | 自然対数 | `np.log(x)` |
 | `log₂(x)` | 2を底とする対数 | `np.log2(x)` |
+| `sin(x)`, `cos(x)`, `tan(x)` | 三角関数（引数の単位は**ラジアン**） | `np.sin(x)`, `np.cos(x)`, `np.tan(x)` |
 
 ```python
 import numpy as np
@@ -102,7 +103,27 @@ print(math.ceil(x))      # -2     （⌈x⌉）
 print(np.sign(x))        # -1.0   （sgn(x)）
 print(np.exp(1.0))       # 2.718... （e）
 print(np.log(np.e))      # 1.0    （ln(e) = 1）
+print(np.sin(np.pi / 6)) # 0.5    （sin 30°。引数はラジアン）
 ```
+
+> ### ✒️ この関数名の生まれ — `sin` は誤訳だった
+>
+> 関数名の多くは語源をたどると図形的な意味が見えます。
+>
+> - `tan` = **tangent**（ラテン語 *tangere*「触れる」→ **接線**）
+> - `sec` = **secant**（*secare*「切る」→ **割線**）
+> - `exp` = **exponential**（指数）
+> - `log` = **logarithm**（ギリシャ語 *logos*「比」+ *arithmos*「数」）
+>
+> ところが `sin` = **sinus** はラテン語で「**入り江・懐**」。三角形とも円とも関係ありません。
+>
+> **これは翻訳ミスです。** 元はサンスクリット語の **jyā（弓の弦）**でした。
+> アラビア語に音訳される途中で母音が失われ、12 世紀のラテン語訳者が
+> 別の単語 **jaib（湾）**と読み違えたと伝えられます。
+>
+> **1000 年の伝言ゲームで、「弓の弦」が「入り江」になった**わけです。
+>
+> 📖 続き → [`columns/02_sin_mistranslation.md`](columns/02_sin_mistranslation.md)（その「弓の弦」が今、Transformer の中で単語の位置を運んでいる話）
 
 ## 添字表記
 
