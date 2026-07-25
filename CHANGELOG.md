@@ -23,6 +23,7 @@
 
 - `ba3b444` docs(glossary): 記号リファレンスを大幅拡充 (ハット・書体・線形代数・統計)
 - `da6a3a5` docs(00_notation): 記号の由来コラム 4 本と各章のミニコーナーを追加
+- `06a4977` docs(links): 本文中のファイル名参照をリンク化し、関連記事への導線を追加
 
 ## 2026-05-14
 
@@ -107,4 +108,4 @@
 
 ---
 
-_Total commits indexed: **60**_
+_Total commits indexed: **61**_
