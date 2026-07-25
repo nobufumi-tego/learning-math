@@ -126,7 +126,16 @@
 - [ ] [`03_probability_statistics/02_distributions.md`](../03_probability_statistics/02_distributions.md) (2h)
 - [ ] [`03_probability_statistics/03_expectation_variance.md`](../03_probability_statistics/03_expectation_variance.md) (1.5h)
 - [ ] [`03_probability_statistics/04_bayes.md`](../03_probability_statistics/04_bayes.md) (2h)
+- [ ] [`03_probability_statistics/05_descriptive_stats.md`](../03_probability_statistics/05_descriptive_stats.md) — 記述統計 (1.5h)
+- [ ] [`03_probability_statistics/06_estimation.md`](../03_probability_statistics/06_estimation.md) — 推定・信頼区間・MLE/MAP (2.5h)
+- [ ] [`03_probability_statistics/07_hypothesis_testing.md`](../03_probability_statistics/07_hypothesis_testing.md) — 仮説検定・p値 (2h)
 - [ ] [`03_probability_statistics/examples/distribution_demo.py`](../03_probability_statistics/examples/distribution_demo.py) 実行・改造
+
+**チェックポイント**:
+- $\mu$ と $\bar{x}$、$\sigma$ と $s$ を区別して使える
+- 「95% 信頼区間」の意味を正しく説明できる（真値が入る確率ではない）
+- p 値が $P(D \mid H_0)$ であって $P(H_0 \mid D)$ ではないと言える
+- 「有意差あり」と「意味のある差」が別物だと説明できる
 
 ### Phase 5: 最適化（1週間 / 約5時間）
 

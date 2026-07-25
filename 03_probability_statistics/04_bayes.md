@@ -287,4 +287,4 @@ ChatGPT のような生成モデルも、**「次の単語の確率分布」を�
 
 | ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次の章 → |
 |---|---|---|---|
-| [`03_expectation_variance.md`](03_expectation_variance.md) | [章 TOP](README.md) | [📚 ROOT README](../README.md) | [`../05_optimization/README.md`](../05_optimization/README.md) |
+| [`03_expectation_variance.md`](03_expectation_variance.md) | [章 TOP](README.md) | [📚 ROOT README](../README.md) | [`05_descriptive_stats.md`](05_descriptive_stats.md) |

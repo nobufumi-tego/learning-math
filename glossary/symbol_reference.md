@@ -424,7 +424,28 @@ $\mathbf{y} = \mathbf{A}\mathbf{x}$ を見たら「行列 × ベクトル = ベ�
 > ⚠️ KL ダイバージェンスの `‖` は**ノルムではなく区切り記号**です。$D_{KL}(p \,\|\, q)$ は
 > 「p から見た q のズレ」。$D_{KL}(p\|q) \ne D_{KL}(q\|p)$ で**対称ではありません**（距離ではない）。
 
-詳しくは [`03_probability_statistics/`](../03_probability_statistics/README.md)。
+### 10-6. 仮説検定
+
+| 記号 | 読み方 | 意味 | Python |
+|---|---|---|---|
+| `H₀` | H naught / 帰無仮説 | 否定したい仮説（「差はない」） | – |
+| `H₁`, `Hₐ` | H one / 対立仮説 | 主張したい仮説（「差がある」） | – |
+| `p` | p 値 | $H_0$ のもとで今回以上に極端な結果が出る確率 | `stats.ttest_ind(...)[1]` |
+| `α` | alpha / 有意水準 | 第一種の過誤を許す確率（慣習 0.05） | – |
+| `β` | beta | 第二種の過誤の確率（見逃し） | – |
+| `1−β` | – | **検出力 (power)**。差を検出できる確率（目安 0.8） | – |
+| `SE` | standard error | 標準誤差 $s/\sqrt{n}$。**標準偏差とは別物** | `x.std(ddof=1)/np.sqrt(len(x))` |
+| `t` | t 統計量 | 差 ÷ 標準誤差 | `stats.ttest_ind` |
+| `χ²` | chi-squared | カイ二乗統計量（独立性・適合度） | `stats.chi2_contingency` |
+| `d` | Cohen's d | 効果量（差 ÷ 標準偏差） | 手計算 |
+| `CI` | confidence interval | 信頼区間（頻度主義） | `stats.t.interval` |
+| `df` | degrees of freedom | 自由度（$t$ 検定なら $n-1$ など） | `ddof` 引数 |
+
+> ⚠️ **$p = P(D \mid H_0)$ であって $P(H_0 \mid D)$ ではありません。**
+> 「$H_0$ が正しい確率」と読むのは、条件付き確率のひっくり返しの誤りです（[`04_bayes.md`](../03_probability_statistics/04_bayes.md)）。
+
+詳しくは [`03_probability_statistics/`](../03_probability_statistics/README.md)
+（特に [`06_estimation.md`](../03_probability_statistics/06_estimation.md)・[`07_hypothesis_testing.md`](../03_probability_statistics/07_hypothesis_testing.md)）。
 
 ---
 

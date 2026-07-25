@@ -51,8 +51,16 @@ uv のインストールから依存関係取得、Jupyter Lab 起動まで全�
 | [`02_distributions.md`](02_distributions.md) | [`notebooks/02_distributions.ipynb`](notebooks/02_distributions.ipynb) | 正規・二項・ポアソン・指数、中心極限定理 | 2時間 |
 | [`03_expectation_variance.md`](03_expectation_variance.md) | [`notebooks/03_expectation_variance.ipynb`](notebooks/03_expectation_variance.ipynb) | 期待値、分散、共分散、相関、標準化 | 1.5時間 |
 | [`04_bayes.md`](04_bayes.md) | [`notebooks/04_bayes.ipynb`](notebooks/04_bayes.ipynb) | ベイズの定理、ベイズ更新、ナイーブベイズ | 2時間 |
+| [`05_descriptive_stats.md`](05_descriptive_stats.md) | [`notebooks/05_descriptive_stats.ipynb`](notebooks/05_descriptive_stats.ipynb) | 中央値・四分位・歪度・尖度、アンスコムの四重奏 | 1.5時間 |
+| [`06_estimation.md`](06_estimation.md) | [`notebooks/06_estimation.ipynb`](notebooks/06_estimation.ipynb) | 点推定・区間推定・t分布・最尤推定・MAP推定 | 2.5時間 |
+| [`07_hypothesis_testing.md`](07_hypothesis_testing.md) | [`notebooks/07_hypothesis_testing.ipynb`](notebooks/07_hypothesis_testing.ipynb) | 帰無仮説・p値・過誤・検出力・t検定・pハッキング | 2時間 |
 
 各 md は読み物、各 ipynb は手を動かす場所。**両方をペアで進めるのが効果的**です。
+
+> 💡 **01〜04 は「確率」の話、05〜07 は「統計」の話**です。
+> 確率は「モデルが分かっているとき、データがどう出るか」を問い、
+> 統計は逆に「データが出たとき、モデルはどうなっているか」を問います。
+> 05 以降で $\mu$（真の値）と $\bar{x}$（手元のデータ）の区別が主役になります。
 
 ## キーとなる Python ツール
 

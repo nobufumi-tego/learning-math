@@ -164,6 +164,26 @@
 | 対立仮説 | alternative hypothesis |
 | p 値 | p-value |
 | 有意水準 | significance level |
+| 第一種の過誤 | type I error (false positive) |
+| 第二種の過誤 | type II error (false negative) |
+| 検出力 | statistical power |
+| 効果量 | effect size |
+| 標準誤差 | standard error |
+| 自由度 | degrees of freedom |
+| 点推定 | point estimation |
+| 区間推定 | interval estimation |
+| 信用区間 (ベイズ) | credible interval |
+| 多重比較 | multiple comparisons |
+| 中央値 | median |
+| 最頻値 | mode |
+| 四分位数 | quartile |
+| 四分位範囲 | interquartile range (IQR) |
+| 変動係数 | coefficient of variation |
+| 歪度 | skewness |
+| 尖度 | kurtosis |
+| 外れ値 | outlier |
+| 欠損値 | missing value |
+| 無作為抽出 | random sampling |
 | 指示関数 | indicator function |
 | エントロピー | entropy |
 | 交差エントロピー | cross entropy |

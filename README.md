@@ -374,6 +374,11 @@ Jupyter Lab を停止するには、起動したターミナル / PowerShell ウ
 | 02 | [`02_distributions.md`](03_probability_statistics/02_distributions.md) | [`02_distributions.ipynb`](03_probability_statistics/notebooks/02_distributions.ipynb) | 正規・二項・ポアソン・指数、中心極限定理 |
 | 03 | [`03_expectation_variance.md`](03_probability_statistics/03_expectation_variance.md) | [`03_expectation_variance.ipynb`](03_probability_statistics/notebooks/03_expectation_variance.ipynb) | 期待値・分散・共分散・標準化 |
 | 04 | [`04_bayes.md`](03_probability_statistics/04_bayes.md) | [`04_bayes.ipynb`](03_probability_statistics/notebooks/04_bayes.ipynb) | ベイズの定理・ベイズ更新・ナイーブベイズ |
+| 05 | [`05_descriptive_stats.md`](03_probability_statistics/05_descriptive_stats.md) | [`05_descriptive_stats.ipynb`](03_probability_statistics/notebooks/05_descriptive_stats.ipynb) | 記述統計・四分位・歪度・アンスコムの四重奏 |
+| 06 | [`06_estimation.md`](03_probability_statistics/06_estimation.md) | [`06_estimation.ipynb`](03_probability_statistics/notebooks/06_estimation.ipynb) | 点推定・区間推定・t分布・最尤推定・MAP推定 |
+| 07 | [`07_hypothesis_testing.md`](03_probability_statistics/07_hypothesis_testing.md) | [`07_hypothesis_testing.ipynb`](03_probability_statistics/notebooks/07_hypothesis_testing.ipynb) | 帰無仮説・p値・過誤・検出力・pハッキング |
+
+> 💡 **01〜04 が「確率」、05〜07 が「統計」**。確率は「モデル → データ」、統計は「データ → モデル」の向きです。
 
 🐍 CLI 実行サンプル:
 - [`examples/distribution_demo.py`](03_probability_statistics/examples/distribution_demo.py) — 各種分布の可視化
