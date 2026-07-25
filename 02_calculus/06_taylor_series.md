@@ -12,7 +12,7 @@
 uv run lab.py
 ```
 
-ブラウザが開いたら、左のファイルツリーから `02_calculus/notebooks/06_taylor_series.ipynb` を開いて、上から順に **Shift+Enter** でセル実行してください。
+ブラウザが開いたら、左のファイルツリーから [`02_calculus/notebooks/06_taylor_series.ipynb`](notebooks/06_taylor_series.ipynb) を開いて、上から順に **Shift+Enter** でセル実行してください。
 
 > 🐧 **「`uv` って何?」「ブラウザが開かない」「ファイルツリーがわからない」方** は、まず以下を:
 > - [`start_here/00_pet_terminal/`](../start_here/00_pet_terminal/README.md) — ペンタと学ぶターミナル基礎

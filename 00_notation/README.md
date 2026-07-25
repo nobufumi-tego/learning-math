@@ -65,7 +65,7 @@
 各ファイルで:
 1. 記号一覧を眺める（暗記不要、雰囲気をつかむ）
 2. **読み方**と**意味**を確認
-3. `examples/notation_to_python.py` で実行して感触をつかむ
+3. [`examples/notation_to_python.py`](examples/notation_to_python.py) で実行して感触をつかむ
 4. わからなくなったら `/project:explain-symbol <記号>` で再質問
 
 ## 実践

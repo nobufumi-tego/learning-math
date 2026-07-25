@@ -109,7 +109,7 @@ x = jax.random.normal(subkey, shape=(3,))
 - 大規模学習: pmap, jax.distributed
 
 ## サンプル
-- `examples/jax_basics.py`: jax.numpy の基本
+- [`examples/jax_basics.py`](examples/jax_basics.py): jax.numpy の基本
 - [`examples/grad_demo.py`](examples/grad_demo.py): 自動微分の威力
 - [`examples/jit_vmap_demo.py`](examples/jit_vmap_demo.py): JIT と vmap の効果
 

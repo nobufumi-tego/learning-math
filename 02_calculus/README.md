@@ -31,7 +31,7 @@ uv のインストールから依存関係取得、Jupyter Lab 起動まで全�
 詳細・トラブルシューティングは ROOT [`README.md`](../README.md#step-2--ワンショットスクリプトで起動-推奨) 参照。
 🧪 **Jupyter Lab の使い方** (Shift+Enter でセル実行など) は [`docs/jupyter_lab_guide.md`](../docs/jupyter_lab_guide.md) を参照。
 
-ブラウザが開いたら、左のファイルツリーから `02_calculus/notebooks/` を開いて、`01_limits.ipynb` から順に。
+ブラウザが開いたら、左のファイルツリーから `02_calculus/notebooks/` を開いて、[`01_limits.ipynb`](notebooks/01_limits.ipynb) から順に。
 
 > 🐧 **「`uv` ってなに?」「ターミナルがわからない」方** は、まず以下を:
 > - [`start_here/00_pet_terminal/`](../start_here/00_pet_terminal/README.md) — ペンタと学ぶターミナル基礎

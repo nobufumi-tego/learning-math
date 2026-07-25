@@ -116,7 +116,7 @@ claude        # または gemini / codex
 ```
 
 このリポジトリには、`/project:...` で始まる**専用コマンド**があります。
-詳しくは `README.md` の「AI CLI で動的に学ぶ」 セクションを参照。
+詳しくは [`README.md`](../../README.md) の「AI CLI で動的に学ぶ」 セクションを参照。
 
 ## ペンタと AI CLI の関係
 

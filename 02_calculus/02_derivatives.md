@@ -44,6 +44,12 @@ $f(x)$ の微分 (導関数) はいくつかの書き方があります:
 | $Df$ | "D of f" | 演算子記法 |
 | $\dfrac{\partial f}{\partial x}$ | "partial f partial x" | **多変数の場合** (偏微分、04章) |
 
+> ✒️ **なぜ記法が何種類もあるのか**: $f'$ はラグランジュ、$\frac{df}{dx}$ はライプニッツ、$Df$ はオイラー、
+> そして物理でよく見る $\dot{x}$ はニュートンの記法です。
+> ライプニッツ記法が ML で好まれるのは、**連鎖律が分数の約分に見える**から。
+> この「記号の使いやすさ」が数学史を動かした話 →
+> [`00_notation/columns/01_leibniz_vs_newton.md`](../00_notation/columns/01_leibniz_vs_newton.md)
+
 定義式:
 
 $$

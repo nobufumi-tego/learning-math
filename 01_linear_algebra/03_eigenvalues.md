@@ -10,7 +10,7 @@
 uv run lab.py
 ```
 
-ファイルツリーから `01_linear_algebra/notebooks/03_eigenvalues.ipynb` を開いて、上から順に **Shift+Enter**。
+ファイルツリーから [`01_linear_algebra/notebooks/03_eigenvalues.ipynb`](notebooks/03_eigenvalues.ipynb) を開いて、上から順に **Shift+Enter**。
 
 > 🐧 **CLI/Jupyter が初めての方** → [`start_here/00_pet_terminal/`](../start_here/00_pet_terminal/README.md)
 >

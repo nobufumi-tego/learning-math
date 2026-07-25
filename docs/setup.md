@@ -128,9 +128,9 @@ uv run lab.py
 
 ブラウザが自動で開き、Jupyter Lab の画面が表示されます。
 
-左のファイルツリーから `start_here/notebooks/02_pythagoras.ipynb` を開いて、上から順にセル実行 (Shift+Enter) してみてください。
+左のファイルツリーから [`start_here/notebooks/02_pythagoras.ipynb`](../start_here/notebooks/02_pythagoras.ipynb) を開いて、上から順にセル実行 (Shift+Enter) してみてください。
 
-> 💡 **`lab.py` って何?**
+> 💡 **[`lab.py`](../lab.py) って何?**
 > リポジトリ ルートの [`lab.py`](../lab.py) は、本リポジトリ専用の JupyterLab 設定 (`.jupyter/lab/user-settings/`) を読み込んでから JupyterLab を起動するラッパースクリプトです。
 > これにより、`.md` ファイルをダブルクリックしたときに **自動的に Markdown Preview モード** で表示されます (raw な markdown を編集モードで開かなくて済む)。
 >
@@ -383,7 +383,7 @@ cd path/to/leaning-math
 codex
 ```
 
-3ツールすべてが、このリポジトリの `AGENTS.md` を共通指示書として読みます。
+3ツールすべてが、このリポジトリの [`AGENTS.md`](../AGENTS.md) を共通指示書として読みます。
 
 ## トラブルシューティング
 
@@ -434,6 +434,6 @@ uv 本体もアンインストール可能ですが、軽量なので残して�
 
 ## 次にすること
 
-1. `start_here/README.md` を読む (このリポジトリの入口)
-2. `docs/learning_path.md` を読む (学習ロードマップ)
+1. [`start_here/README.md`](../start_here/README.md) を読む (このリポジトリの入口)
+2. [`docs/learning_path.md`](learning_path.md) を読む (学習ロードマップ)
 3. `claude` または `gemini` で AI を起動して質問を始める

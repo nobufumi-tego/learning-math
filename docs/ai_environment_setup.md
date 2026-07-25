@@ -9,10 +9,10 @@
 
 | 種別 | 場所 | 役割 |
 |---|---|---|
-| Agent 指示書 | `AGENTS.md`, `CLAUDE.md`, `GEMINI.md` | 3 ツール共通の説明スタイル・規約 |
+| Agent 指示書 | [`AGENTS.md`](../AGENTS.md), [`CLAUDE.md`](../CLAUDE.md), [`GEMINI.md`](../GEMINI.md) | 3 ツール共通の説明スタイル・規約 |
 | カスタムコマンド | `.claude/commands/`, `.gemini/commands/` | `/project:teach-baby` など6種 |
 | スキル | `.claude/skills/math-tutor/` | 数学チューター用ペルソナ |
-| ルール | `.claude/rules/teaching-style.md` | 説明順序の厳守事項 |
+| ルール | [`.claude/rules/teaching-style.md`](../.claude/rules/teaching-style.md) | 説明順序の厳守事項 |
 | ツール設定 | `.claude/settings.json`, `.codex/config.toml` | hooks・権限・モデル選択 |
 | **AI メモリ** | `.claude/memory/` | **設計判断・想定ユーザー像** ← ここがポイント |
 
@@ -20,7 +20,7 @@
 
 通常、Claude Code のメモリは `~/.claude/projects/<project-id>/memory/` に保存され、**取得した相手 (git clone でも ZIP でも) には伝わりません**。
 
-このリポジトリでは、**過去の対話で蓄積した設計判断 (どんな順序で説明すべきか、JAX をどう扱うか、初心者にどう接するか…)** を `.claude/memory/` に同梱し、`CLAUDE.md` から `@-import` で**自動ロード**するようにしています。
+このリポジトリでは、**過去の対話で蓄積した設計判断 (どんな順序で説明すべきか、JAX をどう扱うか、初心者にどう接するか…)** を `.claude/memory/` に同梱し、[`CLAUDE.md`](../CLAUDE.md) から `@-import` で**自動ロード**するようにしています。
 
 そのため repo を取得した瞬間から、AI は
 
@@ -43,7 +43,7 @@ cd path/to/learning-math
 claude
 ```
 
-`CLAUDE.md` が自動で読まれ、`@.claude/memory/...` も全部ロードされます。**追加作業ゼロ**。
+[`CLAUDE.md`](../CLAUDE.md) が自動で読まれ、`@.claude/memory/...` も全部ロードされます。**追加作業ゼロ**。
 
 確認方法:
 ```
@@ -57,7 +57,7 @@ claude
 gemini
 ```
 
-同様に `GEMINI.md` から自動ロードされます。
+同様に [`GEMINI.md`](../GEMINI.md) から自動ロードされます。
 
 ### Codex CLI
 
@@ -65,8 +65,8 @@ gemini
 codex
 ```
 
-Codex は `AGENTS.md` をネイティブで読みます。
-ただし `@-import` は解釈しないので、メモリを参照させたい時は `.claude/memory/MEMORY.md` を**明示的に開いて**読むよう促してください。
+Codex は [`AGENTS.md`](../AGENTS.md) をネイティブで読みます。
+ただし `@-import` は解釈しないので、メモリを参照させたい時は [`.claude/memory/MEMORY.md`](../.claude/memory/MEMORY.md) を**明示的に開いて**読むよう促してください。
 
 ## 「本物のメモリ」として永続化したい場合 (オプション)
 
@@ -98,9 +98,9 @@ Copy-Item .claude\memory\*.md $target
 
 取得した方が自分のプロファイルに合わせて編集してOKです (ZIP/git clone どちらでも):
 
-- `.claude/memory/user_math_learner.md` — あなたのレベル・目的に合わせて書き換え
+- [`.claude/memory/user_math_learner.md`](../.claude/memory/user_math_learner.md) — あなたのレベル・目的に合わせて書き換え
 - `.claude/memory/feedback_*.md` — 不要なものは `@-import` から外す
-- 新しい好みを追加したい → `.claude/memory/feedback_my_style.md` を新規作成して `CLAUDE.md` に追記
+- 新しい好みを追加したい → `.claude/memory/feedback_my_style.md` を新規作成して [`CLAUDE.md`](../CLAUDE.md) に追記
 
 **個人情報や機密はここに書かない**でください (公開リポジトリです)。
 個人専用設定は `CLAUDE.local.md` (gitignore 済み) を作ってそこに。
@@ -116,6 +116,6 @@ Copy-Item .claude\memory\*.md $target
 - [ ] `/project:column ピタゴラスの定理` でエッセイが返る
 - [ ] `uv sync` 成功
 - [ ] `uv run lab.py` でブラウザが開く
-- [ ] `start_here/notebooks/02_pythagoras.ipynb` のセルが実行できる
+- [ ] [`start_here/notebooks/02_pythagoras.ipynb`](../start_here/notebooks/02_pythagoras.ipynb) のセルが実行できる
 
 すべてOKなら、本環境と同等の AI ドリブン学習体験が手に入っています。

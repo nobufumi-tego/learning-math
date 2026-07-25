@@ -507,9 +507,9 @@ JAX を最終到達点に据えることで、研究論文の最先端コード 
 
 ### 対応 CLI ツール
 
-- **Claude Code** (`claude`) — `CLAUDE.md` 経由で全設定が自動ロード
-- **Gemini CLI** (`gemini`) — `GEMINI.md` 経由で全設定が自動ロード
-- **Codex CLI** (`codex`) — `AGENTS.md` をネイティブで読む
+- **Claude Code** (`claude`) — [`CLAUDE.md`](CLAUDE.md) 経由で全設定が自動ロード
+- **Gemini CLI** (`gemini`) — [`GEMINI.md`](GEMINI.md) 経由で全設定が自動ロード
+- **Codex CLI** (`codex`) — [`AGENTS.md`](AGENTS.md) をネイティブで読む
 
 3ツールすべて [`AGENTS.md`](AGENTS.md) を共通指示書として読みます。
 **clone / ZIP 展開 した瞬間から本環境と同等の AI 体験** が手に入る仕組みについては [`docs/ai_environment_setup.md`](docs/ai_environment_setup.md) を参照。
@@ -544,7 +544,7 @@ JAX を最終到達点に据えることで、研究論文の最先端コード 
 
 | 対象 | ライセンス | 利用条件の要約 |
 |---|---|---|
-| **コード** (`*.py`, `lab.py`, `scripts/`, notebook の code セル, 設定ファイル等) | [**MIT**](LICENSE-CODE) | 商用・非商用問わず自由に使用・改変・再配布可。MIT ライセンス表記を残してください |
+| **コード** (`*.py`, [`lab.py`](lab.py), `scripts/`, notebook の code セル, 設定ファイル等) | [**MIT**](LICENSE-CODE) | 商用・非商用問わず自由に使用・改変・再配布可。MIT ライセンス表記を残してください |
 | **文書** (`*.md`, notebook の markdown セル, コラム, 用語集, 図等) | [**CC BY-NC-SA 4.0**](LICENSE-DOCS) | **非商用利用のみ** 許可。改変版も同条件で公開してください (ShareAlike) |
 
 ### 何が許可され、何が要相談か

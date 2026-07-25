@@ -288,7 +288,7 @@ ValueError: math domain error
 
 **ポイント**: **コード + エラー全文** を貼る。一部だけ貼っても AI は推測しかできません。
 
-詳しくは `appendix/columns/ai_era_grad_student.md` も参照。
+詳しくは [`appendix/columns/ai_era_grad_student.md`](../../../appendix/columns/ai_era_grad_student.md) も参照。
 
 ---
 

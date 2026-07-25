@@ -83,7 +83,7 @@ uv インストール → 依存関係取得 → Jupyter Lab 起動まで全部�
 uv run lab.py
 ```
 
-ブラウザが自動で開きます。`start_here/notebooks/02_pythagoras.ipynb` を開いて、上から順にセルを実行（Shift + Enter）してみてください。
+ブラウザが自動で開きます。[`start_here/notebooks/02_pythagoras.ipynb`](notebooks/02_pythagoras.ipynb) を開いて、上から順にセルを実行（Shift + Enter）してみてください。
 
 ## CLI で動的に学ぶ（Claude Code / Codex / Gemini CLI）
 

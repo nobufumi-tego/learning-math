@@ -173,8 +173,8 @@ Jupyter Lab で開ける主なファイル:
 ### このリポジトリの典型的な使い方
 
 1. 左ファイルツリーで **章フォルダ** (例: `01_linear_algebra/`) を開く
-2. `README.md` をクリック → **解説をプレビューで読む**
-3. 解説中のリンクから `notebooks/01_vectors.ipynb` を開く
+2. [`README.md`](../README.md) をクリック → **解説をプレビューで読む**
+3. 解説中のリンクから [`notebooks/01_vectors.ipynb`](../01_linear_algebra/notebooks/01_vectors.ipynb) を開く
 4. 上のセルから **Shift+Enter** で順番に実行
 5. コードを編集してみる → 再度 **Shift+Enter** で結果を確認
 

@@ -144,7 +144,7 @@ Attention(Q, K, V) = softmax(Q × K^T / √d) × V
 | 線形代数 (行列) | `01_linear_algebra/` |
 | 微積分 (勾配) | `02_calculus/` |
 | 確率 (分布、softmax) | `03_probability_statistics/` |
-| 三角関数 (位置情報) | `start_here/03_trigonometry.md` |
+| 三角関数 (位置情報) | [`start_here/03_trigonometry.md`](../03_trigonometry.md) |
 | 最適化 (勾配降下) | `05_optimization/` |
 | ML 統合 (損失関数) | `06_ml_math_bridge/` |
 | JAX (実装の最先端) | `07_jax/` |

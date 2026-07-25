@@ -12,7 +12,7 @@
 uv run lab.py
 ```
 
-ブラウザが開いたら、左のファイルツリーから `01_linear_algebra/notebooks/01_vectors.ipynb` を開いて、上から順に **Shift+Enter** でセル実行してください。
+ブラウザが開いたら、左のファイルツリーから [`01_linear_algebra/notebooks/01_vectors.ipynb`](notebooks/01_vectors.ipynb) を開いて、上から順に **Shift+Enter** でセル実行してください。
 
 > 🐧 **「`uv` って何?」「ブラウザが開かない」「ファイルツリーがわからない」方** は、まず以下を:
 > - [`start_here/00_pet_terminal/`](../start_here/00_pet_terminal/README.md) — ペンタと学ぶターミナル基礎
@@ -251,6 +251,11 @@ print(jnp.linalg.norm(jnp.array([3.0, 4.0])))  # 5.0
 $$
 \hat{\mathbf{v}} = \frac{\mathbf{v}}{\|\mathbf{v}\|}
 $$
+
+> ⚠️ **この帽子 (ハット) は「推定値」ではありません。**
+> 統計・機械学習で $\hat{\theta}$ や $\hat{y}$ と書いたら「データから推定した値」の意味ですが、
+> 線形代数のハットは「**長さを 1 に正規化した**」という別の意味です。
+> 同じ記号が分野で違う意味を持つ例 → [`00_notation/07_decorations_and_fonts.md`](../00_notation/07_decorations_and_fonts.md)
 
 これを **正規化 (normalization)** と呼ぶ。
 **「向きだけが意味のある量」** を扱いたいときに頻出。
