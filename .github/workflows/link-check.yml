@@ -1,0 +1,44 @@
+name: Check links
+
+# Markdown / notebook の相対リンクとアンカーが生きているかを検査する。
+#
+# このリポジトリは「ファイル名は必ずリンクにする」「章末にナビゲーションブロックを置く」
+# という規約 (AGENTS.md) で運用しているためリンクが非常に多く、
+# 見出しを書き換えたときにアンカーが静かに壊れやすい。
+# 目視レビューに頼らず CI で強制する。
+#
+# 手元での実行:
+#     uv run python scripts/check_links.py
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.md"
+      - "**/*.ipynb"
+      - "scripts/check_links.py"
+      - ".github/workflows/link-check.yml"
+  pull_request:
+    paths:
+      - "**/*.md"
+      - "**/*.ipynb"
+      - "scripts/check_links.py"
+      - ".github/workflows/link-check.yml"
+  # 手動実行 (リンクだけ確認したいとき)
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # scripts/check_links.py は標準ライブラリのみで動くので依存関係のインストールは不要
+      - name: Check relative links and anchors
+        run: python scripts/check_links.py

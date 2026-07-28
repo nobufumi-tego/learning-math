@@ -31,7 +31,12 @@ uv run python <script.py>         # スクリプト実行
 uv run pytest tests/ -v           # テスト実行
 uv run lab.py                # ノートブック起動
 uv run python -c "import sympy; sympy.init_printing(); ..."  # 数式描画
+uv run python scripts/check_links.py   # リンク・アンカー切れチェック (CI で強制)
 ```
+
+> 📌 **見出しを書き換えたら `check_links.py` を必ず走らせる。**
+> 本リポジトリはリンクが多く、アンカー (`file.md#見出し`) は見出しを直した瞬間に静かに壊れる。
+> `.github/workflows/link-check.yml` で push / PR 毎に自動実行される。
 
 ## Architecture
 - `start_here/` — 数学初心者向け入口（コラム + Jupyter notebook 含む）

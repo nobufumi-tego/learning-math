@@ -26,7 +26,7 @@
 uv のインストールから依存関係取得、Jupyter Lab 起動まで全部自動です。
 
 > ⏰ **初回起動は 5〜15 分かかります** (依存関係 500MB〜1GB のダウンロード)。途中で中断せず気長に待ってください。「応答なし」 と出ても OS 更新の遅延なので焦らず ☕
-> 2 回目以降は 10〜20 秒で起動します。詳細は ROOT [`README.md`](../README.md#-待ち時間の目安--フリーズしてないと心配しないでください) の「待ち時間の目安」 参照。
+> 2 回目以降は 10〜20 秒で起動します。詳細は ROOT [`README.md`](../README.md#-待ち時間の目安--フリーズしてない-と心配しないでください) の「待ち時間の目安」 参照。
 
 詳細・トラブルシューティングは ROOT [`README.md`](../README.md#step-2--ワンショットスクリプトで起動-推奨) 参照。
 🧪 **Jupyter Lab の使い方** (Shift+Enter でセル実行など) は [`docs/jupyter_lab_guide.md`](../docs/jupyter_lab_guide.md) を参照。
@@ -122,8 +122,8 @@ cdf = stats.norm.cdf(1.96)  # ≈ 0.975
 
 ## 📚 さらに学ぶ
 
-- 📕 **[統計学入門 (赤本)](../appendix/books.md#統計学入門)** (東大出版会) — 統計学入門の決定版
-- 📕 **[データ解析のための統計モデリング入門 (緑本)](../appendix/books.md#データ解析のための統計モデリング入門)** (久保拓弥)
+- 📕 **[統計学入門 (赤本)](../appendix/books.md#統計学入門-赤本)** (東大出版会) — 統計学入門の決定版
+- 📕 **[データ解析のための統計モデリング入門 (緑本)](../appendix/books.md#データ解析のための統計モデリング入門-緑本)** (久保拓弥)
 - 📕 **[ベイズ推論による機械学習入門](../appendix/books.md#ベイズ推論による機械学習入門)** (須山敦志)
 - 🌐 **[StatQuest](../appendix/online.md#statquest-with-josh-starmer)** — 統計を楽しく分かりやすく
 - 🌐 **[Seeing Theory](../appendix/online.md#seeing-theory-brown-university)** — 確率をインタラクティブに体感

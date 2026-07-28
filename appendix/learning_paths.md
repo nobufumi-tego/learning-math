@@ -13,7 +13,7 @@
 
 | 期間 | 学ぶこと | 推奨教材 |
 |---|---|---|
-| Month 1-3 | 厳密な線形代数 | [Strang MIT 18.06](online.md#strang-mit) → [Axler "Linear Algebra Done Right"](books.md#linear-algebra-done-right) |
+| Month 1-3 | 厳密な線形代数 | [Strang MIT 18.06](online.md#strang-mit-1806-linear-algebra) → [Axler "Linear Algebra Done Right"](books.md#linear-algebra-done-right) |
 | Month 4-6 | 厳密な解析学 | [杉浦光夫「解析入門」](books.md#解析入門-i-ii) または [Rudin "Principles of Mathematical Analysis"] |
 | Month 7-9 | 確率論 (測度論ベース) | 舟木直久「確率論」 / Williams "Probability with Martingales" |
 | Month 10-12 | 関数解析・凸最適化 | [Boyd "Convex Optimization"](books.md#convex-optimization) → Bertsekas |
@@ -66,8 +66,8 @@
 
 | 期間 | 学ぶこと | 推奨教材 |
 |---|---|---|
-| Month 1-2 | 統計学基礎 | [統計学入門 (赤本)](books.md#統計学入門) |
-| Month 3 | ベイズ統計実用 | [データ解析のための統計モデリング入門 (緑本)](books.md#データ解析のための統計モデリング入門) |
+| Month 1-2 | 統計学基礎 | [統計学入門 (赤本)](books.md#統計学入門-赤本) |
+| Month 3 | ベイズ統計実用 | [データ解析のための統計モデリング入門 (緑本)](books.md#データ解析のための統計モデリング入門-緑本) |
 | Month 4 | 因果推論 | [Causal Inference: What If](books.md#causal-inference-what-if) |
 | Month 5 | 効果検証・A/B テスト | 「効果検証入門」 安井翔太 + "Trustworthy Online Controlled Experiments" |
 | Month 6-7 | SQL + ダッシュボード | dbt, Looker, Tableau 等 |

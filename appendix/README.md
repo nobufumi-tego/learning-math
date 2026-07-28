@@ -29,13 +29,13 @@
 |---|---|---|
 | [`start_here/`](../start_here/README.md) (数学基礎) | [数学ガール](books.md#数学ガール) (結城浩) | [3Blue1Brown](online.md#3blue1brown) (動画で直感) |
 | [`00_notation/`](../00_notation/README.md) (記号) | [プログラマの数学 第2版](books.md#プログラマの数学-第2版) | [高校数学の美しい物語](online.md#高校数学の美しい物語) |
-| [`01_linear_algebra/`](../01_linear_algebra/README.md) | [プログラミングのための線形代数](books.md#プログラミングのための線形代数) | [3Blue1Brown: Essence of Linear Algebra](online.md#essence-of-linear-algebra) |
-| [`02_calculus/`](../02_calculus/README.md) | [やさしく学べる微分積分](books.md#やさしく学べる微分積分) | [3Blue1Brown: Essence of Calculus](online.md#essence-of-calculus) |
-| [`03_probability_statistics/`](../03_probability_statistics/README.md) | [統計学入門 (赤本)](books.md#統計学入門) (東大出版会) | [StatQuest with Josh Starmer](online.md#statquest) |
-| [`05_optimization/`](../05_optimization/README.md) | [これなら分かる最適化数学](books.md#これなら分かる最適化数学) | [Boyd: Convex Optimization (講義動画)](online.md#boyd-convex-optimization) |
+| [`01_linear_algebra/`](../01_linear_algebra/README.md) | [プログラミングのための線形代数](books.md#プログラミングのための線形代数) | [3Blue1Brown: Essence of Linear Algebra](online.md#3blue1brown) |
+| [`02_calculus/`](../02_calculus/README.md) | [やさしく学べる微分積分](books.md#やさしく学べる微分積分) | [3Blue1Brown: Essence of Calculus](online.md#3blue1brown) |
+| [`03_probability_statistics/`](../03_probability_statistics/README.md) | [統計学入門 (赤本)](books.md#統計学入門-赤本) (東大出版会) | [StatQuest with Josh Starmer](online.md#statquest-with-josh-starmer) |
+| [`05_optimization/`](../05_optimization/README.md) | [これなら分かる最適化数学](books.md#これなら分かる最適化数学) | [Boyd: Convex Optimization (講義動画)](online.md#boyd-convex-optimization-stanford-ee364a) |
 | [`06_ml_math_bridge/`](../06_ml_math_bridge/README.md) | [ゼロから作るDeep Learning](books.md#ゼロから作るdeep-learning) | [Karpathy: Neural Networks Zero to Hero](online.md#karpathy-neural-networks-zero-to-hero) |
-| [`07_jax/`](../07_jax/README.md) | [JAX 公式チュートリアル (無料)](online.md#jax公式) | [Probabilistic ML by K. Murphy (無料PDF)](books.md#probabilistic-machine-learning) |
-| [`04_discrete_math/`](../04_discrete_math/README.md) | [離散数学への招待](books.md#離散数学への招待) | [MIT OCW 6.042: Math for CS](online.md#mit-606042) |
+| [`07_jax/`](../07_jax/README.md) | [JAX 公式チュートリアル (無料)](online.md#jax-公式) | [Probabilistic ML by K. Murphy (無料PDF)](books.md#probabilistic-machine-learning-murphy) |
+| [`04_discrete_math/`](../04_discrete_math/README.md) | [離散数学への招待](books.md#離散数学への招待) | [MIT OCW 6.042: Math for CS](online.md#mit-6042--60042-mathematics-for-computer-science) |
 
 → より広く・深く知りたい方は次のセクションへ
 
@@ -47,7 +47,7 @@
 
 | 学ぶ順 | 内容 | 推奨 |
 |---|---|---|
-| 1 | 線形代数の厳密版 | Strang ([online.md](online.md#strang-mit)) → Axler「線型代数学への招待」 |
+| 1 | 線形代数の厳密版 | Strang ([online.md](online.md#strang-mit-1806-linear-algebra)) → Axler「線型代数学への招待」 |
 | 2 | 解析学 (微積分の厳密版) | 杉浦光夫「解析入門」 / Rudin "Principles of Mathematical Analysis" |
 | 3 | 確率論 (測度論ベース) | 舟木直久「確率論」 / Williams "Probability with Martingales" |
 | 4 | 関数解析・最適化 | Boyd "Convex Optimization" → Bertsekas |
@@ -61,7 +61,7 @@
 |---|---|---|
 | 1 | Python + NumPy/Pandas 実務 | 「Pythonによるデータ分析入門」 (McKinney) |
 | 2 | 古典 ML | 「ゼロから作るDeep Learning」 1〜3巻 |
-| 3 | フレームワーク | PyTorch ([公式チュートリアル](online.md#pytorch公式)) または JAX |
+| 3 | フレームワーク | PyTorch ([公式チュートリアル](online.md#pytorch-公式)) または JAX |
 | 4 | 論文を読む | [Papers With Code](online.md#papers-with-code) → [arxiv-sanity](online.md#arxiv-sanity) |
 | 5 | 実プロジェクト | Kaggle ([online.md](online.md#kaggle)) で手を動かす |
 
