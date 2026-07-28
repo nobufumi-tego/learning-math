@@ -8,6 +8,12 @@
 
 ---
 
+## 2026-07-28
+
+### ✨ 新機能・新規追加
+
+- `a90986d` feat(03_probability): ベイズ推論・MCMC の 2 章を追加
+
 ## 2026-07-25
 
 ### ✨ 新機能・新規追加
@@ -109,4 +115,4 @@
 
 ---
 
-_Total commits indexed: **62**_
+_Total commits indexed: **63**_
