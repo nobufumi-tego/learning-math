@@ -14,6 +14,10 @@
 
 - `a90986d` feat(03_probability): ベイズ推論・MCMC の 2 章を追加
 
+### 🐛 バグ修正
+
+- `d681563` fix(links): 「プログラマの数学」へのアンカーリンク切れを修正
+
 ### 📝 ドキュメント
 
 - `f0d6eda` docs(00_notation): ベイズ統計で使う記号を Phase 1 に追加
@@ -120,4 +124,4 @@
 
 ---
 
-_Total commits indexed: **65**_
+_Total commits indexed: **66**_
