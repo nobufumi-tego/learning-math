@@ -120,7 +120,7 @@
 - 勾配 ∇f を SymPy と数値の両方で計算できる
 - (発展) 「近似には有効範囲がある」を、log のテイラー展開を発散させて体感した
 
-### Phase 4: 確率・統計（2週間 / 約10時間）
+### Phase 4: 確率・統計（3週間 / 約18時間）
 
 - [ ] [`03_probability_statistics/01_probability_basics.md`](../03_probability_statistics/01_probability_basics.md) (1.5h)
 - [ ] [`03_probability_statistics/02_distributions.md`](../03_probability_statistics/02_distributions.md) (2h)
@@ -129,6 +129,8 @@
 - [ ] [`03_probability_statistics/05_descriptive_stats.md`](../03_probability_statistics/05_descriptive_stats.md) — 記述統計 (1.5h)
 - [ ] [`03_probability_statistics/06_estimation.md`](../03_probability_statistics/06_estimation.md) — 推定・信頼区間・MLE/MAP (2.5h)
 - [ ] [`03_probability_statistics/07_hypothesis_testing.md`](../03_probability_statistics/07_hypothesis_testing.md) — 仮説検定・p値 (2h)
+- [ ] [`03_probability_statistics/08_bayesian_inference.md`](../03_probability_statistics/08_bayesian_inference.md) — ベイズ推論・共役モデル・信用区間 (2.5h)
+- [ ] [`03_probability_statistics/09_mcmc.md`](../03_probability_statistics/09_mcmc.md) — モンテカルロ・MCMC・階層モデル (2.5h)
 - [ ] [`03_probability_statistics/examples/distribution_demo.py`](../03_probability_statistics/examples/distribution_demo.py) 実行・改造
 
 **チェックポイント**:
@@ -136,6 +138,9 @@
 - 「95% 信頼区間」の意味を正しく説明できる（真値が入る確率ではない）
 - p 値が $P(D \mid H_0)$ であって $P(H_0 \mid D)$ ではないと言える
 - 「有意差あり」と「意味のある差」が別物だと説明できる
+- $\pi(\theta \mid x) \propto L(\theta; x)\pi(\theta)$ の 3 要素をそれぞれ説明できる
+- 信用区間 (credible) と信頼区間 (confidence) の読み方の違いを 1 文ずつで言える
+- なぜ MCMC では正規化定数が要らないのか説明できる（比を取ると消えるから）
 
 ### Phase 5: 最適化（1週間 / 約5時間）
 

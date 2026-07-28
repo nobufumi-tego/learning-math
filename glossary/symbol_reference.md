@@ -19,7 +19,7 @@
 | 7 | [**文字につく飾り**](#7-文字につく飾りハットバーチルダ) | **`x̂` `x̄` `x̃` `x*` `ẋ`** ← 推定のハットはここ |
 | 8 | [**書体の違い**](#8-書体の違い) | **`ℝ` `ℒ` `𝐱` `θ`** |
 | 9 | [線形代数](#9-線形代数) | `Aᵀ` `A⁻¹` `I` `λ` `⊙` `‖x‖₂` |
-| 10 | [確率・統計](#10-確率統計) | `P` `𝔼` `Var` `σ` `⊥⊥` `𝒩` |
+| 10 | [確率・統計](#10-確率統計) | `P` `𝔼` `Var` `σ` `⊥⊥` `𝒩` `π(θ\|x)` `BF₀₁` |
 | 11 | [最適化](#11-最適化) | `argmin` `s.t.` `η` `≽` |
 | 12 | [機械学習で頻出](#12-機械学習で頻出) | `θ` `ℒ` `𝒟` `∇θ` `ŷ` |
 | 13 | [その他](#13-その他よく見るもの) | `∞` `O(·)` `∴` `∎` |
@@ -134,6 +134,8 @@
 | `∇²`, `Δ` | Laplacian | ラプラシアン（2階微分の和） | – |
 | `n!` | n factorial | 階乗 n×(n−1)×…×1、`0! = 1` | `math.factorial(n)` |
 | `C(n,k)`, `ₙCₖ` | n choose k | 二項係数（組合せ） | `math.comb(n, k)` |
+| `Γ(x)` | **gamma function** / ガンマ関数 | 階乗を実数に拡張したもの。整数なら $\Gamma(n) = (n-1)!$ | `scipy.special.gamma` / `gammaln`（対数版） |
+| `B(α, β)` | **beta function** / ベータ関数 | $B(\alpha,\beta) = \dfrac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}$。ベータ分布の正規化定数 | `scipy.special.beta` |
 
 二項係数は論文では縦に積んだ形で書かれます:
 
@@ -409,8 +411,19 @@ $\mathbf{y} = \mathbf{A}\mathbf{x}$ を見たら「行列 × ベクトル = ベ�
 | `U(a, b)` | uniform | 一様分布 | `stats.uniform` |
 | `Exp(λ)` | exponential | 指数分布（待ち時間） | `stats.expon` |
 | `Beta(α, β)` | beta | ベータ分布（確率の確率、ベイズで頻出） | `stats.beta` |
+| `Gamma(α, β)` | gamma | ガンマ分布（正の量・発生率・待ち時間） | `stats.gamma(a, scale=1/β)` |
+| `NegBin(r, p)` | negative binomial | 負の二項分布（r 回成功するまでの失敗回数、過分散のカウント） | `stats.nbinom` |
+| `BetaBin(m, α, β)` | beta-binomial | ベータ二項分布（成功確率自体が不確実な二項） | `stats.betabinom` |
+| `LN(μ, σ²)` | log-normal | 対数正規分布（$\log X$ が正規。株価・所得など） | `stats.lognorm` |
 | `χ²(k)` | chi-squared | カイ二乗分布 | `stats.chi2` |
 | `t(ν)` | Student's t | t 分布（小標本の検定） | `stats.t` |
+
+> ⚠️ **ガンマ分布の「率」と「スケール」に注意。** $f(x) \propto x^{\alpha-1}e^{-\beta x}$ と書くとき $\beta$ は
+> **率パラメータ (rate)**（平均 $\alpha/\beta$）ですが、**SciPy は scale 流儀** $(\vartheta = 1/\beta)$ です。
+> 率 $\beta$ を使うときは `stats.gamma(a, scale=1/beta)` と書きます。**最頻出の事故ポイント**。
+
+分布の定義式（確率関数・密度関数）は [`03_probability_statistics/02_distributions.md`](../03_probability_statistics/02_distributions.md) と
+[`08_bayesian_inference.md`](../03_probability_statistics/08_bayesian_inference.md) を参照。
 
 ### 10-5. 情報理論（ML で頻出）
 
@@ -444,8 +457,75 @@ $\mathbf{y} = \mathbf{A}\mathbf{x}$ を見たら「行列 × ベクトル = ベ�
 > ⚠️ **$p = P(D \mid H_0)$ であって $P(H_0 \mid D)$ ではありません。**
 > 「$H_0$ が正しい確率」と読むのは、条件付き確率のひっくり返しの誤りです（[`04_bayes.md`](../03_probability_statistics/04_bayes.md)）。
 
+### 10-7. ベイズ統計
+
+ベイズの文献は**記号が読めれば 8 割読めます**。詳しくは
+[`08_bayesian_inference.md`](../03_probability_statistics/08_bayesian_inference.md)・[`09_mcmc.md`](../03_probability_statistics/09_mcmc.md)。
+
+#### 分布そのものを表す記号
+
+| 記号 | 読み方 | 意味 | Python |
+|---|---|---|---|
+| `π(θ)` | **パイ・シータ** | **事前分布** (prior)。データを見る前の $\theta$ の見立て | `stats.beta(a0, b0)` など |
+| `π(θ \| x)` | パイ・シータ・ギブン・エックス | **事後分布** (posterior)。データを見た後の見立て | – |
+| `L(θ; x)` | エル・オブ・シータ | **尤度**。$\theta$ の関数として見たデータの出やすさ | – |
+| `∝` | proportional to | 「正規化定数を省いた」の意味。$\pi(\theta\|x) \propto L(\theta;x)\pi(\theta)$ | – |
+| `∫L(t;x)π(t)dt` | – | **正規化定数**（周辺尤度）。$\theta$ に依存しないので $\propto$ で省ける | – |
+| `p(x̃ \| x)` | – | **事後予測分布**。$\theta$ を決め打ちせず事後分布で平均した将来の観測の分布 | – |
+| `x̃` | **エックス・チルダ** | **これから観測する**データ（観測済みの $x$ と区別する） | – |
+
+> ⚠️ **$\pi$ は円周率ではありません。** ベイズでは $\pi(\cdot)$ は「分布（密度関数）」です。
+> **括弧に引数があれば分布、なければ円周率**と読み分けてください
+> （$\frac{1}{\sqrt{2\pi}\sigma}$ の $\pi$ は円周率）。
+
+#### 事前分布のパラメータ（ハイパーパラメータ）
+
+| 記号 | 読み方 | 意味 |
+|---|---|---|
+| `α₀`, `β₀` | アルファ・ノート | Beta 事前のパラメータ。**添字 0 は「データを見る前」の印** |
+| `a₀`, `b₀` | – | Gamma 事前の形状 / 率パラメータ |
+| `κ₀` | **カッパ・ノート** | Beta 事前の**集中度** $\alpha_0+\beta_0$。「**すでに何件見たのと同じ重みか**」 |
+| `μ₀` | ミュー・ノート | 事前分布の中心 $\alpha_0/\kappa_0$ |
+| `τ₀²`, `τₙ²` | **タウ・ノート二乗 / タウ・エヌ二乗** | 正規–正規モデルの事前分散 / 事後分散 |
+| `μₙ` | ミュー・エヌ | 正規–正規モデルの事後平均（事前平均と $\bar{x}$ の**加重平均**） |
+
+#### 事後分布から取り出すもの
+
+| 記号 | 読み方 | 意味 | Python |
+|---|---|---|---|
+| `𝔼[θ \| x]` | – | 事後平均（事後分布の**重心**） | `post.mean()` |
+| `θ̂_MAP` | シータ・ハット・マップ | **MAP 推定量**（事後密度の**最大点**） | – |
+| `γ` | gamma | 信用区間から外す確率。95% 区間なら $\gamma = 0.05$ | – |
+| `P(L ≤ θ ≤ U \| x)` | – | **信用区間** (credible interval)。$\theta$ に確率が乗る | `post.ppf([γ/2, 1-γ/2])` |
+| `C(c) = {θ : π(θ\|x) ≥ c}` | – | **HPD 区間**（密度の高い順に $1-\gamma$ を集める。**最短**になる） | `arviz.hdi` |
+| `P(θ > c \| x)` | – | しきい値超過確率（頻度論では出せない量） | `1 - post.cdf(c)` |
+| `C₁₀`, `C₀₁` | – | 誤判断の損失。$P(\theta_{new}>\theta_{old}\|x) > \frac{C_{10}}{C_{10}+C_{01}}$ で判断 | – |
+| `m(x \| Hᵢ)` | – | **周辺尤度**。仮説 $H_i$ 全体でのデータの出やすさ | – |
+| `BF₀₁` | **ベイズファクター** | $m(x\|H_0)/m(x\|H_1)$。事後オッズ = BF × 事前オッズ | – |
+
+> ⚠️ **信用区間 (credible) と信頼区間 (confidence) は別物です。**
+> 信用区間は「$\theta$ がこの区間に入る確率が 95%」と**言ってよい**。
+> 信頼区間は「手続きを繰り返すと 95% が真値を含む」で、**今回の区間**については言えません。
+
+#### MCMC・モンテカルロ
+
+| 記号 | 読み方 | 意味 | Python |
+|---|---|---|---|
+| `θ⁽ᵏ⁾` | **シータ・スーパースクリプト・ケー** | $k$ 番目の**標本**（**累乗ではない**） | `samples[k]` |
+| `θ*` | シータ・スター | MCMC が出した**候補点**（最適値の意味ではない） | `proposal` |
+| `K` | – | 標本数（MCMC の反復回数） | `n_iter` |
+| `g(θ)` | – | 知りたい量を作る関数（平均なら $g(\theta)=\theta$） | – |
+| `I(·)`, `𝟙[·]` | **indicator function** / 指示関数 | 条件が真なら 1、偽なら 0 | `(arr > c).astype(float)` |
+| `π(θ*\|x) / π(θ⁽ᵏ⁾\|x)` | – | 2 地点の密度の**比**。**正規化定数が割り算で消える** | `np.exp(lp2 - lp1)` |
+| `q(· \| ·)` | – | **提案分布** (proposal distribution)。次の候補を出す分布 | `rng.normal(cur, sd)` |
+| `R̂` | **R ハット** | 収束診断（連鎖間分散 ÷ 連鎖内分散）。1.01 未満が目安 | `arviz.rhat` |
+| `ESS` | effective sample size | 有効標本数（自己相関を考慮した実質的な標本数） | `arviz.ess` |
+
+> 📌 **モンテカルロの中心式**（この 1 行が MCMC のすべて）:
+> $$\mathbb{E}[g(\theta) \mid x] = \int g(\theta)\pi(\theta \mid x)\,d\theta \;\approx\; \frac{1}{K}\sum_{k=1}^{K} g\!\left(\theta^{(k)}\right)$$
+
 詳しくは [`03_probability_statistics/`](../03_probability_statistics/README.md)
-（特に [`06_estimation.md`](../03_probability_statistics/06_estimation.md)・[`07_hypothesis_testing.md`](../03_probability_statistics/07_hypothesis_testing.md)）。
+（特に [`06_estimation.md`](../03_probability_statistics/06_estimation.md)・[`07_hypothesis_testing.md`](../03_probability_statistics/07_hypothesis_testing.md)・[`08_bayesian_inference.md`](../03_probability_statistics/08_bayesian_inference.md)・[`09_mcmc.md`](../03_probability_statistics/09_mcmc.md)）。
 
 ---
 

@@ -338,9 +338,10 @@ p 値だけを報告するのは不十分です。必ず次を添えます。
 
 ## 次へ
 
-→ 次の章: [`../05_optimization/README.md`](../05_optimization/README.md) — 最適化: 損失を最小にするパラメータを見つける
+→ [`08_bayesian_inference.md`](08_bayesian_inference.md) — ベイズ推論: p 値の代わりに「$\theta$ そのものの確率」を出す立場
 
-🎉 **確率・統計章、卒業です！** 確率 → 分布 → 期待値 → ベイズ → 記述 → 推定 → 検定 と辿ってきました。
+頻度論では言えなかった「**この区間に真値が入る確率は 95%**」を、ベイズはそのまま言えます。
+その代わり事前分布という仮定を明示的に置く必要がある。**どちらが優れているかではなく、目的で選ぶ**話です。
 
 ## 関連
 - [`06_estimation.md`](06_estimation.md) — 標準誤差・信頼区間（検定と表裏一体）
@@ -368,6 +369,6 @@ p 値だけを報告するのは不十分です。必ず次を添えます。
 
 ## 📍 ナビゲーション
 
-| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次の章 → |
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
 |---|---|---|---|
-| [`06_estimation.md`](06_estimation.md) | [章 TOP](README.md) | [📚 ROOT README](../README.md) | [`../05_optimization/README.md`](../05_optimization/README.md) |
+| [`06_estimation.md`](06_estimation.md) | [章 TOP](README.md) | [📚 ROOT README](../README.md) | [`08_bayesian_inference.md`](08_bayesian_inference.md) |

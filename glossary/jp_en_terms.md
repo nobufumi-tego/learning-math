@@ -190,6 +190,58 @@
 | KL ダイバージェンス | Kullback-Leibler divergence |
 | 相互情報量 | mutual information |
 
+## 5-2. ベイズ統計
+
+論文・ライブラリのドキュメント（PyMC / Stan / NumPyro）でそのまま出てくる語。
+解説は [`03_probability_statistics/08_bayesian_inference.md`](../03_probability_statistics/08_bayesian_inference.md)・[`09_mcmc.md`](../03_probability_statistics/09_mcmc.md)。
+
+| 日本語 | English | 補足 |
+|---|---|---|
+| 事前分布 | prior distribution | $\pi(\theta)$ |
+| 事後分布 | posterior distribution | $\pi(\theta \mid x)$ |
+| 事後予測分布 | posterior predictive distribution | $p(\tilde{x} \mid x)$ |
+| 周辺尤度 / エビデンス | marginal likelihood / evidence | 正規化定数でもある |
+| 共役事前分布 | conjugate prior | 事前と事後が同じ分布族 |
+| 共役性 | conjugacy | 更新が代数計算で終わる性質 |
+| ハイパーパラメータ | hyperparameter | 事前分布のパラメータ（分析者が置く） |
+| 集中度 | concentration | $\kappa_0 = \alpha_0 + \beta_0$。仮想的なデータ件数 |
+| 形状パラメータ | shape parameter | Gamma の $\alpha$ |
+| 率パラメータ | rate parameter | Gamma の $\beta$。SciPy は `scale=1/rate` |
+| 尺度パラメータ | scale parameter | 率の逆数 |
+| 信用区間 | credible interval | $\theta$ に確率が乗る（信頼区間と別物） |
+| 等裾信用区間 | equal-tailed credible interval | 左右の裾を $\gamma/2$ ずつ |
+| 最高事後密度区間 / HPD 区間 | highest posterior density (HPD) interval | 最短の信用区間 |
+| ベイズファクター | Bayes factor | $BF_{01}$。周辺尤度の比 |
+| 事前オッズ / 事後オッズ | prior odds / posterior odds | 事後オッズ = BF × 事前オッズ |
+| 感度分析 | sensitivity analysis | 事前分布を変えて結論の頑健性を見る |
+| 逐次更新 | sequential updating | 昨日の事後が今日の事前 |
+| 階層モデル | hierarchical model / multilevel model | – |
+| 部分プーリング | partial pooling | 完全分離と完全プールの中間 |
+| 縮小 | shrinkage | データの少ない群が全体平均へ引かれる |
+| 事後予測チェック | posterior predictive check (PPC) | 模擬データで実データの特徴を再現できるか |
+| 過分散 | overdispersion | 二項・Poisson が想定する以上のばらつき |
+| ベータ二項分布 | beta-binomial distribution | – |
+| 負の二項分布 | negative binomial distribution | – |
+| ガンマ分布 | gamma distribution | – |
+| 対数正規分布 | log-normal distribution | – |
+| ガンマ関数 | gamma function | $\Gamma(\cdot)$。階乗の実数拡張 |
+| ベータ関数 | beta function | $B(\alpha, \beta)$ |
+| モンテカルロ法 | Monte Carlo method | 積分を標本平均で近似 |
+| マルコフ連鎖モンテカルロ法 | Markov chain Monte Carlo (MCMC) | – |
+| メトロポリス法 | Metropolis algorithm | 最も基本的な MCMC |
+| メトロポリス・ヘイスティングス法 | Metropolis-Hastings algorithm | 提案分布が非対称な一般形 |
+| ギブスサンプリング | Gibbs sampling | 条件付き分布から順に引く |
+| ハミルトニアンモンテカルロ法 | Hamiltonian Monte Carlo (HMC) | 勾配を使う現代的な MCMC |
+| 提案分布 | proposal distribution | 次の候補を出す分布 |
+| 受容率 | acceptance rate | 採択された割合 |
+| 受容・棄却法 | rejection sampling | – |
+| 重点サンプリング | importance sampling | – |
+| バーンイン | burn-in | 初期値の影響が残る先頭部分を捨てる |
+| 収束診断 | convergence diagnostics | $\hat{R}$・ESS・トレースプロット |
+| 有効標本数 | effective sample size (ESS) | 自己相関を考慮した実質的な標本数 |
+| 変分推論 | variational inference | 最適化で事後分布を近似する |
+| 非共役 | non-conjugate | 事後分布に分布名が付かない |
+
 ## 6. 最適化
 
 | 日本語 | English |
@@ -246,3 +298,11 @@
 | 辺 | edge |
 | 木 | tree |
 | 連結 | connected |
+
+---
+
+## 📍 ナビゲーション
+
+| ← 前 | 🏠 章 TOP | 📚 全体 TOP | 次 → |
+|---|---|---|---|
+| [`symbol_reference.md`](symbol_reference.md) | [用語集 TOP](README.md) | [📚 ROOT README](../README.md) | (このページが用語集の最後) |

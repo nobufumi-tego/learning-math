@@ -54,6 +54,8 @@ uv のインストールから依存関係取得、Jupyter Lab 起動まで全�
 | [`05_descriptive_stats.md`](05_descriptive_stats.md) | [`notebooks/05_descriptive_stats.ipynb`](notebooks/05_descriptive_stats.ipynb) | 中央値・四分位・歪度・尖度、アンスコムの四重奏 | 1.5時間 |
 | [`06_estimation.md`](06_estimation.md) | [`notebooks/06_estimation.ipynb`](notebooks/06_estimation.ipynb) | 点推定・区間推定・t分布・最尤推定・MAP推定 | 2.5時間 |
 | [`07_hypothesis_testing.md`](07_hypothesis_testing.md) | [`notebooks/07_hypothesis_testing.ipynb`](notebooks/07_hypothesis_testing.ipynb) | 帰無仮説・p値・過誤・検出力・t検定・pハッキング | 2時間 |
+| [`08_bayesian_inference.md`](08_bayesian_inference.md) | [`notebooks/08_bayesian_inference.ipynb`](notebooks/08_bayesian_inference.ipynb) | 共役モデル・事後予測分布・信用区間/HPD・ベイズファクター | 2.5時間 |
+| [`09_mcmc.md`](09_mcmc.md) | [`notebooks/09_mcmc.ipynb`](notebooks/09_mcmc.ipynb) | モンテカルロ・Metropolis法・収束診断・階層モデル・縮小 | 2.5時間 |
 
 各 md は読み物、各 ipynb は手を動かす場所。**両方をペアで進めるのが効果的**です。
 
@@ -61,6 +63,10 @@ uv のインストールから依存関係取得、Jupyter Lab 起動まで全�
 > 確率は「モデルが分かっているとき、データがどう出るか」を問い、
 > 統計は逆に「データが出たとき、モデルはどうなっているか」を問います。
 > 05 以降で $\mu$（真の値）と $\bar{x}$（手元のデータ）の区別が主役になります。
+>
+> 🎲 **08〜09 は「もう一つの立場」＝ベイズ**です。
+> 05〜07 の頻度論が「手順の長期的な性質」を問うのに対し、ベイズは「**観測後に残る不確実性**」を
+> 確率分布そのもので表します。信頼区間と信用区間の読み方の違いが、その象徴です。
 
 ## キーとなる Python ツール
 
@@ -97,6 +103,11 @@ cdf = stats.norm.cdf(1.96)  # ≈ 0.975
 | $\mathbb{E}[X]$ | X の期待値 | 確率変数 X の平均 |
 | $\mathrm{Var}[X]$ | X の分散 | 散らばり具合 |
 | $X \sim \mathcal{N}(\mu, \sigma^2)$ | X は正規分布に従う | 確率変数の分布の宣言 |
+| $\pi(\theta)$ / $\pi(\theta \mid x)$ | パイ・シータ | ベイズの**事前分布 / 事後分布**（円周率ではない） |
+| $L(\theta; x)$ | 尤度 | $\theta$ の関数として見たデータの出やすさ |
+| $\propto$ | proportional to | 比例（正規化定数を省いた、の意味） |
+| $\tilde{x}$ | エックス・チルダ | **これから観測する**データ（観測済みの $x$ と区別） |
+| $\theta^{(k)}$ | シータ・スーパースクリプト・ケー | $k$ 番目の**標本**（累乗ではない） |
 
 ## ML への接続
 - 最尤推定 (MLE): 尤度関数を最大化

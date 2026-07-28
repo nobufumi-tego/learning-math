@@ -377,8 +377,12 @@ Jupyter Lab を停止するには、起動したターミナル / PowerShell ウ
 | 05 | [`05_descriptive_stats.md`](03_probability_statistics/05_descriptive_stats.md) | [`05_descriptive_stats.ipynb`](03_probability_statistics/notebooks/05_descriptive_stats.ipynb) | 記述統計・四分位・歪度・アンスコムの四重奏 |
 | 06 | [`06_estimation.md`](03_probability_statistics/06_estimation.md) | [`06_estimation.ipynb`](03_probability_statistics/notebooks/06_estimation.ipynb) | 点推定・区間推定・t分布・最尤推定・MAP推定 |
 | 07 | [`07_hypothesis_testing.md`](03_probability_statistics/07_hypothesis_testing.md) | [`07_hypothesis_testing.ipynb`](03_probability_statistics/notebooks/07_hypothesis_testing.ipynb) | 帰無仮説・p値・過誤・検出力・pハッキング |
+| 08 | [`08_bayesian_inference.md`](03_probability_statistics/08_bayesian_inference.md) | [`08_bayesian_inference.ipynb`](03_probability_statistics/notebooks/08_bayesian_inference.ipynb) | 共役モデル・事後予測分布・信用区間/HPD・ベイズファクター |
+| 09 | [`09_mcmc.md`](03_probability_statistics/09_mcmc.md) | [`09_mcmc.ipynb`](03_probability_statistics/notebooks/09_mcmc.ipynb) | モンテカルロ・Metropolis法・収束診断・階層モデル・縮小 |
 
-> 💡 **01〜04 が「確率」、05〜07 が「統計」**。確率は「モデル → データ」、統計は「データ → モデル」の向きです。
+> 💡 **01〜04 が「確率」、05〜07 が「統計」（頻度論）、08〜09 が「ベイズ」**。
+> 確率は「モデル → データ」、統計は「データ → モデル」の向きです。
+> 頻度論が「手順の長期的な性質」を問うのに対し、ベイズは「観測後に残る不確実性」を分布で表します。
 
 🐍 CLI 実行サンプル:
 - [`examples/distribution_demo.py`](03_probability_statistics/examples/distribution_demo.py) — 各種分布の可視化
