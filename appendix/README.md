@@ -28,7 +28,7 @@
 | 本リポジトリの章 | 📕 おすすめ書籍 | 🌐 おすすめサイト/動画 |
 |---|---|---|
 | [`start_here/`](../start_here/README.md) (数学基礎) | [数学ガール](books.md#数学ガール) (結城浩) | [3Blue1Brown](online.md#3blue1brown) (動画で直感) |
-| [`00_notation/`](../00_notation/README.md) (記号) | [プログラマの数学 第2版](books.md#プログラマの数学) | [高校数学の美しい物語](online.md#高校数学の美しい物語) |
+| [`00_notation/`](../00_notation/README.md) (記号) | [プログラマの数学 第2版](books.md#プログラマの数学-第2版) | [高校数学の美しい物語](online.md#高校数学の美しい物語) |
 | [`01_linear_algebra/`](../01_linear_algebra/README.md) | [プログラミングのための線形代数](books.md#プログラミングのための線形代数) | [3Blue1Brown: Essence of Linear Algebra](online.md#essence-of-linear-algebra) |
 | [`02_calculus/`](../02_calculus/README.md) | [やさしく学べる微分積分](books.md#やさしく学べる微分積分) | [3Blue1Brown: Essence of Calculus](online.md#essence-of-calculus) |
 | [`03_probability_statistics/`](../03_probability_statistics/README.md) | [統計学入門 (赤本)](books.md#統計学入門) (東大出版会) | [StatQuest with Josh Starmer](online.md#statquest) |
