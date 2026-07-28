@@ -15,13 +15,13 @@
 
 | md (読む) | ipynb (動かす) | 内容 | 所要時間目安 |
 |---|---|---|---|
-| [`01_basic_symbols.md`](01_basic_symbols.md) | [`notebooks/01_basic_symbols.ipynb`](notebooks/01_basic_symbols.ipynb) | 等号・不等号・無限・± | 30 分 |
+| [`01_basic_symbols.md`](01_basic_symbols.md) | [`notebooks/01_basic_symbols.ipynb`](notebooks/01_basic_symbols.ipynb) | 等号・不等号・無限・±・比例 ∝・条件の縦棒 \| | 30 分 |
 | [`02_set_theory.md`](02_set_theory.md) | [`notebooks/02_set_theory.ipynb`](notebooks/02_set_theory.ipynb) | 集合 ∈ ∉ ⊂ ⊆ ∪ ∩ ∅ | 1 時間 |
 | [`03_logic_symbols.md`](03_logic_symbols.md) | [`notebooks/03_logic_symbols.ipynb`](notebooks/03_logic_symbols.ipynb) | 論理 ∀ ∃ ⇒ ⇔ ∧ ∨ ¬ | 1 時間 |
-| [`04_function_notation.md`](04_function_notation.md) | [`notebooks/04_function_notation.ipynb`](notebooks/04_function_notation.ipynb) | 関数記法 f: A → B, ↦ | 30 分 |
+| [`04_function_notation.md`](04_function_notation.md) | [`notebooks/04_function_notation.ipynb`](notebooks/04_function_notation.ipynb) | 関数記法 f: A → B, ↦・指示関数 I(·)・Γ / B | 30 分 |
 | [`05_summation_product.md`](05_summation_product.md) | [`notebooks/05_summation_product.ipynb`](notebooks/05_summation_product.ipynb) | Σ・Π・∫・$n!$・$\binom{n}{k}$ | 1 時間 |
 | [`06_greek_letters.md`](06_greek_letters.md) | [`notebooks/06_greek_letters.ipynb`](notebooks/06_greek_letters.ipynb) | ギリシャ文字 + LaTeX 記法 | 30 分 |
-| [`07_decorations_and_fonts.md`](07_decorations_and_fonts.md) | [`notebooks/07_decorations_and_fonts.ipynb`](notebooks/07_decorations_and_fonts.ipynb) | 飾りと書体 $\hat{x}$ $\bar{x}$ $\mathbf{x}$ $\mathbb{R}$ | 1 時間 |
+| [`07_decorations_and_fonts.md`](07_decorations_and_fonts.md) | [`notebooks/07_decorations_and_fonts.ipynb`](notebooks/07_decorations_and_fonts.ipynb) | 飾りと書体 $\hat{x}$ $\bar{x}$ $\tilde{x}$ $\mathbf{x}$ $\mathbb{R}$ | 1 時間 |
 
 合計約 5〜6 時間で「読める目」 が手に入ります。各 md は読み物、各 ipynb は手を動かす場所。**両方をペアで進める** のが効果的です。
 

@@ -90,6 +90,40 @@ print(g_compose_f(2.0))  # 9.0
 | `log(x)`, `ln(x)` | 自然対数 | `np.log(x)` |
 | `log₂(x)` | 2を底とする対数 | `np.log2(x)` |
 | `sin(x)`, `cos(x)`, `tan(x)` | 三角関数（引数の単位は**ラジアン**） | `np.sin(x)`, `np.cos(x)`, `np.tan(x)` |
+| `I(条件)`, `𝟙[条件]` | **指示関数**（条件が真なら 1、偽なら 0） | `int(cond)` / `(arr > c).astype(float)` |
+| `Γ(x)` | **ガンマ関数**（階乗を実数に拡張。$\Gamma(n) = (n-1)!$） | `scipy.special.gamma(x)` |
+| `B(α, β)` | **ベータ関数** $\dfrac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}$ | `scipy.special.beta(a, b)` |
+
+### 指示関数 `I(·)` — 「数える」を「足す」に変える道具
+
+指示関数は、**条件を満たす個数を数える**作業を、**足し算の式**に書き換えるために使います。
+
+$$
+I(\theta > c) = \begin{cases} 1 & \theta > c \text{ のとき} \\ 0 & \text{それ以外} \end{cases}
+$$
+
+だから「$c$ を超えたものの割合」は、こう書けます:
+
+$$
+\frac{1}{K}\sum_{k=1}^{K} I\!\left(\theta^{(k)} > c\right)
+$$
+
+```python
+import numpy as np
+
+THRESHOLD: float = 0.5
+samples = np.array([0.3, 0.6, 0.55, 0.4, 0.8])   # shape: (5,)
+
+# 数式の I(·) は、NumPy では「真偽値の配列」がそのまま対応する
+indicator = (samples > THRESHOLD)                 # array([False, True, True, False, True])
+print(indicator.astype(int))                      # [0 1 1 0 1]  ← これが I(·)
+print(indicator.mean())                           # 0.6  ← (1/K)ΣI(·) = 「超えた割合」
+```
+
+> 📌 **`mean()` が「割合」になるのが指示関数の効きどころ**です。
+> True/False を 1/0 とみなして平均を取ると、そのまま比率になります。
+> 確率をモンテカルロで近似するときの中心的な道具
+> → [`03_probability_statistics/09_mcmc.md`](../03_probability_statistics/09_mcmc.md)
 
 ```python
 import numpy as np
@@ -130,8 +164,13 @@ print(np.sin(np.pi / 6)) # 0.5    （sin 30°。引数はラジアン）
 | 表記 | 意味 |
 |---|---|
 | `x_i` または `xᵢ` | i番目の要素（数学は1始まりが多い） |
-| `x^(k)` | k番目（イテレーション k 回目など） |
+| `x^(k)` | k番目（イテレーション k 回目、**k 番目のサンプル**など）。**累乗ではない** |
 | `x_{i,j}` | 行 i 列 j の要素 |
+
+> ⚠️ **`x^(k)` の上付きカッコは「番号」で、累乗ではありません。**
+> 勾配降下法の $\theta^{(k)}$ は「$k$ 回目の反復のパラメータ」、
+> MCMC の $\theta^{(k)}$ は「$k$ 番目の標本」、ML の $x^{(i)}$ は「$i$ 番目のデータ点」。
+> **カッコが付いていたら番号**と覚えてください（カッコなしの $x^2$ は普通に 2 乗）。
 
 Python（0始まり）:
 ```python
