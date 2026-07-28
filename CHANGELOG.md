@@ -14,6 +14,10 @@
 
 - `a90986d` feat(03_probability): ベイズ推論・MCMC の 2 章を追加
 
+### 📝 ドキュメント
+
+- `f0d6eda` docs(00_notation): ベイズ統計で使う記号を Phase 1 に追加
+
 ## 2026-07-25
 
 ### ✨ 新機能・新規追加
@@ -115,4 +119,4 @@
 
 ---
 
-_Total commits indexed: **63**_
+_Total commits indexed: **64**_
