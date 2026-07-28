@@ -311,7 +311,7 @@ Jupyter Lab を停止するには、起動したターミナル / PowerShell ウ
 | 02 | [`02_set_theory.md`](00_notation/02_set_theory.md) | [`02_set_theory.ipynb`](00_notation/notebooks/02_set_theory.ipynb) | 集合 ∈ ∉ ⊂ ⊆ ∪ ∩ ∅ |
 | 03 | [`03_logic_symbols.md`](00_notation/03_logic_symbols.md) | [`03_logic_symbols.ipynb`](00_notation/notebooks/03_logic_symbols.ipynb) | 論理 ∀ ∃ ⇒ ⇔ ∧ ∨ ¬ |
 | 04 | [`04_function_notation.md`](00_notation/04_function_notation.md) | [`04_function_notation.ipynb`](00_notation/notebooks/04_function_notation.ipynb) | 関数記法 f: A → B, ↦・指示関数 I(·)・Γ / B |
-| 05 | [`05_summation_product.md`](00_notation/05_summation_product.md) | [`05_summation_product.ipynb`](00_notation/notebooks/05_summation_product.ipynb) | Σ (総和) / Π (総乗) / ∫ (積分) |
+| 05 | [`05_summation_product.md`](00_notation/05_summation_product.md) | [`05_summation_product.ipynb`](00_notation/notebooks/05_summation_product.ipynb) | Σ (総和) / Π (総乗) / ∫ (積分) / Γ (ガンマ関数) |
 | 06 | [`06_greek_letters.md`](00_notation/06_greek_letters.md) | [`06_greek_letters.ipynb`](00_notation/notebooks/06_greek_letters.ipynb) | ギリシャ文字一覧 + LaTeX 記法 |
 | 07 | [`07_decorations_and_fonts.md`](00_notation/07_decorations_and_fonts.md) | [`07_decorations_and_fonts.ipynb`](00_notation/notebooks/07_decorations_and_fonts.ipynb) | 飾りと書体 — 推定のハット x̂ / 将来の観測 x̃ / 太字と shape |
 

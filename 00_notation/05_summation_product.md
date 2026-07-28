@@ -173,6 +173,157 @@ result, _ = integrate.dblquad(f, 0, 1, 0, 1)
 print(result)  # 0.25
 ```
 
+## Γ（ガンマ関数）— 階乗を実数へつなぐ
+
+### 直感
+
+$n!$ は $1!, 2!, 3!, \dots$ と**飛び飛び**にしか定義されていません。$2.5!$ は？と聞かれると困る。
+
+そこで「階乗の点を**なめらかにつないだ曲線**」を用意したのが **ガンマ関数 $\Gamma$** です。
+
+```
+n!  :  ● 　 ● 　 ● 　 ●        ← 整数の上にしか点がない
+Γ   :  ●─╮ ●─╮ ●─╮ ●          ← その点を通る「曲線」
+```
+
+読み方は「**ガンマ**」（大文字ギリシャ文字。小文字 $\gamma$ とは別物）。
+
+### 定義
+
+$$
+\Gamma(z) = \int_0^{\infty} t^{\,z-1} e^{-t}\,dt \qquad (z > 0)
+$$
+
+前節の $\int$ がここで効いてきます。**「積分で定義された関数」の代表例**です。
+
+### ⚠️ 1 つズレる
+
+いちばん引っかかるのがここです。
+
+$$
+\Gamma(n) = (n-1)! \qquad\text{であって}\qquad \Gamma(n) \ne n!
+$$
+
+| $n$ | $\Gamma(n)$ | $(n-1)!$ |
+|---|---|---|
+| 1 | 1 | $0! = 1$ |
+| 2 | 1 | $1! = 1$ |
+| 3 | 2 | $2! = 2$ |
+| 4 | 6 | $3! = 6$ |
+| 5 | 24 | $4! = 24$ |
+
+$n!$ が欲しいなら $\Gamma(n+1)$ を使います。**このズレは歴史的な事情**（オイラーの定義の流儀）で、
+数学的な必然ではありません。「そういうものだ」と割り切って覚えるのが早いです。
+
+### なぜ階乗の「つづき」になるのか
+
+鍵は**漸化式**です。部分積分をすると、次が成り立ちます:
+
+$$
+\Gamma(z+1) = z\,\Gamma(z)
+$$
+
+これは階乗の $n! = n \cdot (n-1)!$ とまったく同じ形。
+出発点が $\Gamma(1) = \int_0^\infty e^{-t}dt = 1$ なので、$\Gamma(2)=1, \Gamma(3)=2, \Gamma(4)=6, \dots$ と
+階乗の値をなぞっていきます。
+
+整数以外でも値が決まるのが強みで、たとえば:
+
+$$
+\Gamma\!\left(\tfrac{1}{2}\right) = \sqrt{\pi} \approx 1.7725
+$$
+
+（この $\pi$ は**円周率**のほうです。→ [`06_greek_letters.md`](06_greek_letters.md)）
+
+### Python
+
+```python
+import math
+
+import numpy as np
+from scipy.special import gamma, gammaln, beta
+
+# Γ(n) = (n−1)! を確認する
+for n in range(1, 6):
+    print(f'Γ({n}) = {gamma(n):>4.0f}   ({n-1}! = {math.factorial(n-1)})')
+
+# 整数以外でも値がある (階乗ではできない)
+print(f'Γ(0.5) = {gamma(0.5):.4f}   (√π = {np.sqrt(np.pi):.4f})')
+print(f'Γ(2.5) = {gamma(2.5):.4f}')
+
+# ⚠️ すぐオーバーフローする -> 対数版 gammaln を使う
+print(f'Γ(171) = {gamma(171):.3e}')        # 7.257e+306  ← ここまでは足りる
+print(f'Γ(172) = {gamma(172)}')            # inf  ← float64 (最大 ~1.8e308) を超える
+print(f'log Γ(172) = {gammaln(172):.4f}')  # 711.7147  こちらは計算できる
+print(f'log Γ(10000) = {gammaln(10000):.1f}')  # 桁がいくら大きくても平気
+```
+
+> ⚠️ **実務では `gamma` ではなく `gammaln`（対数ガンマ関数）を使う場面が多い**です。
+> 尤度計算では $\Gamma$ の値そのものではなく**比や積**が必要で、対数にすれば
+> 掛け算が足し算になり、オーバーフローも避けられます
+> （[`03_probability_statistics/09_mcmc.md`](../03_probability_statistics/09_mcmc.md) の「対数で比較する」と同じ発想）。
+
+### どこで出会うか — ほとんどは「正規化定数」として
+
+$\Gamma$ を単体で使うことは少なく、**確率密度の頭に付く係数**として現れます。
+
+**ベータ関数** $B$（$\Gamma$ から作る）:
+
+$$
+B(\alpha, \beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}
+$$
+
+**ベータ分布**（0〜1 の割合を表す。ベイズの事前分布の定番）:
+
+$$
+f(x) = \frac{1}{B(\alpha,\beta)}\,x^{\alpha-1}(1-x)^{\beta-1}
+= \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}\,x^{\alpha-1}(1-x)^{\beta-1}
+\qquad (0 < x < 1)
+$$
+
+**ガンマ分布**（正の量・待ち時間・発生率）:
+
+$$
+f(x) = \frac{\beta^{\alpha}}{\Gamma(\alpha)}\,x^{\alpha-1}e^{-\beta x} \qquad (x > 0)
+$$
+
+> 📌 **どちらも「$x$ の式」の前に付いた $\Gamma$ の塊は、面積を 1 にするための割り算**です。
+> つまり [`01_basic_symbols.md`](01_basic_symbols.md) の $\propto$ で**省略される部分**そのもの。
+> ベイズで「$\propto$ だから正規化定数は無視してよい」と言うとき、
+> 消えているのはたいていこの $\Gamma$ の塊です。
+> → [`03_probability_statistics/08_bayesian_inference.md`](../03_probability_statistics/08_bayesian_inference.md)
+
+```python
+from scipy.special import beta as beta_fn, gamma
+from scipy import stats
+import numpy as np
+
+ALPHA: float = 2.0
+BETA: float = 5.0
+x: float = 0.3
+
+# 定義どおりに手で計算する
+manual = x**(ALPHA - 1) * (1 - x)**(BETA - 1) / beta_fn(ALPHA, BETA)
+
+# Γ で書いても同じ (B(α,β) = Γ(α)Γ(β)/Γ(α+β))
+via_gamma = (gamma(ALPHA + BETA) / (gamma(ALPHA) * gamma(BETA))
+             * x**(ALPHA - 1) * (1 - x)**(BETA - 1))
+
+print(f'手計算       : {manual:.6f}')
+print(f'Γ で書いた版 : {via_gamma:.6f}')
+print(f'SciPy        : {stats.beta.pdf(x, ALPHA, BETA):.6f}')
+assert np.isclose(manual, stats.beta.pdf(x, ALPHA, BETA))
+print('✅ 3 つとも一致')
+```
+
+### Γ のハマりポイント
+
+- **$\Gamma(n) = (n-1)!$ で 1 ズレる** — $n!$ が欲しいなら $\Gamma(n+1)$
+- **大文字 $\Gamma$ と小文字 $\gamma$ は別物** — $\gamma$ は割引率・信用区間の裾確率など
+- **負の整数と 0 では定義されない**（発散する）
+- **$\Gamma(172)$ で `inf`** — float64 の上限（$\Gamma(171) \approx 7.3 \times 10^{306}$ が限界）。対数版 `gammaln` を使う
+- **「ガンマ関数」と「ガンマ分布」は別物** — 分布の名前は、密度に $\Gamma$ が出てくることに由来
+
 ## ハマりポイント
 
 - 添字の範囲を見落とさない: `Σ_{i=1}^{n}` か `Σ_{i=0}^{n-1}` かで意味が違う

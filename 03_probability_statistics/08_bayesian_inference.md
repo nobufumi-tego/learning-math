@@ -635,7 +635,7 @@ $$
 > （**オッカムの剃刀が自動で効く**、と言われる現象）。
 
 > 📌 事後オッズが 1 より大きくても、直ちに $H_0$ を採択することにはなりません。
-> 実際の選択は、[第 10 節](#10-事後分布から取り出す--損失を考えた意思決定)の**損失**も考慮して決めます。
+> 実際の選択は、[第 10 節](#10-事後分布から取り出す③--損失を考えた意思決定)の**損失**も考慮して決めます。
 
 ---
 
@@ -695,12 +695,87 @@ print('✅ 標準形式と JAX 形式が一致')
 
 ---
 
-## 13. ハマりポイント
+## 13. 付録: この章で使う分布の定義式
+
+「$\mathrm{Beta}(14,10)$」と書かれたときに**中身の式**が言えると、論文が一段読みやすくなります。
+$\Gamma$（ガンマ関数）と $B$（ベータ関数）の説明そのものは
+[`00_notation/05_summation_product.md`](../00_notation/05_summation_product.md#γガンマ関数-階乗を実数へつなぐ) にあります。
+
+### 離散（回数・個数を表す）
+
+| 分布 | 確率関数 | 平均 | 分散 | SciPy |
+|---|---|---|---|---|
+| $\mathrm{Bernoulli}(p)$ | $P(X=1)=p,\ P(X=0)=1-p$ | $p$ | $p(1-p)$ | `stats.bernoulli` |
+| $\mathrm{Binomial}(n,p)$ | $\dbinom{n}{k}p^k(1-p)^{n-k}$ | $np$ | $np(1-p)$ | `stats.binom` |
+| $\mathrm{NegativeBinomial}(r,p)$ | $\dbinom{k+r-1}{k}p^r(1-p)^k$ | $\dfrac{r(1-p)}{p}$ | $\dfrac{r(1-p)}{p^2}$ | `stats.nbinom` |
+| $\mathrm{Poisson}(\lambda)$ | $\dfrac{\lambda^k e^{-\lambda}}{k!}$ | $\lambda$ | $\lambda$ | `stats.poisson` |
+
+$\mathrm{NegativeBinomial}(r,p)$ の $k$ は「$r$ 回成功するまでに起こる**失敗回数**」です。
+
+### 連続（事前分布に使う）
+
+**ベータ分布**（0〜1 の割合。成功確率の事前分布）:
+
+$$
+f(x) = \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}\,x^{\alpha-1}(1-x)^{\beta-1}
+= \frac{x^{\alpha-1}(1-x)^{\beta-1}}{B(\alpha,\beta)}, \quad 0<x<1
+$$
+
+$$
+\mathbb{E}[X] = \frac{\alpha}{\alpha+\beta}, \qquad
+\mathrm{Var}(X) = \frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)} = \frac{\mu_0(1-\mu_0)}{\kappa_0+1}
+$$
+
+**ガンマ分布**（正の量・発生率・待ち時間。$\beta$ は**率パラメータ**）:
+
+$$
+f(x) = \frac{\beta^{\alpha}}{\Gamma(\alpha)}\,x^{\alpha-1}e^{-\beta x}, \quad x>0
+\qquad
+\mathbb{E}[X] = \frac{\alpha}{\beta}, \qquad \mathrm{Var}(X) = \frac{\alpha}{\beta^2}
+$$
+
+### 事後予測に出てくる分布
+
+**ベータ二項分布**（$\theta$ 自体が不確実な二項）:
+
+$$
+P(Y=k) = \binom{m}{k}\frac{B(k+\alpha,\; m-k+\beta)}{B(\alpha,\beta)}, \quad k = 0,1,\dots,m
+$$
+
+$$
+\mathbb{E}[Y] = m\frac{\alpha}{\alpha+\beta}, \qquad
+\mathrm{Var}(Y) = m\frac{\alpha\beta}{(\alpha+\beta)^2}\cdot\frac{\alpha+\beta+m}{\alpha+\beta+1}
+$$
+
+> 📌 **分散の最後の因子 $\dfrac{\alpha+\beta+m}{\alpha+\beta+1}$ が 1 より大きい**ことに注目してください。
+> これが「二項分布より分散が大きい」（**過分散**）の正体です。
+> $\kappa_0 = \alpha+\beta$ が大きい（＝$\theta$ に自信がある）ほど 1 に近づき、通常の二項分布に戻ります。
+
+### 正規化定数はどこへ消えるのか
+
+上の式で **$x$ を含まない部分**（$\Gamma$ や $B$ の塊、$\binom{n}{k}$）が正規化定数です。
+だから [第 3 節](#3-共役モデル①-bernoullibeta--成功確率を推定する)の共役計算では:
+
+$$
+\pi(\theta \mid x) \propto \underbrace{\theta^{y}(1-\theta)^{n-y}}_{\text{尤度}}\cdot
+\underbrace{\theta^{\alpha_0-1}(1-\theta)^{\beta_0-1}}_{\text{事前}}
+$$
+
+と、$\binom{n}{y}$ も $1/B(\alpha_0,\beta_0)$ も**書かずに済ませられます**。
+指数だけ見比べれば分布が決まり、係数は最後に「$\mathrm{Beta}$ の形だから」と付け直せばよい。
+
+> 💡 **$\propto$ で計算が軽くなる、という実感がここで得られます。**
+> 逆に MCMC（[`09_mcmc.md`](09_mcmc.md)）では、この正規化定数が**そもそも計算できない**のに
+> 比を取れば消えるので困らない、という話になります。
+
+---
+
+## 14. ハマりポイント
 
 - **$\pi$ を円周率と読んでしまう** — 引数があれば分布。[第 0 節](#0-この章で出てくる記号--先に読み方を配っておきます)参照
 - **Gamma 分布の率 / スケール取り違え** — SciPy は `scale=1/rate`。**最頻出の事故**
 - **事後平均と MAP を混同する** — 重心と山頂は別物。歪んだ分布で顕著
-- **信用区間を信頼区間の意味で読む（逆も）** — [第 9 節](#9-事後分布から取り出す--信用区間等裾と-hpd)の表を毎回確認
+- **信用区間を信頼区間の意味で読む（逆も）** — [第 9 節](#9-事後分布から取り出す②--信用区間等裾と-hpd)の表を毎回確認
 - **「無情報事前なら中立」ではない** — どのスケールで一様かに仮定が入る。周辺尤度も下がる
 - **強い事前を黙って使う** — $\kappa_0$ は仮想データ件数。**必ず報告する**
 - **事後予測を「点推定を代入した分布」で済ませる** — 分散 $\tau_n^2$ の分だけ予測を過信する

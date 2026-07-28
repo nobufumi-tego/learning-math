@@ -134,7 +134,7 @@
 | `∇²`, `Δ` | Laplacian | ラプラシアン（2階微分の和） | – |
 | `n!` | n factorial | 階乗 n×(n−1)×…×1、`0! = 1` | `math.factorial(n)` |
 | `C(n,k)`, `ₙCₖ` | n choose k | 二項係数（組合せ） | `math.comb(n, k)` |
-| `Γ(x)` | **gamma function** / ガンマ関数 | 階乗を実数に拡張したもの。整数なら $\Gamma(n) = (n-1)!$ | `scipy.special.gamma` / `gammaln`（対数版） |
+| `Γ(x)` | **gamma function** / ガンマ関数 | 階乗を実数に拡張したもの。整数なら $\Gamma(n) = (n-1)!$（**1 つズレる**） → [解説](../00_notation/05_summation_product.md#γガンマ関数-階乗を実数へつなぐ) | `scipy.special.gamma` / `gammaln`（対数版） |
 | `B(α, β)` | **beta function** / ベータ関数 | $B(\alpha,\beta) = \dfrac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}$。ベータ分布の正規化定数 | `scipy.special.beta` |
 
 二項係数は論文では縦に積んだ形で書かれます:
