@@ -17,6 +17,7 @@
 ### 📝 ドキュメント
 
 - `f0d6eda` docs(00_notation): ベイズ統計で使う記号を Phase 1 に追加
+- `7abad6d` docs(notation): ガンマ関数 Γ の解説と、分布の定義式を追加
 
 ## 2026-07-25
 
@@ -119,4 +120,4 @@
 
 ---
 
-_Total commits indexed: **64**_
+_Total commits indexed: **65**_
